@@ -41,4 +41,12 @@ return [
             'newsletter' => env('BREVO_NEWSLETTER_LIST_ID'),
         ],
     ],
+
+    'google' => [
+        'analytics_id' => env('GOOGLE_ANALYTICS_ID'),
+    ],
+
+    'cookieyes' => [
+        'id' => env('COOKIEYES_ID'),
+    ],
 ];

@@ -1,14 +1,28 @@
 @import 'tailwindcss';
 @import '../../vendor/livewire/flux/dist/flux.css';
 
+@source '../views';
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
+@source '../../vendor/livewire/flux-pro/stubs/**/*.blade.php';
+@source '../../vendor/livewire/flux/stubs/**/*.blade.php';
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
     --font-sans: 'Rubik', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     --font-serif: 'Rubik', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --color-zinc-50: #fafafa;
+    --color-zinc-100: #f5f5f5;
+    --color-zinc-200: #e5e5e5;
+    --color-zinc-300: #d4d4d4;
+    --color-zinc-400: #a3a3a3;
+    --color-zinc-500: #737373;
+    --color-zinc-600: #525252;
+    --color-zinc-700: #404040;
+    --color-zinc-800: #262626;
+    --color-zinc-900: #171717;
+    --color-zinc-950: #0a0a0a;
 
     --color-blue-50: #f0f8ff;
     --color-blue-100: #dff1ff;
@@ -21,6 +35,18 @@
     --color-blue-800: #035589;
     --color-blue-900: #094771;
     --color-blue-950: #062c4b;
+
+    --color-green-50: #f1fcf9;
+    --color-green-100: #cef9eb;
+    --color-green-200: #90fee5;
+    --color-green-300: #65e3c1;
+    --color-green-400: #4cd2b1;
+    --color-green-500: #26aea2;
+    --color-green-600: #138e74;
+    --color-green-700: #14715f;
+    --color-green-800: #155a4e;
+    --color-green-900: #164b42;
+    --color-green-950: #062d27;
 
     --color-light: #f8f9fd;
     --color-dark: #062c4b;

@@ -10,8 +10,7 @@ class UserSeeder extends Seeder
 {
     private array $initialUsers = [
         [
-            'first_name' => 'Amar',
-            'last_name' => 'Hidić',
+            'name' => 'Amar Hidić',
             'email' => 'office@hidicamar.com',
             'password' => 'password',
         ],
@@ -22,20 +21,17 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        foreach ($this->initialUsers as $key => $initalUser) {
-            $userModel = User::query()
-                ->updateOrcreate(
-                    [
-                        'email' => $initalUser['email'],
-                    ],
-                    [
-                        'first_name' => $initalUser['first_name'],
-                        'last_name' => $initalUser['last_name'],
-                        'email' => $initalUser['email'],
-                        'email_verified_at' => now(),
-                        'password' => Hash::make($initalUser['password']),
-                    ]
-                );
+        foreach ($this->initialUsers as $initialUser) {
+            User::query()->updateOrCreate(
+                [
+                    'email' => $initialUser['email'],
+                ],
+                [
+                    'name' => $initialUser['name'],
+                    'email_verified_at' => now(),
+                    'password' => Hash::make($initialUser['password']),
+                ]
+            );
         }
     }
 }

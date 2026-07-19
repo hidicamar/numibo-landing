@@ -1,9 +1,1 @@
-<link rel="apple-touch-icon" sizes="57x57" href="{{ asset('img/app-icons/iOS/Icon-57.png') }}">
-<link rel="apple-touch-icon" sizes="60x60" href="{{ asset('img/app-icons/iOS/Icon-60.png') }}">
-<link rel="apple-touch-icon" sizes="72x72" href="{{ asset('img/app-icons/iOS/Icon-72.png') }}">
-<link rel="apple-touch-icon" sizes="76x76" href="{{ asset('img/app-icons/iOS/Icon-76.png') }}">
-<link rel="apple-touch-icon" sizes="114x114" href="{{ asset('img/app-icons/iOS/Icon-114.png') }}">
-<link rel="apple-touch-icon" sizes="120x120" href="{{ asset('img/app-icons/iOS/Icon-120.png') }}">
-<link rel="apple-touch-icon" sizes="144x144" href="{{ asset('img/app-icons/iOS/Icon-144.png') }}">
-<link rel="apple-touch-icon" sizes="152x152" href="{{ asset('img/app-icons/iOS/Icon-152.png') }}">
-<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/app-icons/iOS/Icon-180.png') }}">
+<link rel="apple-touch-icon" href="{{ asset('img/favicons/apple-touch-icon.png') }}">

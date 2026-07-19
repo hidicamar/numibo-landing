@@ -28,75 +28,11 @@ class PageSeeder extends Seeder
             ],
         ],
         [
-            'name' => 'Vaje',
-            'type' => 'exercises.index',
-            'seo' => [
-                'title' => 'Vaje',
-                'description' => '',
-            ],
-        ],
-        [
-            'name' => 'Reševanje vaje',
-            'type' => 'exercises.solve',
-            'seo' => [
-                'title' => 'Reševanje vaje',
-                'description' => '',
-            ],
-        ],
-        [
-            'name' => 'Seštevanje in odštevanje',
-            'type' => 'addition-and-subtraction.index',
-            'seo' => [
-                'title' => 'Seštevanje in odštevanje',
-                'description' => '',
-            ],
-        ],
-        [
-            'name' => 'Množenje in deljenje',
-            'type' => 'multiplication-and-division.index',
-            'seo' => [
-                'title' => 'Množenje in deljenje',
-                'description' => '',
-            ],
-        ],
-        [
-            'name' => 'Osnovna tabela – Množenje in deljenje',
-            'type' => 'multiplication-and-division.base-table',
-            'seo' => [
-                'title' => 'Osnovna tabela – Množenje in deljenje',
-                'description' => '',
-            ],
-        ],
-        [
-            'name' => 'Naloge po meri – Množenje in deljenje',
-            'type' => 'multiplication-and-division.custom-equations',
-            'seo' => [
-                'title' => 'Naloge po meri – Množenje in deljenje',
-                'description' => '',
-            ],
-        ],
-        [
             'name' => 'Blog',
             'type' => 'posts.index',
             'seo' => [
                 'title' => 'Blog',
                 'description' => '',
-            ],
-        ],
-        [
-            'name' => 'Prijava',
-            'type' => 'login',
-            'seo' => [
-                'title' => 'Prijava',
-                'description' => 'Prijavite se v svoj račun in nadaljujte z vajami.',
-            ],
-        ],
-        [
-            'name' => 'Registracija',
-            'type' => 'register',
-            'seo' => [
-                'title' => 'Registracija',
-                'description' => 'Ustvarite brezplačen račun in začnite z vajami.',
             ],
         ],
         [
@@ -138,75 +74,11 @@ class PageSeeder extends Seeder
             ],
         ],
         [
-            'name' => 'Exercises',
-            'type' => 'exercises.index',
-            'seo' => [
-                'title' => 'Exercises',
-                'description' => '',
-            ],
-        ],
-        [
-            'name' => 'Solve exercise',
-            'type' => 'exercises.solve',
-            'seo' => [
-                'title' => 'Solve exercise',
-                'description' => '',
-            ],
-        ],
-        [
-            'name' => 'Addition and Subtraction',
-            'type' => 'addition-and-subtraction.index',
-            'seo' => [
-                'title' => 'Addition and Subtraction',
-                'description' => '',
-            ],
-        ],
-        [
-            'name' => 'Multiplication and Division',
-            'type' => 'multiplication-and-division.index',
-            'seo' => [
-                'title' => 'Multiplication and Division',
-                'description' => '',
-            ],
-        ],
-        [
-            'name' => 'Base Table – Multiplication and Division',
-            'type' => 'multiplication-and-division.base-table',
-            'seo' => [
-                'title' => 'Base Table – Multiplication and Division',
-                'description' => '',
-            ],
-        ],
-        [
-            'name' => 'Custom Exercises – Multiplication and Division',
-            'type' => 'multiplication-and-division.custom-equations',
-            'seo' => [
-                'title' => 'Custom Exercises – Multiplication and Division',
-                'description' => '',
-            ],
-        ],
-        [
             'name' => 'Blog',
             'type' => 'posts.index',
             'seo' => [
                 'title' => 'Blog',
                 'description' => '',
-            ],
-        ],
-        [
-            'name' => 'Login',
-            'type' => 'login',
-            'seo' => [
-                'title' => 'Login',
-                'description' => 'Sign in to your account and continue practicing.',
-            ],
-        ],
-        [
-            'name' => 'Register',
-            'type' => 'register',
-            'seo' => [
-                'title' => 'Register',
-                'description' => 'Create a free account and start practicing.',
             ],
         ],
         [
@@ -248,75 +120,11 @@ class PageSeeder extends Seeder
             ],
         ],
         [
-            'name' => 'Übungen',
-            'type' => 'exercises.index',
-            'seo' => [
-                'title' => 'Übungen',
-                'description' => '',
-            ],
-        ],
-        [
-            'name' => 'Übung lösen',
-            'type' => 'exercises.solve',
-            'seo' => [
-                'title' => 'Übung lösen',
-                'description' => '',
-            ],
-        ],
-        [
-            'name' => 'Addition und Subtraktion',
-            'type' => 'addition-and-subtraction.index',
-            'seo' => [
-                'title' => 'Addition und Subtraktion',
-                'description' => '',
-            ],
-        ],
-        [
-            'name' => 'Multiplikation und Division',
-            'type' => 'multiplication-and-division.index',
-            'seo' => [
-                'title' => 'Multiplikation und Division',
-                'description' => '',
-            ],
-        ],
-        [
-            'name' => 'Grundtabelle – Multiplikation und Division',
-            'type' => 'multiplication-and-division.base-table',
-            'seo' => [
-                'title' => 'Grundtabelle – Multiplikation und Division',
-                'description' => '',
-            ],
-        ],
-        [
-            'name' => 'Benutzerdefinierte Aufgaben – Multiplikation und Division',
-            'type' => 'multiplication-and-division.custom-equations',
-            'seo' => [
-                'title' => 'Benutzerdefinierte Aufgaben – Multiplikation und Division',
-                'description' => '',
-            ],
-        ],
-        [
             'name' => 'Blog',
             'type' => 'posts.index',
             'seo' => [
                 'title' => 'Blog',
                 'description' => '',
-            ],
-        ],
-        [
-            'name' => 'Anmelden',
-            'type' => 'login',
-            'seo' => [
-                'title' => 'Anmelden',
-                'description' => 'Melden Sie sich an und üben Sie weiter.',
-            ],
-        ],
-        [
-            'name' => 'Registrieren',
-            'type' => 'register',
-            'seo' => [
-                'title' => 'Registrieren',
-                'description' => 'Erstellen Sie ein kostenloses Konto und beginnen Sie mit dem Üben.',
             ],
         ],
         [
@@ -358,75 +166,11 @@ class PageSeeder extends Seeder
             ],
         ],
         [
-            'name' => 'Vježbe',
-            'type' => 'exercises.index',
-            'seo' => [
-                'title' => 'Vježbe',
-                'description' => '',
-            ],
-        ],
-        [
-            'name' => 'Rješavanje vježbe',
-            'type' => 'exercises.solve',
-            'seo' => [
-                'title' => 'Rješavanje vježbe',
-                'description' => '',
-            ],
-        ],
-        [
-            'name' => 'Sabiranje i oduzimanje',
-            'type' => 'addition-and-subtraction.index',
-            'seo' => [
-                'title' => 'Sabiranje i oduzimanje',
-                'description' => '',
-            ],
-        ],
-        [
-            'name' => 'Množenje i dijeljenje',
-            'type' => 'multiplication-and-division.index',
-            'seo' => [
-                'title' => 'Množenje i dijeljenje',
-                'description' => '',
-            ],
-        ],
-        [
-            'name' => 'Osnovna tablica – Množenje i dijeljenje',
-            'type' => 'multiplication-and-division.base-table',
-            'seo' => [
-                'title' => 'Osnovna tablica – Množenje i dijeljenje',
-                'description' => '',
-            ],
-        ],
-        [
-            'name' => 'Zadaci po želji – Množenje i dijeljenje',
-            'type' => 'multiplication-and-division.custom-equations',
-            'seo' => [
-                'title' => 'Zadaci po želji – Množenje i dijeljenje',
-                'description' => '',
-            ],
-        ],
-        [
             'name' => 'Blog',
             'type' => 'posts.index',
             'seo' => [
                 'title' => 'Blog',
                 'description' => '',
-            ],
-        ],
-        [
-            'name' => 'Prijava',
-            'type' => 'login',
-            'seo' => [
-                'title' => 'Prijava',
-                'description' => 'Prijavite se na svoj račun i nastavite s vježbanjem.',
-            ],
-        ],
-        [
-            'name' => 'Registracija',
-            'type' => 'register',
-            'seo' => [
-                'title' => 'Registracija',
-                'description' => 'Kreirajte besplatan račun i počnite s vježbanjem.',
             ],
         ],
         [

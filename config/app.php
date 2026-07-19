@@ -56,6 +56,8 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
+    'app_url' => env('NUMIBOO_APP_URL', 'https://app.numiboo.com'),
+
     'short_url' => mb_rtrim(preg_replace('/^https?:\/\//i', '', env('APP_URL', 'http://localhost')), '/'),
 
     'short_url_with_subdomain' => 'www.'.preg_replace('/^https?:\/\//i', '', env('APP_URL', 'http://localhost')),

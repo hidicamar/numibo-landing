@@ -62,7 +62,8 @@ if ($loading && $type !== 'submit' && ! $isJsMethod) {
 }
 
 $classes = Flux::classes()
-    ->add('relative items-center font-medium justify-center gap-2 whitespace-nowrap')
+    ->add('relative items-center justify-center gap-2 whitespace-nowrap cursor-pointer')
+    ->add($variant === 'primary' ? 'font-bold' : 'font-medium')
     ->add('disabled:opacity-75 dark:disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none')
     ->add(match ($align) {
         'start' => 'justify-start',
@@ -108,20 +109,27 @@ $classes = Flux::classes()
         'subtle' => 'text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-white',
     })
     ->add(match ($variant) { // Border color...
-        'primary' => 'border border-black/10 dark:border-0',
+        'primary' => 'border border-blue-600',
         'outline' => 'border border-zinc-200 hover:border-zinc-200 border-b-zinc-300/80 dark:border-zinc-600 dark:hover:border-zinc-600',
          default => '',
     })
-    ->add(match ($variant) { // Shadows...
-        'primary' => 'shadow-[inset_0px_1px_--theme(--color-white/.2)]',
+    ->add(match ($variant) { // Shadows... (primary/outline: hard candy drop shadow that collapses when pressed)
+        'primary' => 'shadow-[0_2px_0_0_var(--color-blue-600)] active:translate-y-[2px] active:shadow-none',
         'danger' => 'shadow-[inset_0px_1px_var(--color-red-500),inset_0px_2px_--theme(--color-white/.15)] dark:shadow-none',
         'outline' => match ($size) {
-            'base' => 'shadow-xs',
-            'sm' => 'shadow-xs',
+            'base' => 'shadow-[0_2px_0_0_var(--color-zinc-200)] active:translate-y-[2px] active:shadow-none',
+            'sm' => 'shadow-[0_2px_0_0_var(--color-zinc-200)] active:translate-y-[2px] active:shadow-none',
             'xs' => 'shadow-none',
         },
         default => '',
     })
+    // Candy gloss: a wide highlight arc across the top plus a small sparkle, both as pseudo-elements so
+    // they survive the loading state (which only fades the button's children)...
+    ->add($variant === 'primary' ? implode(' ', [
+        'overflow-hidden',
+        'before:pointer-events-none before:absolute before:inset-x-2 before:top-px before:h-1/2 before:rounded-full before:bg-[radial-gradient(100%_100%_at_50%_0%,rgba(255,255,255,.45),rgba(255,255,255,0)_80%)]',
+        'after:pointer-events-none after:absolute after:top-1 after:left-2.5 after:h-1.5 after:w-3 after:rounded-full after:bg-white/60 after:blur-[1px]',
+    ]) : '')
     ->add(match ($variant) { // Grouped border treatments...
         'ghost' => '',
         'subtle' => '',
