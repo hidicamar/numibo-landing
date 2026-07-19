@@ -1,0 +1,248 @@
+@import 'tailwindcss';
+@import '../../vendor/livewire/flux/dist/flux.css';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-sans: 'Rubik', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-serif: 'Rubik', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --color-blue-50: #f0f8ff;
+    --color-blue-100: #dff1ff;
+    --color-blue-200: #b8e4ff;
+    --color-blue-300: #79cfff;
+    --color-blue-400: #4ac0fe;
+    --color-blue-500: #079ff0;
+    --color-blue-600: #007ecd;
+    --color-blue-700: #0064a6;
+    --color-blue-800: #035589;
+    --color-blue-900: #094771;
+    --color-blue-950: #062c4b;
+
+    --color-light: #f8f9fd;
+    --color-dark: #062c4b;
+
+    --color-accent: var(--color-blue-400);
+    --color-accent-content: var(--color-blue-600);
+    --color-accent-foreground: var(--color-white);
+
+    --shadow-custom: 0px 8px 8px -1px rgba(12, 12, 13, 0.08), 0px 8px 16px -1px rgba(12, 12, 13, 0.1);
+}
+
+@layer theme {
+    .dark {
+        --color-accent: var(--color-white);
+        --color-accent-content: var(--color-white);
+        --color-accent-foreground: var(--color-neutral-800);
+    }
+}
+
+@layer base {
+
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
+}
+
+@layer base {
+    h1 {
+        @apply text-4xl font-semibold tracking-tight text-dark md:text-5xl;
+    }
+
+    h2 {
+        @apply text-3xl font-semibold tracking-tight text-dark md:text-4xl;
+    }
+
+    h3 {
+        @apply text-2xl font-semibold tracking-tight text-dark md:text-3xl;
+    }
+
+    h4 {
+        @apply text-xl font-semibold text-dark md:text-2xl;
+    }
+
+    h5 {
+        @apply text-lg font-semibold text-dark md:text-xl;
+    }
+
+    h6 {
+        @apply text-base font-semibold text-dark md:text-lg;
+    }
+}
+
+[data-flux-field]:not(ui-radio, ui-checkbox) {
+    @apply grid gap-2;
+}
+
+[data-flux-label] {
+    @apply  !mb-0 !leading-tight;
+}
+
+input:focus[data-flux-control],
+textarea:focus[data-flux-control],
+select:focus[data-flux-control] {
+    @apply outline-hidden ring-2 ring-accent ring-offset-2 ring-offset-accent-foreground;
+}
+
+/* \[:where(&)\]:size-4 {
+    @apply size-4;
+} */
+
+html {
+    scroll-behavior: smooth;
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
+.bg-radial-picton {
+    background: radial-gradient(
+        115% 180% at 110% 70%,
+        #f0f8ff,
+        #b8e4ff 20.63%,
+        #dff1ff 37.57%,
+        #dff1ff 55.66%,
+        #e0f1ff 67.38%,
+        var(--color-light)
+    );
+}
+
+.bg-radial-picton-2 {
+    background: radial-gradient(
+        120% 120% at 50% 0%,
+        #f0f8ff,
+        #dff1ff 28%,
+        #eaf6ff 52%,
+        var(--color-light)
+    );
+}
+
+/* Sliding-underline hover for the pill nav links. */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.15rem;
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    border-radius: 9999px;
+    background-color: var(--color-blue-400);
+    transition: transform 0.25s ease;
+}
+
+.nav-link:hover::after,
+.nav-link[aria-current='page']::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Text-swap hover for the floating pill nav: the label slides up while a blue copy rises from below. */
+.nav-swap-link {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.nav-swap-link::after {
+    content: attr(data-replace);
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    color: var(--color-blue-400);
+    transform: translate3d(0, 0, 0);
+    transition: top 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.nav-swap-link:hover::after,
+.nav-swap-link[data-current]::after {
+    top: 0;
+}
+
+.nav-swap-link span {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.nav-swap-link:hover span,
+.nav-swap-link[data-current] span {
+    transform: translate3d(0, -100%, 0);
+}
+
+/* Rendered blog article body (rich-text editor output). */
+.rich-text-editor-content {
+    @apply text-base leading-relaxed text-dark/80;
+}
+
+.rich-text-editor-content > * + * {
+    @apply mt-5;
+}
+
+.rich-text-editor-content h1,
+.rich-text-editor-content h2,
+.rich-text-editor-content h3,
+.rich-text-editor-content h4 {
+    @apply mt-10 mb-3 text-dark;
+}
+
+.rich-text-editor-content p {
+    @apply text-dark/80;
+}
+
+.rich-text-editor-content a {
+    @apply font-medium text-blue-600 underline decoration-blue-200 underline-offset-2 hover:decoration-blue-400;
+}
+
+.rich-text-editor-content ul {
+    @apply list-disc space-y-2 pl-6;
+}
+
+.rich-text-editor-content ol {
+    @apply list-decimal space-y-2 pl-6;
+}
+
+.rich-text-editor-content blockquote {
+    @apply border-l-4 border-blue-200 pl-4 text-dark/70 italic;
+}
+
+.rich-text-editor-content img {
+    @apply my-6 rounded-2xl shadow-custom;
+}
+
+.rich-text-editor-content code {
+    @apply rounded bg-blue-50 px-1.5 py-0.5 text-sm text-blue-800;
+}
+
+.rich-text-editor-content hr {
+    @apply my-10 border-blue-100;
+}
+
+.blurred-footer {
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    background: linear-gradient(0deg, var(--color-light) 4%, rgba(248, 249, 253, .8) 23.423423423423422%, rgba(247, 248, 252, 0) 100%);
+    bottom: calc(100% - min(var(--framer-viewport-height, 100%), 100%) + 0px);
+    flex: none;
+    height: calc(min(100vh, 100%) / 25);
+    left: 0;
+    order: 1003;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    z-index: 1;
+}
