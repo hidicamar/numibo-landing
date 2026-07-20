@@ -1,4 +1,6 @@
-<x-head.cookieyes />
+@production
+    <x-head.cookieyes />
+@endproduction
 
 <meta charset="utf-8" />
 
@@ -14,7 +16,8 @@
 
 <x-head.favicons />
 
-
-<x-head.gtag />
+@production
+    <x-head.gtag />
+@endproduction
 
 @vite(['resources/css/app.css', 'resources/js/app.js'])
