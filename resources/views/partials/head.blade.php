@@ -11,8 +11,6 @@
 
 <x-head.favicons />
 
-<x-head.google-fonts />
-
 <x-head.cookieyes />
 
 <x-head.gtag />
