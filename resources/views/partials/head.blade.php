@@ -1,4 +1,7 @@
+<x-head.cookieyes />
+
 <meta charset="utf-8" />
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 @unless ($hasSeo ?? false)
@@ -11,7 +14,6 @@
 
 <x-head.favicons />
 
-<x-head.cookieyes />
 
 <x-head.gtag />
 

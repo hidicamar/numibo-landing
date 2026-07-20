@@ -46,15 +46,18 @@
                 </flux:button>
             </div>
 
-            <button
-                type="button"
-                x-on:click="open = ! open"
-                class="block lg:hidden"
-                aria-label="{{ __('labels.menu') }}"
-            >
-                <flux:icon.bars-3 x-show="! open" />
-                <flux:icon.x-mark x-cloak x-show="open" />
-            </button>
+            <div class="flex items-center gap-1 lg:hidden">
+                <x-partials.locale-switcher />
+
+                <button
+                    type="button"
+                    x-on:click="open = ! open"
+                    aria-label="{{ __('labels.menu') }}"
+                >
+                    <flux:icon.bars-3 x-show="! open" />
+                    <flux:icon.x-mark x-cloak x-show="open" />
+                </button>
+            </div>
         </div>
 
         <div
