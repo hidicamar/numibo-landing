@@ -224,7 +224,7 @@ class PageSeeder extends Seeder
                 $pageModel->seo()->updateOrCreate(
                     ['model_type' => $pageModel->getMorphClass(), 'model_id' => $pageModel->id],
                     [
-                        'title' => $page['seo']['title'].' | '.config('app.short_url'),
+                        'title' => $page['seo']['title'],
                         'description' => $page['seo']['description'],
                         'keywords' => $page['seo']['keywords'] ?? [],
                     ],
