@@ -7,6 +7,7 @@ return [
         'title' => 'Blog',
         'subtitle' => 'Savjeti, uvidi i novosti o učenju matematike, strategijama učenja i kako izvući najviše iz aplikacije.',
         'empty' => 'Još nema članaka. Navrati uskoro.',
+        'all' => 'Sve',
     ],
 
     'article' => [

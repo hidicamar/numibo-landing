@@ -17,30 +17,23 @@ class PostsTable
     {
         return $table
             ->columns([
-                TextColumn::make('post_category_id')
-                    ->numeric()
-                    ->sortable(),
+                TextColumn::make('category.name'),
                 TextColumn::make('title')
                     ->searchable(),
-                TextColumn::make('slug')
-                    ->searchable(),
-                TextColumn::make('subtitle')
-                    ->searchable(),
-                TextColumn::make('popularity')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('lang')
-                    ->searchable(),
+                TextColumn::make('lang'),
                 TextColumn::make('published_at')
                     ->dateTime()
-                    ->sortable(),
+                    ->sortable()
+                    ->alignEnd(),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
+                    ->alignEnd()
                     ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
+                    ->alignEnd()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
@@ -55,6 +48,7 @@ class PostsTable
                 BulkActionGroup::make([
                     DeleteBulkAction::make(),
                 ]),
-            ]);
+            ])
+            ->defaultSort('published_at', 'desc');
     }
 }

@@ -100,7 +100,7 @@ class FaqSeeder extends Seeder
     /**
      * @var array<int, array{question: string, answer: string}>
      */
-    private array $bsFaqs = [
+    private array $hrFaqs = [
         [
             'question' => 'Postoji li besplatni probni period?',
             'answer' => 'Da, prilikom registracije dobijate 7-dnevni besplatni probni period.',
@@ -133,7 +133,7 @@ class FaqSeeder extends Seeder
             'sl' => $this->slFaqs,
             'en' => $this->enFaqs,
             'de' => $this->deFaqs,
-            'bs' => $this->bsFaqs,
+            'hr' => $this->hrFaqs,
         ];
 
         foreach ($languages as $lang => $faqs) {

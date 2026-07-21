@@ -3,7 +3,7 @@
         <div class="flex flex-col items-start gap-10 md:flex-row">
             <div class="flex w-full max-w-xs flex-col gap-6">
                 <a href="{{ route('home') }}" class="block" wire:navigate>
-                    <img class="h-9" src="{{ asset('img/logo/png/primary.png') }}" alt="{{ __('app.name') }}" />
+                    <img class="h-9" src="{{ asset('img/logo/png/primary.png') }}" alt="{{ config('app.name') }}" />
                 </a>
 
                 <p class="text-sm/6 text-dark/70">{{ __('Addition, subtraction, multiplication, division – all in one place for effective learning!') }}</p>
@@ -43,7 +43,7 @@
         </div>
 
         <div class="mt-16 border-t border-blue-100 pt-8">
-            <p class="text-center text-sm text-dark/60 md:text-left">&copy; {{ now()->year }} {{ __('app.name') }}. {{ __('All rights reserved.') }}</p>
+            <p class="text-center text-sm text-dark/60 md:text-left">&copy; {{ now()->year }} {{ config('app.name') }}. {{ __('All rights reserved.') }}</p>
         </div>
     </div>
 </footer>

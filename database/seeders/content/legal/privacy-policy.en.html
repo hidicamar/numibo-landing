@@ -3,7 +3,7 @@
 <p>This policy covers the entire <strong>Numibo</strong> service: the public website at <strong>numibo.com</strong> and the application at <strong>app.numibo.com</strong>. The website itself processes very little personal data (a newsletter email address and, with your consent, analytics cookies); accounts, payments and exercise data are processed in the application.</p>
 
 <h2>1. Data controller</h2>
-<!-- TODO: replace operator identity placeholders with the real company details -->
+<!-- The bracketed operator identity placeholders are resolved from .env (config/company.php + mail.from.address) at render time by LegalPageController - leave them as-is. -->
 <p>The data controller is <strong>[OPERATOR NAME] s.p.</strong>, a sole trader registered in Slovenia, [ADDRESS], Slovenia, registration number [REGISTRATION NUMBER], VAT ID [VAT ID] ("Numibo", "we", "us"). For any privacy-related questions, contact us at <a href="mailto:[EMAIL]">[EMAIL]</a>.</p>
 
 <h2>2. Data we collect</h2>
@@ -34,11 +34,10 @@
 <ul>
     <li><strong>Stripe</strong> (Stripe Payments Europe, Ltd. / Stripe, Inc.) – payment processing.</li>
     <li><strong>Google</strong> (Google Ireland Ltd.) – Google sign-in and Google Analytics on the public website.</li>
-    <li><strong>Brevo</strong> (Sendinblue GmbH, Germany) – sending the newsletter and managing the subscriber list.</li>
+    <li><strong>Brevo</strong> (Sendinblue GmbH, Germany) – sending the newsletter and transactional emails, and managing the subscriber list.</li>
     <li><strong>CookieYes</strong> – the cookie consent banner on the public website.</li>
-    <!-- TODO: fill in the actual email + hosting providers before going live -->
-    <li><strong>[EMAIL PROVIDER]</strong> – sending transactional emails.</li>
-    <li><strong>[HOSTING PROVIDER]</strong> – hosting the website, application and database.</li>
+    <li><strong>Zoho Mail</strong> (Zoho Corporation) – hosting our email inbox and correspondence with you.</li>
+    <li><strong>Hetzner</strong> (Hetzner Online GmbH, Germany – Frankfurt data centre) – hosting the website, application and database.</li>
 </ul>
 <p>Data is stored in the EU/EEA wherever possible. Where a processor transfers data outside the EEA (for example Stripe or Google to the USA), the transfer relies on the EU–US Data Privacy Framework or standard contractual clauses.</p>
 

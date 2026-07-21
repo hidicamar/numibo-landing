@@ -19,12 +19,14 @@ class PostFactory extends Factory
     public function definition(): array
     {
         return [
-            'post_category_id' => PostCategory::factory(),
             'title' => fake()->unique()->sentence(),
             'subtitle' => fake()->sentence(),
             'summary' => fake()->paragraph(),
             'content' => fake()->paragraphs(4, true),
-            'lang' => fake()->randomElement(['sl', 'en', 'de', 'bs']),
+            'lang' => fake()->randomElement(['sl', 'en', 'de', 'hr']),
+            // The category must share the post's lang: PostCategory's
+            // LanguageScope would otherwise resolve $post->category to null.
+            'post_category_id' => fn (array $attributes) => PostCategory::factory()->create(['lang' => $attributes['lang']]),
             'published_at' => now(),
         ];
     }

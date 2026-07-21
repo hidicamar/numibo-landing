@@ -156,7 +156,7 @@ class PageSeeder extends Seeder
     /**
      * @var array<int, array{name: string, type: string, seo: array{title: string, description: string, keywords?: array<int, string>}}>
      */
-    private array $bsPages = [
+    private array $hrPages = [
         [
             'name' => 'Početna',
             'type' => 'home',
@@ -205,7 +205,7 @@ class PageSeeder extends Seeder
             'sl' => $this->slPages,
             'en' => $this->enPages,
             'de' => $this->dePages,
-            'bs' => $this->bsPages,
+            'hr' => $this->hrPages,
         ];
 
         foreach ($languages as $lang => $pages) {

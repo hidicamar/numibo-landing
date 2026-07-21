@@ -22,7 +22,7 @@ class PageFactory extends Factory
             'name' => Str::title(fake()->words(2, true)),
             'type' => fake()->unique()->slug(2),
             'content' => fake()->paragraphs(3, true),
-            'lang' => fake()->randomElement(['sl', 'en', 'de', 'bs']),
+            'lang' => fake()->randomElement(['sl', 'en', 'de', 'hr']),
         ];
     }
 }

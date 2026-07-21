@@ -8,7 +8,7 @@
 <x-layouts.app :title="__('titles.home')">
     <x-slot:seo>
         <x-head.meta.dynamic
-            :title="$page?->seo?->title ?: __('titles.home').' - '.__('app.name')"
+            :title="$page?->seo?->title ?: __('titles.home').' - '.config('app.name')"
             :description="$page?->seo?->description ?: __('home.hero.subtitle')"
             :image="$page?->seo?->getFirstMediaUrl('seo-cover') ?: asset('img/banners/seo.png')"
         />
@@ -180,7 +180,7 @@
                     <p class="text-lg text-dark/70">{{ __('home.blog.subtitle') }}</p>
                 </div>
 
-                <div class="mt-12 flex flex-col gap-6">
+                <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                     @foreach ($posts as $post)
                         <x-cards.post :post="$post" wire:key="post-{{ $post->id }}" />
                     @endforeach

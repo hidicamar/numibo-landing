@@ -3,7 +3,7 @@
 <p>Ta politika zajema celotno storitev <strong>Numibo</strong>: javno spletno stran na naslovu <strong>numibo.com</strong> in aplikacijo na naslovu <strong>app.numibo.com</strong>. Spletna stran sama obdeluje zelo malo osebnih podatkov (e-poštni naslov za e-novice in, z vašo privolitvijo, analitične piškotke); podatki o računih, plačilih in vajah pa se obdelujejo v aplikaciji.</p>
 
 <h2>1. Upravljavec osebnih podatkov</h2>
-<!-- TODO: replace operator identity placeholders with the real company details -->
+<!-- The bracketed operator identity placeholders are resolved from .env (config/company.php + mail.from.address) at render time by LegalPageController - leave them as-is. -->
 <p>Upravljavec osebnih podatkov je <strong>[OPERATOR NAME] s.p.</strong>, samostojni podjetnik s sedežem v Sloveniji, [ADDRESS], Slovenija, matična številka [REGISTRATION NUMBER], davčna številka [VAT ID] (»Numibo«, »mi«). Za vsa vprašanja v zvezi z varstvom osebnih podatkov nas kontaktirajte na <a href="mailto:[EMAIL]">[EMAIL]</a>.</p>
 
 <h2>2. Katere podatke zbiramo</h2>
@@ -34,11 +34,10 @@
 <ul>
     <li><strong>Stripe</strong> (Stripe Payments Europe, Ltd. / Stripe, Inc.) – obdelava plačil.</li>
     <li><strong>Google</strong> (Google Ireland Ltd.) – prijava z Google računom in Google Analytics na javni spletni strani.</li>
-    <li><strong>Brevo</strong> (Sendinblue GmbH, Nemčija) – pošiljanje e-novic in vodenje seznama prejemnikov.</li>
+    <li><strong>Brevo</strong> (Sendinblue GmbH, Nemčija) – pošiljanje e-novic in sistemskih e-poštnih sporočil ter vodenje seznama prejemnikov.</li>
     <li><strong>CookieYes</strong> – pasica za soglasje k piškotkom na javni spletni strani.</li>
-    <!-- TODO: fill in the actual email + hosting providers before going live -->
-    <li><strong>[EMAIL PROVIDER]</strong> – pošiljanje sistemskih e-poštnih sporočil.</li>
-    <li><strong>[HOSTING PROVIDER]</strong> – gostovanje spletne strani, aplikacije in podatkovne baze.</li>
+    <li><strong>Zoho Mail</strong> (Zoho Corporation) – gostovanje našega e-poštnega predala in dopisovanje z vami.</li>
+    <li><strong>Hetzner</strong> (Hetzner Online GmbH, Nemčija – podatkovni center Frankfurt) – gostovanje spletne strani, aplikacije in podatkovne baze.</li>
 </ul>
 <p>Podatke, kadar je mogoče, hranimo v EU/EGP. Kadar obdelovalec podatke prenese zunaj EGP (na primer Stripe ali Google v ZDA), tak prenos temelji na okviru EU-ZDA za varstvo podatkov (Data Privacy Framework) oziroma na standardnih pogodbenih klavzulah.</p>
 

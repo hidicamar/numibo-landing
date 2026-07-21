@@ -57,9 +57,9 @@ class PostCategoryResource extends Resource
     {
         return [
             'index' => ListPostCategories::route('/'),
-            'create' => CreatePostCategory::route('/create'),
-            'view' => ViewPostCategory::route('/{record}'),
-            'edit' => EditPostCategory::route('/{record}/edit'),
+            // 'create' => CreatePostCategory::route('/create'),
+            // 'view' => ViewPostCategory::route('/{record}'),
+            // 'edit' => EditPostCategory::route('/{record}/edit'),
         ];
     }
 }

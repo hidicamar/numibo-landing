@@ -20,7 +20,7 @@ class PostCategoryFactory extends Factory
     {
         return [
             'name' => Str::title(fake()->unique()->words(2, true)),
-            'lang' => fake()->randomElement(['sl', 'en', 'de', 'bs']),
+            'lang' => fake()->randomElement(['sl', 'en', 'de', 'hr']),
         ];
     }
 }

@@ -3,7 +3,7 @@
 <p>Ova politika obuhvata cjelokupnu uslugu <strong>Numibo</strong>: javnu web stranicu na <strong>numibo.com</strong> i aplikaciju na <strong>app.numibo.com</strong>. Sama web stranica obrađuje vrlo malo ličnih podataka (email adresu za newsletter i, uz vašu privolu, analitičke kolačiće); podaci o računima, plaćanjima i vježbama obrađuju se u aplikaciji.</p>
 
 <h2>1. Voditelj obrade podataka</h2>
-<!-- TODO: replace operator identity placeholders with the real company details -->
+<!-- The bracketed operator identity placeholders are resolved from .env (config/company.php + mail.from.address) at render time by LegalPageController - leave them as-is. -->
 <p>Voditelj obrade podataka je <strong>[OPERATOR NAME] s.p.</strong>, samostalni poduzetnik registrovan u Sloveniji, [ADDRESS], Slovenija, matični broj [REGISTRATION NUMBER], porezni broj [VAT ID] („Numibo", „mi" ili „nas"). Za sva pitanja u vezi sa zaštitom podataka kontaktirajte nas na <a href="mailto:[EMAIL]">[EMAIL]</a>.</p>
 
 <h2>2. Koje podatke prikupljamo</h2>
@@ -34,11 +34,10 @@
 <ul>
     <li><strong>Stripe</strong> (Stripe Payments Europe, Ltd. / Stripe, Inc.) – obrada plaćanja.</li>
     <li><strong>Google</strong> (Google Ireland Ltd.) – prijava putem Google računa i Google Analytics na javnoj web stranici.</li>
-    <li><strong>Brevo</strong> (Sendinblue GmbH, Njemačka) – slanje newslettera i vođenje liste primalaca.</li>
+    <li><strong>Brevo</strong> (Sendinblue GmbH, Njemačka) – slanje newslettera i sistemskih email poruka te vođenje liste primalaca.</li>
     <li><strong>CookieYes</strong> – traka za privolu na kolačiće na javnoj web stranici.</li>
-    <!-- TODO: fill in the actual email + hosting providers before going live -->
-    <li><strong>[EMAIL PROVIDER]</strong> – slanje sistemskih email poruka.</li>
-    <li><strong>[HOSTING PROVIDER]</strong> – hosting web stranice, aplikacije i baze podataka.</li>
+    <li><strong>Zoho Mail</strong> (Zoho Corporation) – hosting našeg email sandučića i korespondencija s vama.</li>
+    <li><strong>Hetzner</strong> (Hetzner Online GmbH, Njemačka – podatkovni centar Frankfurt) – hosting web stranice, aplikacije i baze podataka.</li>
 </ul>
 <p>Podaci se, gdje god je to moguće, čuvaju u EU/EEA. Kada obrađivač prenosi podatke izvan EEA (na primjer Stripe ili Google u SAD), takav prenos zasniva se na okviru EU–SAD za zaštitu podataka (Data Privacy Framework) ili na standardnim ugovornim klauzulama.</p>
 

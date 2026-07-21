@@ -7,6 +7,7 @@ return [
         'title' => 'Blog',
         'subtitle' => 'Tipps, Einblicke und Neuigkeiten rund ums Mathelernen, Lernstrategien und wie du die App optimal nutzt.',
         'empty' => 'Noch keine Artikel. Schau bald wieder vorbei.',
+        'all' => 'Alle',
     ],
 
     'article' => [

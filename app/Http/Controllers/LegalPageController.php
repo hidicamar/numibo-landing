@@ -9,16 +9,21 @@ use Illuminate\Contracts\View\View;
 
 class LegalPageController extends Controller
 {
-    /**
-     * Show an admin-managed legal page. The type comes from the route defaults;
-     * the current locale's row is selected by the Page model's language scope.
-     */
     public function __invoke(string $type): View
     {
         $page = Page::query()
             ->with('seo')
             ->where('type', $type)
             ->firstOrFail();
+
+        $page->content = strtr($page->content ?? '', [
+            '[OPERATOR NAME] s.p.' => config('company.name'),
+            '[OPERATOR NAME]' => config('company.name'),
+            '[ADDRESS]' => config('company.address'),
+            '[REGISTRATION NUMBER]' => config('company.registration_number'),
+            '[VAT ID]' => config('company.vat_id'),
+            '[EMAIL]' => config('mail.from.address'),
+        ]);
 
         return view('pages.legal.show', [
             'page' => $page,

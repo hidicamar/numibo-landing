@@ -11,9 +11,7 @@ class PostInfolist
     {
         return $schema
             ->components([
-                TextEntry::make('post_category_id')
-                    ->numeric()
-                    ->placeholder('-'),
+                TextEntry::make('category.name'),
                 TextEntry::make('title'),
                 TextEntry::make('slug'),
                 TextEntry::make('subtitle')
@@ -22,9 +20,8 @@ class PostInfolist
                     ->placeholder('-')
                     ->columnSpanFull(),
                 TextEntry::make('content')
+                    ->html()
                     ->columnSpanFull(),
-                TextEntry::make('popularity')
-                    ->numeric(),
                 TextEntry::make('lang'),
                 TextEntry::make('published_at')
                     ->dateTime(),

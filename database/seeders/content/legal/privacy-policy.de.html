@@ -3,7 +3,7 @@
 <p>Diese Richtlinie gilt für den gesamten <strong>Numibo</strong>-Dienst: die öffentliche Website unter <strong>numibo.com</strong> und die Anwendung unter <strong>app.numibo.com</strong>. Die Website selbst verarbeitet nur sehr wenige personenbezogene Daten (eine E-Mail-Adresse für den Newsletter und, mit Ihrer Einwilligung, Analyse-Cookies); Konten, Zahlungen und Übungsdaten werden in der Anwendung verarbeitet.</p>
 
 <h2>1. Verantwortlicher</h2>
-<!-- TODO: replace operator identity placeholders with the real company details -->
+<!-- The bracketed operator identity placeholders are resolved from .env (config/company.php + mail.from.address) at render time by LegalPageController - leave them as-is. -->
 <p>Verantwortlicher für die Datenverarbeitung ist <strong>[OPERATOR NAME] s.p.</strong>, ein in Slowenien eingetragener Einzelunternehmer, [ADDRESS], Slowenien, Registernummer [REGISTRATION NUMBER], USt-ID [VAT ID] („Numibo", „wir", „uns"). Bei Fragen zum Datenschutz erreichen Sie uns unter <a href="mailto:[EMAIL]">[EMAIL]</a>.</p>
 
 <h2>2. Welche Daten wir verarbeiten</h2>
@@ -34,11 +34,10 @@
 <ul>
     <li><strong>Stripe</strong> (Stripe Payments Europe, Ltd. / Stripe, Inc.) – Zahlungsabwicklung.</li>
     <li><strong>Google</strong> (Google Ireland Ltd.) – Google-Anmeldung und Google Analytics auf der öffentlichen Website.</li>
-    <li><strong>Brevo</strong> (Sendinblue GmbH, Deutschland) – Versand des Newsletters und Verwaltung der Empfängerliste.</li>
+    <li><strong>Brevo</strong> (Sendinblue GmbH, Deutschland) – Versand des Newsletters und von System-E-Mails sowie Verwaltung der Empfängerliste.</li>
     <li><strong>CookieYes</strong> – das Cookie-Consent-Banner auf der öffentlichen Website.</li>
-    <!-- TODO: fill in the actual email + hosting providers before going live -->
-    <li><strong>[EMAIL PROVIDER]</strong> – Versand von System-E-Mails.</li>
-    <li><strong>[HOSTING PROVIDER]</strong> – Hosting der Website, der Anwendung und der Datenbank.</li>
+    <li><strong>Zoho Mail</strong> (Zoho Corporation) – Hosting unseres E-Mail-Postfachs und Korrespondenz mit Ihnen.</li>
+    <li><strong>Hetzner</strong> (Hetzner Online GmbH, Deutschland – Rechenzentrum Frankfurt) – Hosting der Website, der Anwendung und der Datenbank.</li>
 </ul>
 <p>Daten werden, wo immer möglich, in der EU/im EWR gespeichert. Übermittelt ein Auftragsverarbeiter Daten außerhalb des EWR (zum Beispiel Stripe oder Google in die USA), stützt sich die Übermittlung auf das EU-US Data Privacy Framework oder Standardvertragsklauseln.</p>
 

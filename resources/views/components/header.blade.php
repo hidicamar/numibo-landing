@@ -16,7 +16,7 @@
     >
         <div class="relative flex items-center justify-between gap-4">
             <a href="{{ route('home') }}" class="w-56" wire:navigate>
-                <img src="{{ asset('img/logo/png/primary.png') }}" alt="{{ __('app.name') }}" class="h-9" />
+                <img src="{{ asset('img/logo/png/primary.png') }}" alt="{{ config('app.name') }}" class="h-9" />
             </a>
 
             <div class="hidden flex-1 flex-row justify-center gap-10 lg:flex">

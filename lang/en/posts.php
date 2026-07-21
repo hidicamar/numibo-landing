@@ -7,6 +7,7 @@ return [
         'title' => 'Blog',
         'subtitle' => 'Tips, insights, and updates on math education, learning strategies, and getting the most out of the app.',
         'empty' => 'No articles yet. Check back soon.',
+        'all' => 'All',
     ],
 
     'article' => [

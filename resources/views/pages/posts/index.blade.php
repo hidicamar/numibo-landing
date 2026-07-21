@@ -1,7 +1,7 @@
 <x-layouts.app :title="__('posts.index.title')">
     <x-slot:seo>
         <x-head.meta.dynamic
-            :title="__('posts.index.title').' - '.__('app.name')"
+            :title="__('posts.index.title').' - '.config('app.name')"
             :description="__('posts.index.subtitle')"
         />
     </x-slot:seo>
@@ -13,9 +13,7 @@
         </div>
     </section>
 
-    <section class="px-5 py-16 lg:px-8 lg:py-24">
-        <div class="mx-auto max-w-5xl">
-            <livewire:posts.list-posts />
-        </div>
-    </section>
+    <div class="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
+        <livewire:posts.list-posts />
+    </div>
 </x-layouts.app>
