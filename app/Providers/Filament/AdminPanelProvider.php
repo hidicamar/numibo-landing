@@ -6,6 +6,7 @@ use App\Filament\Resources\Faqs\FaqResource;
 use App\Filament\Resources\Pages\PageResource;
 use App\Filament\Resources\PostCategories\PostCategoryResource;
 use App\Filament\Resources\Posts\PostResource;
+use Filament\FontProviders\GoogleFontProvider;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -39,6 +40,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->brandLogo(asset('img/logo/png/primary.png'))
             ->favicon(asset('img/favicons/favicon.ico'))
+            ->font('Rubik', provider: GoogleFontProvider::class)
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
             ->pages([
