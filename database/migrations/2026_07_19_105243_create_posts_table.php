@@ -16,14 +16,13 @@ return new class extends Migration
             $table->id();
 
             $table->foreignId('post_category_id')
-                ->nullable()
                 ->constrained()
-                ->nullOnDelete();
+                ->restrictOnDelete();
 
             $table->string('title');
             $table->string('slug')->unique();
             $table->string('subtitle')->nullable();
-            $table->text('summary')->nullable();
+            $table->text('summary');
             $table->text('content');
             $table->integer('popularity')->default(0);
             $table->string('lang');

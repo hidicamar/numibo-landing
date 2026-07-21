@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Posts\Tables;
 
 use App\Filament\Forms\Components\LanguageSelect;
 use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;
@@ -41,8 +42,9 @@ class PostsTable
                     ->options(LanguageSelect::localeOptions()),
             ])
             ->recordActions([
-                ViewAction::make(),
+                // ViewAction::make(),
                 EditAction::make(),
+                DeleteAction::make(),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([

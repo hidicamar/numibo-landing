@@ -50,6 +50,7 @@ class PostForm
                                     ->columnSpanFull(),
 
                                 Textarea::make('summary')
+                                    ->required()
                                     ->rows(3)
                                     ->columnSpanFull(),
 

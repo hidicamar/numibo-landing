@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Faqs\Tables;
 
 use App\Filament\Forms\Components\LanguageSelect;
 use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;
@@ -43,6 +44,7 @@ class FaqsTable
             ->recordActions([
                 // ViewAction::make(),
                 EditAction::make(),
+                DeleteAction::make(),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([
