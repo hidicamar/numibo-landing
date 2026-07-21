@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'email' => 'Email adresa',
-    'menu' => 'Meni',
+    'email' => 'E-mail adresa',
+    'menu' => 'Izbornik',
     'recommended' => 'Preporučeno',
 ];

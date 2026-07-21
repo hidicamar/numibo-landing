@@ -1,7 +1,7 @@
 <x-layouts.app :title="__('posts.index.title')">
     <x-slot:seo>
         <x-head.meta.dynamic
-            :title="__('posts.index.title').' - '.config('app.name')"
+            :title="__('posts.index.title')"
             :description="__('posts.index.subtitle')"
         />
     </x-slot:seo>

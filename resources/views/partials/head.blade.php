@@ -8,7 +8,7 @@
 
 @unless ($hasSeo ?? false)
     <title>
-        {{ filled($title ?? null) ? $title.' - '.config('app.name') : config('app.name') }}
+        {{ filled($title ?? null) ? $title.' | '.config('app.short_url') : config('app.name') }}
     </title>
 @endunless
 

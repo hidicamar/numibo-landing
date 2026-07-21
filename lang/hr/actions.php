@@ -5,6 +5,6 @@ return [
     'login' => 'Prijava',
     'see_pricing' => 'Pogledaj cijene',
     'start_free' => 'Počni besplatno',
-    'start_free_trial' => 'Počni besplatni probni period',
+    'start_free_trial' => 'Počni besplatno probno razdoblje',
     'subscribe' => 'Pretplati se',
 ];

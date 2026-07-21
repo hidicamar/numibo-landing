@@ -8,9 +8,10 @@
 <x-layouts.app :title="__('titles.home')">
     <x-slot:seo>
         <x-head.meta.dynamic
-            :title="$page?->seo?->title ?: __('titles.home').' - '.config('app.name')"
-            :description="$page?->seo?->description ?: __('home.hero.subtitle')"
-            :image="$page?->seo?->getFirstMediaUrl('seo-cover') ?: asset('img/banners/seo.png')"
+            :title="$page->seo->title"
+            :suffix="false"
+            :description="$page->seo->description"
+            :image="$page->seo->getFirstMediaUrl('seo-cover') ?: asset('img/banners/seo.png')"
         />
     </x-slot:seo>
 

@@ -9,7 +9,7 @@ return [
         'yearly' => 'Godišnje',
         'per_month' => '/ mjesec',
         'per_year' => '/ godina',
-        'trial_notice' => 'Svaki paket počinje s :days-dnevnim besplatnim probnim periodom koji uključuje :count generisanja vježbi.',
+        'trial_notice' => 'Svaki paket počinje s :days-dnevnim besplatnim probnim razdobljem koje uključuje :count generiranja vježbi.',
     ],
 
     'plans' => [
@@ -20,7 +20,7 @@ return [
                 'Neograničeno kreiranje radnih listova',
                 'Sve vrste vježbi za 1.–5. razred',
                 'Interaktivno online rješavanje',
-                'PDF radni listovi za štampanje s rješenjima',
+                'PDF radni listovi za ispis s rješenjima',
             ],
         ],
         'premium' => [
@@ -28,7 +28,7 @@ return [
             'description' => 'Sve iz paketa Starter, plus potpun uvid u napredak vježbanja.',
             'features' => [
                 'Sve iz paketa Starter',
-                'Historija vježbi',
+                'Povijest vježbi',
                 'Statistika pokušaja i napredak',
             ],
         ],

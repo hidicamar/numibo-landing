@@ -1,5 +1,9 @@
 <?php
 
+use Database\Seeders\PageSeeder;
+
+beforeEach(fn () => $this->seed(PageSeeder::class));
+
 /*
  * Only the default locale (en) is reachable over HTTP in the test kernel — the
  * LaravelLocalization prefix routes for non-default locales are not registered

@@ -37,4 +37,14 @@ class PostFactory extends Factory
             'published_at' => now()->addWeek(),
         ]);
     }
+
+    public function configure(): static
+    {
+        return $this->afterCreating(function (Post $post): void {
+            $post->seo()->create([
+                'title' => $post->title,
+                'description' => $post->summary,
+            ]);
+        });
+    }
 }

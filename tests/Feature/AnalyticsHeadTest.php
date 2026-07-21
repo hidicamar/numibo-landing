@@ -1,5 +1,9 @@
 <?php
 
+use Database\Seeders\PageSeeder;
+
+beforeEach(fn () => $this->seed(PageSeeder::class));
+
 it('renders no analytics or consent scripts when the services are not configured', function () {
     config(['services.google.analytics_id' => null, 'services.cookieyes.id' => null]);
 

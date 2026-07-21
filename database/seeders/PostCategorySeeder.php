@@ -47,7 +47,7 @@ class PostCategorySeeder extends Seeder
         'Matematika',
         'Obrazovanje',
         'Tutorijali',
-        'Savjeti i Trikovi',
+        'Savjeti i trikovi',
         'Vijesti',
     ];
 

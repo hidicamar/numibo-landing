@@ -8,7 +8,7 @@ return [
     'legal' => [
         'heading' => 'Pravno',
         'privacy_policy' => 'Politika privatnosti',
-        'terms_and_conditions' => 'Uslovi korištenja',
+        'terms_and_conditions' => 'Uvjeti korištenja',
         'cookies' => 'Kolačići',
     ],
 ];

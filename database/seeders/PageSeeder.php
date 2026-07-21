@@ -161,8 +161,8 @@ class PageSeeder extends Seeder
             'name' => 'Početna',
             'type' => 'home',
             'seo' => [
-                'title' => 'Numibo - brzo i efikasno učenje matematike!',
-                'description' => 'Sabiranje, oduzimanje, množenje, dijeljenje - vježbaj matematiku uz Numibo, sve na jednom mjestu za efikasno učenje!',
+                'title' => 'Numibo - brzo i učinkovito učenje matematike!',
+                'description' => 'Zbrajanje, oduzimanje, množenje, dijeljenje - vježbaj matematiku uz Numibo, sve na jednom mjestu za učinkovito učenje!',
             ],
         ],
         [
@@ -182,10 +182,10 @@ class PageSeeder extends Seeder
             ],
         ],
         [
-            'name' => 'Uslovi korištenja',
+            'name' => 'Uvjeti korištenja',
             'type' => 'terms-and-conditions',
             'seo' => [
-                'title' => 'Uslovi korištenja',
+                'title' => 'Uvjeti korištenja',
                 'description' => '',
             ],
         ],

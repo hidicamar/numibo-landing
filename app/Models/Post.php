@@ -11,7 +11,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
-use Illuminate\Support\Str;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\Sluggable\HasSlug;
@@ -60,32 +59,15 @@ class Post extends Model implements HasMedia
 
     public function seoTitle(): Attribute
     {
-        $seoTitle = $this->seo && $this->seo->title
-            ? $this->seo->title
-            : $this->title.' | '.config('app.short_url');
-
         return Attribute::make(
-            get: fn () => $seoTitle,
+            get: fn () => $this->seo->title,
         );
     }
 
     public function seoDescription(): Attribute
     {
-        $seoDescription = null;
-
-        if ($this->seo?->description) {
-            $seoDescription = $this->seo->description;
-        } elseif ($this->summary) {
-            $seoDescription = $this->summary;
-        } elseif ($this->content) {
-            $seoDescription = Str::limit(
-                preg_replace('/\s+/', ' ', strip_tags(str_replace('\n', '', $this->content))),
-                160
-            );
-        }
-
         return Attribute::make(
-            get: fn () => $seoDescription
+            get: fn () => $this->seo->description,
         );
     }
 

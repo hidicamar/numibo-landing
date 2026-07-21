@@ -2,6 +2,9 @@
 
 use App\Models\Faq;
 use App\Models\Post;
+use Database\Seeders\PageSeeder;
+
+beforeEach(fn () => $this->seed(PageSeeder::class));
 
 it('shows the hero, pricing teaser, and a CTA to register on the app', function () {
     $this->get(route('home'))

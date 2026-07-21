@@ -12,7 +12,7 @@ return [
 
     'legal' => [
         'privacy-policy' => 'politika-privatnosti',
-        'terms-and-conditions' => 'uslovi-koristenja',
+        'terms-and-conditions' => 'uvjeti-koristenja',
         'cookies' => 'kolacici',
     ],
 

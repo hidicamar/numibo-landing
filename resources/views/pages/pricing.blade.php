@@ -14,7 +14,7 @@
 <x-layouts.app :title="__('billing.pricing.title')">
     <x-slot:seo>
         <x-head.meta.dynamic
-            :title="__('billing.pricing.title').' - '.config('app.name')"
+            :title="__('titles.pricing')"
             :description="__('pricing.hero.subtitle')"
         />
     </x-slot:seo>
