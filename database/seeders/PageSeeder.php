@@ -23,8 +23,8 @@ class PageSeeder extends Seeder
             'name' => 'Domov',
             'type' => 'home',
             'seo' => [
-                'title' => 'Numiboo – hitro in učinkovito učenje matematike!',
-                'description' => 'Seštevanje, odštevanje, množenje, deljenje – z Numiboo vadi matematiko, vse na enem mestu za učinkovito učenje!',
+                'title' => 'Numibo – hitro in učinkovito učenje matematike!',
+                'description' => 'Seštevanje, odštevanje, množenje, deljenje – z Numibo vadi matematiko, vse na enem mestu za učinkovito učenje!',
             ],
         ],
         [
@@ -69,8 +69,8 @@ class PageSeeder extends Seeder
             'name' => 'Home',
             'type' => 'home',
             'seo' => [
-                'title' => 'Numiboo – Fast and Efficient Math Learning!',
-                'description' => 'Addition, subtraction, multiplication, division – practice math with Numiboo, all in one place for effective learning!',
+                'title' => 'Numibo – Fast and Efficient Math Learning!',
+                'description' => 'Addition, subtraction, multiplication, division – practice math with Numibo, all in one place for effective learning!',
             ],
         ],
         [
@@ -115,8 +115,8 @@ class PageSeeder extends Seeder
             'name' => 'Startseite',
             'type' => 'home',
             'seo' => [
-                'title' => 'Numiboo – Mathe schnell und effizient lernen!',
-                'description' => 'Addition, Subtraktion, Multiplikation, Division – übe Mathe mit Numiboo, alles an einem Ort für effektives Lernen!',
+                'title' => 'Numibo – Mathe schnell und effizient lernen!',
+                'description' => 'Addition, Subtraktion, Multiplikation, Division – übe Mathe mit Numibo, alles an einem Ort für effektives Lernen!',
             ],
         ],
         [
@@ -161,8 +161,8 @@ class PageSeeder extends Seeder
             'name' => 'Početna',
             'type' => 'home',
             'seo' => [
-                'title' => 'Numiboo - brzo i efikasno učenje matematike!',
-                'description' => 'Sabiranje, oduzimanje, množenje, dijeljenje - vježbaj matematiku uz Numiboo, sve na jednom mjestu za efikasno učenje!',
+                'title' => 'Numibo - brzo i efikasno učenje matematike!',
+                'description' => 'Sabiranje, oduzimanje, množenje, dijeljenje - vježbaj matematiku uz Numibo, sve na jednom mjestu za efikasno učenje!',
             ],
         ],
         [
