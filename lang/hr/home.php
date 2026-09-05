@@ -8,17 +8,14 @@ return [
         'title_highlight' => 'bez muke',
         'title_trail' => 'za djecu, roditelje i nastavnike.',
         'subtitle' => 'Napravi zabavne i djelotvorne radne listove iz matematike u samo nekoliko klikova. Ispiši ih ili rješavaj online — savršeno za 1.–5. razred.',
-    ],
-
-    'preview' => [
-        'eyebrow' => 'Pogledaj na djelu',
-        'title' => 'Od nekoliko klikova do gotovog radnog lista',
-        'subtitle' => 'Odaberi temu i razinu, prilagodi detalje i za nekoliko sekundi dobiješ uredan radni list.',
-        'worksheet_title' => 'Radni list',
-        'solve_online' => 'Rješavaj online',
-        'solve_online_description' => 'Djeca odgovaraju interaktivno i odmah dobivaju povratnu informaciju za svaki zadatak.',
-        'download_pdf' => 'Preuzmi kao PDF',
-        'download_pdf_description' => 'Ispiši uredan radni list s pripadajućim rješenjima za učionicu ili dom.',
+        'screenshots_label' => 'Snimke zaslona aplikacije',
+        'screenshots' => [
+            'generator' => 'Generator tablice množenja',
+            'worksheet_blank' => 'Gotov radni list',
+            'worksheet_filled' => 'Rješavanje online',
+            'worksheet_feedback' => 'Trenutna povratna informacija',
+            'celebration_perfect' => 'Sve točno',
+        ],
     ],
 
     'steps' => [
@@ -35,31 +32,7 @@ return [
             ],
             [
                 'title' => 'Ispiši ili rješavaj',
-                'description' => 'Preuzmi PDF za ispis ili pusti djecu da rješavaju online uz automatsku provjeru.',
-            ],
-        ],
-    ],
-
-    'features' => [
-        'eyebrow' => 'Zašto funkcionira',
-        'title' => 'Sve što ti treba za vježbanje matematike',
-        'subtitle' => 'Napravljeno da vježbanje matematike bude bez stresa i za roditelje i za nastavnike i za najmlađe.',
-        'items' => [
-            'coverage' => [
-                'title' => 'Od 1. do 5. razreda, sve četiri operacije',
-                'description' => 'Zbrajanje, oduzimanje, množenje i dijeljenje — uz vježbe prilagođene svakoj razini od prvog do petog razreda.',
-            ],
-            'no_prep' => [
-                'title' => 'Bez pripreme',
-                'description' => 'Radni list spreman za uporabu za manje od minute — kao stvoren za zauzete roditelje i nastavnike.',
-            ],
-            'solutions' => [
-                'title' => 'Automatski generirana rješenja',
-                'description' => 'Uz svaki radni list dolaze i rješenja — uštedi vrijeme i olakšaj samoprovjeru.',
-            ],
-            'fast_learning' => [
-                'title' => 'Osmišljeno za brzo učenje',
-                'description' => 'Jednostavan i fokusiran tijek koji drži djecu u vježbanju i napredovanju bez zastoja.',
+                'description' => 'Preuzmi PDF za ispis zajedno s rješenjima ili pusti djecu da rješavaju online uz trenutnu provjeru.',
             ],
         ],
     ],
@@ -69,6 +42,25 @@ return [
         'title' => 'Jednostavni paketi za svaku obitelj i učionicu',
         'subtitle' => 'Počni s besplatnim probnim razdobljem, a zatim odaberi paket koji ti odgovara. Otkaži bilo kada.',
         'cta' => 'Pogledaj sve cijene',
+    ],
+
+    'features' => [
+        'eyebrow' => 'Zašto funkcionira',
+        'title' => 'Osmišljeno za vježbanje koje doista ostaje',
+        'items' => [
+            'feedback' => [
+                'title' => 'Povratna informacija koja motivira',
+                'description' => 'Svaki se odgovor provjerava odmah nakon unosa, prikazuje se točan rezultat, a za sve točne slijedi proslava.',
+            ],
+            'answer_key' => [
+                'title' => 'Rješenja uz svaki ispis',
+                'description' => 'Uz svaki PDF dolazi i list s rješenjima, pa ispravljanje traje sekunde, a djeca se mogu provjeriti sama.',
+            ],
+            'any_device' => [
+                'title' => 'Radi na svakom uređaju',
+                'description' => 'Mobitel, tablet ili računalo: napravi radni list na jednom, a rješavaj na drugom — bez instalacije.',
+            ],
+        ],
     ],
 
     'blog' => [

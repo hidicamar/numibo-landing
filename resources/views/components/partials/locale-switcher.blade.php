@@ -1,11 +1,11 @@
 @php
     $locales = LaravelLocalization::getLocalesOrder();
-    $flagFor = fn (array $properties): string => 'flag-country-'.strtolower(substr($properties['regional'], -2));
+    $countryFor = fn (array $properties): string => substr($properties['regional'], -2);
 @endphp
 
 <flux:dropdown position="bottom" align="end">
     <flux:button variant="ghost" size="sm">
-        {{ svg($flagFor($locales[app()->getLocale()]), 'size-5 rounded-xs') }}
+        <flux:flag :country="$countryFor($locales[app()->getLocale()])" size="xs" :alt="ucfirst($locales[app()->getLocale()]['native'])" />
     </flux:button>
 
     <flux:menu>
@@ -14,7 +14,7 @@
                 href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}"
                 hreflang="{{ $localeCode }}"
             >
-                {{ svg($flagFor($properties), 'mr-2 size-5 rounded-xs') }}
+                <flux:flag :country="$countryFor($properties)" size="xs" class="mr-2" />
                 {{ ucfirst($properties['native']) }}
             </flux:menu.item>
         @endforeach

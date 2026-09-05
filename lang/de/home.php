@@ -8,17 +8,14 @@ return [
         'title_highlight' => 'leicht gemacht',
         'title_trail' => 'für Kinder, Eltern und Lehrkräfte.',
         'subtitle' => 'Erstelle mit wenigen Klicks abwechslungsreiche und wirkungsvolle Mathe-Arbeitsblätter. Drucke sie aus oder löse sie online – perfekt für Klasse 1 bis 5.',
-    ],
-
-    'preview' => [
-        'eyebrow' => 'Direkt ausprobieren',
-        'title' => 'Von wenigen Klicks zum fertigen Arbeitsblatt',
-        'subtitle' => 'Wähle Thema und Niveau, passe die Details an und erhalte in Sekunden ein sauberes Arbeitsblatt.',
-        'worksheet_title' => 'Arbeitsblatt',
-        'solve_online' => 'Online lösen',
-        'solve_online_description' => 'Kinder rechnen interaktiv und bekommen zu jeder Aufgabe sofort Rückmeldung.',
-        'download_pdf' => 'Als PDF herunterladen',
-        'download_pdf_description' => 'Drucke ein übersichtliches Arbeitsblatt mit passendem Lösungsschlüssel für Schule oder Zuhause.',
+        'screenshots_label' => 'Screenshots der App',
+        'screenshots' => [
+            'generator' => 'Einmaleins-Generator',
+            'worksheet_blank' => 'Fertiges Arbeitsblatt',
+            'worksheet_filled' => 'Online lösen',
+            'worksheet_feedback' => 'Sofortige Rückmeldung',
+            'celebration_perfect' => 'Alles richtig',
+        ],
     ],
 
     'steps' => [
@@ -35,31 +32,7 @@ return [
             ],
             [
                 'title' => 'Drucken oder lösen',
-                'description' => 'Lade ein druckfertiges PDF herunter oder lass Kinder es online mit automatischer Kontrolle lösen.',
-            ],
-        ],
-    ],
-
-    'features' => [
-        'eyebrow' => 'Warum es funktioniert',
-        'title' => 'Alles, was du zum Matheüben brauchst',
-        'subtitle' => 'Entwickelt, damit das Matheüben für Eltern, Lehrkräfte und junge Lernende gleichermaßen stressfrei bleibt.',
-        'items' => [
-            'coverage' => [
-                'title' => 'Klasse 1–5, alle vier Grundrechenarten',
-                'description' => 'Addition, Subtraktion, Multiplikation und Division – mit Übungen für jedes Niveau von der ersten bis zur fünften Klasse.',
-            ],
-            'no_prep' => [
-                'title' => 'Keine Vorbereitung nötig',
-                'description' => 'Ein einsatzbereites Arbeitsblatt in weniger als einer Minute – gemacht für vielbeschäftigte Eltern und Lehrkräfte.',
-            ],
-            'solutions' => [
-                'title' => 'Automatisch erzeugte Lösungen',
-                'description' => 'Jedes Arbeitsblatt kommt mit Lösungsschlüssel – das spart Zeit und unterstützt die Selbstkontrolle.',
-            ],
-            'fast_learning' => [
-                'title' => 'Für schnelles Lernen gemacht',
-                'description' => 'Ein einfacher, klarer Ablauf, der Kinder ohne Umwege am Üben und Vorankommen hält.',
+                'description' => 'Lade ein druckfertiges PDF samt Lösungsblatt herunter oder lass Kinder es online mit sofortiger Kontrolle lösen.',
             ],
         ],
     ],
@@ -69,6 +42,25 @@ return [
         'title' => 'Einfache Tarife für jede Familie und jedes Klassenzimmer',
         'subtitle' => 'Starte mit einer kostenlosen Testphase und wähle dann den passenden Tarif. Jederzeit kündbar.',
         'cta' => 'Alle Preise ansehen',
+    ],
+
+    'features' => [
+        'eyebrow' => 'Warum es funktioniert',
+        'title' => 'Gemacht für Üben, das wirklich sitzt',
+        'items' => [
+            'feedback' => [
+                'title' => 'Rückmeldung, die motiviert',
+                'description' => 'Jede Antwort wird direkt nach der Eingabe geprüft, die richtige Lösung angezeigt – und bei voller Punktzahl gibt es eine Feier.',
+            ],
+            'answer_key' => [
+                'title' => 'Lösungsblatt zu jedem Ausdruck',
+                'description' => 'Jedes PDF kommt mit passendem Lösungsblatt, sodass das Korrigieren Sekunden dauert und Kinder sich selbst kontrollieren können.',
+            ],
+            'any_device' => [
+                'title' => 'Funktioniert auf jedem Gerät',
+                'description' => 'Handy, Tablet oder Computer: Erstelle das Arbeitsblatt auf dem einen und löse es auf dem anderen – ganz ohne Installation.',
+            ],
+        ],
     ],
 
     'blog' => [

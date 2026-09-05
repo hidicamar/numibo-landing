@@ -57,6 +57,19 @@
     --color-accent-foreground: var(--color-white);
 
     --shadow-custom: 0px 8px 8px -1px rgba(12, 12, 13, 0.08), 0px 8px 16px -1px rgba(12, 12, 13, 0.1);
+
+    --animate-float: float 6s ease-in-out infinite;
+
+    @keyframes float {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-0.75rem);
+        }
+    }
 }
 
 @layer theme {
@@ -150,6 +163,84 @@ html {
         #eaf6ff 52%,
         var(--color-light)
     );
+}
+
+/* Scroll-triggered entrance; the reveal component toggles `is-visible`. */
+.reveal {
+    opacity: 0;
+    transform: translateY(1.25rem);
+    transition:
+        opacity 0.7s ease-out,
+        transform 0.7s ease-out;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* Hand-drawn underline under the hero highlight, swept in after the title lands. */
+.reveal-swoosh {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.8s cubic-bezier(0.76, 0, 0.24, 1) 0.5s;
+}
+
+.reveal.is-visible .reveal-swoosh {
+    transform: scaleX(1);
+}
+
+/* Light band sweeping across the hero highlight: the text is a moving gradient clipped to the glyphs. */
+.text-shimmer {
+    color: transparent;
+    background-image: linear-gradient(
+        100deg,
+        var(--color-blue-400) 0%,
+        var(--color-blue-400) 38%,
+        var(--color-blue-100) 50%,
+        var(--color-blue-400) 62%,
+        var(--color-blue-400) 100%
+    );
+    background-size: 250% 100%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shimmer 3.5s ease-in-out 1s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 100% 0;
+    }
+
+    55%,
+    100% {
+        background-position: 0% 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal-swoosh {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .text-shimmer {
+        color: var(--color-blue-400);
+        background-image: none;
+        animation: none;
+    }
+}
+
+/* Dots under the hero phone carousel (Swiper pagination rendered outside the track). */
+.swiper-pagination-bullet {
+    @apply block h-2 w-2 cursor-pointer rounded-full bg-blue-200 transition-all duration-200 hover:bg-blue-300;
+}
+
+.swiper-pagination-bullet-active {
+    @apply w-6 bg-blue-500;
 }
 
 /* Sliding-underline hover for the pill nav links. */

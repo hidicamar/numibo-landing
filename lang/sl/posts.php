@@ -5,8 +5,8 @@ declare(strict_types=1);
 return [
     'index' => [
         'title' => 'Blog',
-        'subtitle' => 'Nasveti, vpogledi in novice o poučevanju matematike, učnih strategijah ter o tem, kako iz aplikacije iztisniti največ.',
-        'empty' => 'Člankov še ni. Oglej si znova kmalu.',
+        'subtitle' => 'Nasveti, vpogledi in novice o poučevanju matematike, učnih strategijah ter o tem, kako kar najbolje izkoristiti aplikacijo.',
+        'empty' => 'Člankov še ni. Preveri znova kmalu.',
         'all' => 'Vse',
     ],
 

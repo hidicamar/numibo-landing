@@ -17,9 +17,9 @@ return [
         'feature' => 'Funkcija',
         'rows' => [
             'unlimited' => 'Neomejeno ustvarjanje delovnih listov',
-            'all_types' => 'Vse vrste vaj za razrede od 1. do 5.',
+            'all_types' => 'Vse vrste vaj za 1.–5. razred',
             'history' => 'Zgodovina vaj',
-            'statistics' => 'Statistika poskusov in napredka',
+            'statistics' => 'Statistika poskusov in napredek',
         ],
     ],
 

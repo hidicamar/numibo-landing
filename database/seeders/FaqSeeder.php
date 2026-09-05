@@ -13,15 +13,11 @@ class FaqSeeder extends Seeder
     private array $slFaqs = [
         [
             'question' => 'Ali obstaja brezplačno preizkusno obdobje?',
-            'answer' => 'Da, ob registraciji dobite 7-dnevno brezplačno preizkusno obdobje.',
+            'answer' => 'Da, ob registraciji dobiš 7-dnevno brezplačno preizkusno obdobje.',
         ],
         [
             'question' => 'Katere vrste vaj so na voljo?',
-            'answer' => 'Seštevanje, odštevanje, množenje in deljenje – vključno z osnovno tabelo in nalogami po meri.',
-        ],
-        [
-            'question' => 'Ali lahko dodam več otrok?',
-            'answer' => 'Da, aplikacija je primerna za več otrok. Izberite paket, katerega mesečno število delovnih listov ustreza vadbi vaše družine.',
+            'answer' => 'Seštevanje, odštevanje, množenje in deljenje – vključno s poštevanko in nalogami po meri.',
         ],
         [
             'question' => 'Ali lahko zamenjam jezik?',
@@ -29,11 +25,11 @@ class FaqSeeder extends Seeder
         ],
         [
             'question' => 'Kako prekličem naročnino?',
-            'answer' => 'Naročnino lahko kadar koli prekličete v nastavitvah računa; dostop ostane do konca obračunskega obdobja.',
+            'answer' => 'Naročnino lahko kadar koli prekličeš v nastavitvah računa; dostop ti ostane do konca obračunskega obdobja.',
         ],
         [
             'question' => 'Ali lahko vaje natisnem?',
-            'answer' => 'Da, vsak sklop vaj lahko izvozite in natisnete kot PDF.',
+            'answer' => 'Da, vsak sklop vaj lahko izvoziš in natisneš kot PDF.',
         ],
     ];
 
@@ -48,10 +44,6 @@ class FaqSeeder extends Seeder
         [
             'question' => 'What types of exercises are available?',
             'answer' => 'Addition, subtraction, multiplication and division – including the base times table and custom exercises.',
-        ],
-        [
-            'question' => 'Can I add more than one child?',
-            'answer' => 'Yes, the app works well for several children. Choose a plan whose monthly worksheet allowance fits how much your family practises.',
         ],
         [
             'question' => 'Can I change the language?',
@@ -80,10 +72,6 @@ class FaqSeeder extends Seeder
             'answer' => 'Addition, Subtraktion, Multiplikation und Division – einschließlich Grundtabelle und benutzerdefinierter Aufgaben.',
         ],
         [
-            'question' => 'Kann ich mehrere Kinder hinzufügen?',
-            'answer' => 'Ja, die App eignet sich gut für mehrere Kinder. Wählen Sie einen Tarif, dessen monatliche Anzahl an Arbeitsblättern zum Übungspensum Ihrer Familie passt.',
-        ],
-        [
             'question' => 'Kann ich die Sprache ändern?',
             'answer' => 'Ja, die App ist auf Slowenisch, Englisch, Deutsch und Kroatisch verfügbar.',
         ],
@@ -108,10 +96,6 @@ class FaqSeeder extends Seeder
         [
             'question' => 'Koje su vrste vježbi dostupne?',
             'answer' => 'Zbrajanje, oduzimanje, množenje i dijeljenje – uključujući osnovnu tablicu i zadatke po želji.',
-        ],
-        [
-            'question' => 'Mogu li dodati više djece?',
-            'answer' => 'Da, aplikacija dobro funkcionira za više djece. Odaberite paket čiji mjesečni broj radnih listova odgovara tome koliko vaša obitelj vježba.',
         ],
         [
             'question' => 'Mogu li promijeniti jezik?',
