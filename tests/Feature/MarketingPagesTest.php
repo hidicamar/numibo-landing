@@ -42,3 +42,15 @@ it('points the header CTAs at the app domain', function () {
         ->assertSee(config('app.app_url').'/login')
         ->assertSee(config('app.app_url').'/register');
 });
+
+it('renders only the configured social profiles in the footer', function () {
+    config(['company.socials' => [
+        'facebook' => ['name' => 'Facebook', 'url' => 'https://facebook.com/numibo'],
+    ]]);
+
+    $this->get(route('home'))
+        ->assertOk()
+        ->assertSee('https://facebook.com/numibo')
+        ->assertSee('aria-label="Facebook"', false)
+        ->assertDontSee('aria-label="TikTok"', false);
+});

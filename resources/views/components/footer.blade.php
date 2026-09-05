@@ -7,6 +7,8 @@
                 </a>
 
                 <p class="text-sm/6 text-dark/70">{{ __('Addition, subtraction, multiplication, division – all in one place for effective learning!') }}</p>
+
+                <x-partials.socials />
             </div>
 
             <div class="flex flex-1 items-start justify-start md:justify-end">
