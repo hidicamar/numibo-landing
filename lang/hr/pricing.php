@@ -27,4 +27,22 @@ return [
         'title' => 'Počni vježbati već danas',
         'subtitle' => 'Isprobaj besplatno svaku vrstu vježbe, a zatim nastavi s paketom koji ti odgovara.',
     ],
+
+    'early_access' => [
+        'hero_subtitle' => 'Zasad nemaš što birati: Numibo je besplatan dok traje rani pristup.',
+        'title' => 'Besplatno dok traje rani pristup',
+        'subtitle' => 'Registriraj se i koristi sve što Numibo nudi, uključujući mogućnosti planirane za paket Premium.',
+        'included' => 'Trenutno uključeno',
+        'features' => [
+            'Sve vrste vježbi od 1. do 5. razreda',
+            'Interaktivno rješavanje u pregledniku',
+            'PDF radni listovi za ispis, po želji s rješenjima',
+            'Povijest vježbi',
+            'Statistika pokušaja i napredak',
+        ],
+        'microcopy' => 'Besplatan račun u ranom pristupu · bez kartice',
+        'later_title' => 'Plaćeni paketi stižu kasnije',
+        'later' => 'Numibo će postati aplikacija koja se plaća. Na vrijeme ćemo te obavijestiti e-poštom i ništa ti nećemo naplatiti dok ne odabereš paket.',
+        'cta_subtitle' => 'Otvori račun i u ranom pristupu besplatno isprobaj svaku vrstu vježbe.',
+    ],
 ];

@@ -88,3 +88,77 @@ it('has a mobile screenshot file for every slide and locale', function () {
         }
     }
 });
+
+it('shows the first slide caption under the hero phone', function () {
+    $slide = config('screenshots.slides')[0];
+    $html = $this->get(route('home'))->assertOk()->getContent();
+
+    expect(Str::between($html, 'data-screenshot-caption', '</p>'))
+        ->toContain(__("home.hero.screenshots.{$slide['key']}"));
+});
+
+it('pairs every how-it-works step with its visual', function () {
+    $locale = app()->getLocale();
+    $steps = config('screenshots.steps');
+
+    $response = $this->get(route('home'))->assertOk();
+
+    expect($steps)->toHaveCount(count(__('home.steps.items')));
+
+    foreach ($steps as $index => $visual) {
+        $response->assertSee(__("home.steps.items.{$index}.image_alt"));
+
+        foreach ($visual['images'] as $image) {
+            $response->assertSee("img/usage/{$locale}/img-{$image}-{$visual['type']}.png");
+        }
+    }
+});
+
+it('has a step visual file and alt text for every step and locale', function () {
+    foreach (['en', 'sl', 'de', 'hr'] as $locale) {
+        $copy = require lang_path($locale.'/home.php');
+
+        foreach (config('screenshots.steps') as $index => $visual) {
+            expect($copy['steps']['items'][$index]['image_alt'] ?? null)->toBeString();
+
+            foreach ($visual['images'] as $image) {
+                expect(public_path("img/usage/{$locale}/img-{$image}-{$visual['type']}.png"))->toBeFile();
+            }
+        }
+    }
+});
+
+it('builds the case before pricing and keeps blog and newsletter below the final CTA', function () {
+    Faq::factory()->create(['lang' => app()->getLocale()]);
+    Post::factory()->create(['lang' => app()->getLocale()]);
+
+    $this->get(route('home'))
+        ->assertOk()
+        ->assertSeeInOrder([
+            __('home.steps.title'),
+            __('home.features.title'),
+            __('home.pricing.title'),
+            __('home.faq.title'),
+            __('home.cta.title'),
+            __('home.blog.title'),
+            __('home.newsletter.title'),
+        ]);
+});
+
+it('sends both secondary CTAs to the pricing section', function () {
+    $html = $this->get(route('home'))->assertOk()->getContent();
+
+    expect(substr_count($html, 'href="#pricing"'))->toBe(2);
+});
+
+it('renders the shared FAQ list with the row padding on the heading button', function (string $routeName) {
+    $faq = Faq::factory()->create(['lang' => app()->getLocale()]);
+
+    $html = $this->get(route($routeName))
+        ->assertOk()
+        ->assertSee($faq->question)
+        ->assertSee($faq->answer, false)
+        ->getContent();
+
+    expect($html)->toMatch('/<button[^>]*class="[^"]*\bpt-4 pb-2\b[^"]*"[^>]*data-flux-accordion-heading/');
+})->with(['home', 'pricing']);

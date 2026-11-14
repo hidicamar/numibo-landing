@@ -10,8 +10,6 @@ return [
         'subtitle' => 'Erstelle mit wenigen Klicks abwechslungsreiche und wirkungsvolle Mathe-Arbeitsblätter. Drucke sie aus oder löse sie online – perfekt für Klasse 1 bis 5.',
         'screenshots_label' => 'Screenshots der App',
         'screenshots' => [
-            'generator' => 'Einmaleins-Generator',
-            'worksheet_blank' => 'Fertiges Arbeitsblatt',
             'worksheet_filled' => 'Online lösen',
             'worksheet_feedback' => 'Sofortige Rückmeldung',
             'celebration_perfect' => 'Alles richtig',
@@ -24,15 +22,18 @@ return [
         'items' => [
             [
                 'title' => 'Thema & Niveau wählen',
-                'description' => 'Wähle Addition, Subtraktion, Multiplikation oder Division und lege die Klassenstufe fest.',
+                'description' => 'Wähle Addition, Subtraktion, Multiplikation oder Division und lege die Schwierigkeit fest.',
+                'image_alt' => 'Additions-Generator mit Schwierigkeit bis 20',
             ],
             [
                 'title' => 'Anpassen',
                 'description' => 'Stelle Zahlenraum, Anzahl und Format so ein, dass das Arbeitsblatt genau zu deinem Kind passt.',
+                'image_alt' => 'Multiplikations-Generator mit eingestellten Zahlen und Übertrag',
             ],
             [
                 'title' => 'Drucken oder lösen',
-                'description' => 'Lade ein druckfertiges PDF samt Lösungsblatt herunter oder lass Kinder es online mit sofortiger Kontrolle lösen.',
+                'description' => 'Lade ein druckfertiges PDF herunter – auf Wunsch mit Lösungsblatt – oder lass Kinder es online mit sofortiger Kontrolle lösen.',
+                'image_alt' => 'Ausgedrucktes Arbeitsblatt mit Lösungsblatt',
             ],
         ],
     ],
@@ -53,8 +54,8 @@ return [
                 'description' => 'Jede Antwort wird direkt nach der Eingabe geprüft, die richtige Lösung angezeigt – und bei voller Punktzahl gibt es eine Feier.',
             ],
             'answer_key' => [
-                'title' => 'Lösungsblatt zu jedem Ausdruck',
-                'description' => 'Jedes PDF kommt mit passendem Lösungsblatt, sodass das Korrigieren Sekunden dauert und Kinder sich selbst kontrollieren können.',
+                'title' => 'Lösungsblatt auf Wunsch',
+                'description' => 'Schalte die Lösungen ein und das PDF bekommt ein passendes Lösungsblatt: Korrigieren dauert Sekunden, und Kinder können sich selbst kontrollieren.',
             ],
             'any_device' => [
                 'title' => 'Funktioniert auf jedem Gerät',

@@ -1,5 +1,7 @@
 @php
     $primaryCtaHref = config('app.app_url').'/register';
+    $isEarlyAccess = config('plans.early_access');
+    $secondaryCtaLabel = $isEarlyAccess ? __('actions.see_included') : __('actions.see_pricing');
     $maxYearlySavings = collect($plans)
         ->map(fn (array $plan) => (int) round((1 - $plan['prices']['yearly'] / ($plan['prices']['monthly'] * 12)) * 100))
         ->max();
@@ -34,7 +36,7 @@
                         {{ __('home.hero.title_trail') }}
                     </h1>
 
-                    <p class="max-w-xl text-lg text-dark/70 md:text-xl">
+                    <p class="max-w-xl text-lg text-pretty text-dark/70 md:text-xl">
                         {{ __('home.hero.subtitle') }}
                     </p>
                 </x-reveal>
@@ -46,12 +48,12 @@
                         </flux:button>
 
                         <flux:button href="#pricing" variant="ghost" class="w-full sm:w-auto">
-                            {{ __('actions.see_pricing') }}
+                            {{ $secondaryCtaLabel }}
                         </flux:button>
                     </div>
 
-                    <p class="text-sm text-dark/60 lg:self-start">
-                        {{ __('pricing.cta_microcopy', ['days' => config('plans.trial_days')]) }}
+                    <p class="text-sm text-balance text-dark/70 lg:self-start">
+                        {{ $isEarlyAccess ? __('pricing.early_access.microcopy') : __('pricing.cta_microcopy', ['days' => config('plans.trial_days')]) }}
                     </p>
                 </x-reveal>
             </div>
@@ -73,53 +75,25 @@
             </x-reveal>
 
             <div class="mt-14 grid gap-6 md:grid-cols-3">
-                @foreach (['cursor-arrow-rays', 'adjustments-horizontal', 'printer'] as $index => $icon)
-                    <x-reveal wire:key="step-{{ $index }}" :delay="$index * 120" class="flex flex-col gap-4 rounded-2xl bg-white p-8 shadow-custom inset-ring-4 inset-ring-blue-50">
-                        <div class="flex items-center gap-3">
-                            <span class="flex size-9 items-center justify-center rounded-full bg-blue-500 text-sm font-semibold text-white">{{ $index + 1 }}</span>
-                            <flux:icon :name="$icon" class="size-6 text-blue-500" />
+                @foreach (config('screenshots.steps') as $index => $visual)
+                    <x-reveal wire:key="step-{{ $index }}" :delay="$index * 120" class="flex flex-col rounded-2xl bg-white p-2 shadow-custom inset-ring-4 inset-ring-blue-50">
+                        <x-screenshots.step :index="$index" />
+
+                        <div class="flex flex-col gap-3 px-5 pt-6 pb-5">
+                            <div class="flex items-center gap-3">
+                                <span class="flex size-8 shrink-0 items-center justify-center rounded-full bg-blue-500 text-sm font-semibold text-white">{{ $index + 1 }}</span>
+                                <h6 class="text-dark">{{ __('home.steps.items.'.$index.'.title') }}</h6>
+                            </div>
+                            <p class="text-sm text-dark/70">{{ __('home.steps.items.'.$index.'.description') }}</p>
                         </div>
-                        <h6 class="text-dark">{{ __('home.steps.items.'.$index.'.title') }}</h6>
-                        <p class="text-sm text-dark/70">{{ __('home.steps.items.'.$index.'.description') }}</p>
                     </x-reveal>
                 @endforeach
-            </div>
-        </div>
-    </section>
-
-    {{-- Pricing --}}
-    <section id="pricing" class="scroll-mt-28 bg-radial-picton-2 px-5 py-20 lg:px-8 lg:py-28" x-data="{ period: 'monthly' }">
-        <div class="mx-auto max-w-5xl">
-            <x-reveal class="mx-auto flex max-w-2xl flex-col gap-4 text-center">
-                <span class="text-sm font-semibold tracking-wide text-blue-500 uppercase">{{ __('home.pricing.eyebrow') }}</span>
-
-                <h2 class="text-dark">{{ __('home.pricing.title') }}</h2>
-
-                <p class="text-lg text-dark/70">{{ __('home.pricing.subtitle') }}</p>
-
-                <div class="mt-2 flex justify-center">
-                    <x-pricing.toggle :savings="$maxYearlySavings" />
-                </div>
-            </x-reveal>
-
-            <div class="mx-auto mt-12 grid max-w-3xl gap-6 md:grid-cols-2">
-                @foreach ($plans as $plan)
-                    <x-reveal wire:key="teaser-{{ $plan['slug'] }}" :delay="$loop->index * 120">
-                        <x-pricing.plan-card :plan="$plan" />
-                    </x-reveal>
-                @endforeach
-            </div>
-
-            <div class="mt-10 flex justify-center">
-                <flux:button :href="route('pricing')" variant="ghost" icon:trailing="arrow-up-right" wire:navigate>
-                    {{ __('home.pricing.cta') }}
-                </flux:button>
             </div>
         </div>
     </section>
 
     {{-- Why it works --}}
-    <section class="px-5 py-20 lg:px-8 lg:py-28">
+    <section class="bg-radial-picton-2 px-5 py-20 lg:px-8 lg:py-28">
         <div class="mx-auto max-w-5xl">
             <x-reveal class="mx-auto flex max-w-2xl flex-col gap-3 text-center">
                 <span class="text-sm font-semibold tracking-wide text-blue-500 uppercase">{{ __('home.features.eyebrow') }}</span>
@@ -136,6 +110,47 @@
         </div>
     </section>
 
+    {{-- Pricing (early access: free for now, plans and prices hidden) --}}
+    @if ($isEarlyAccess)
+        <section id="pricing" class="scroll-mt-28 px-5 py-20 lg:px-8 lg:py-28">
+            <div class="mx-auto max-w-5xl">
+                <x-reveal>
+                    <x-pricing.early-access />
+                </x-reveal>
+            </div>
+        </section>
+    @else
+        <section id="pricing" class="scroll-mt-28 px-5 py-20 lg:px-8 lg:py-28" x-data="{ period: 'monthly' }">
+            <div class="mx-auto max-w-5xl">
+                <x-reveal class="mx-auto flex max-w-2xl flex-col gap-4 text-center">
+                    <span class="text-sm font-semibold tracking-wide text-blue-500 uppercase">{{ __('home.pricing.eyebrow') }}</span>
+
+                    <h2 class="text-dark">{{ __('home.pricing.title') }}</h2>
+
+                    <p class="text-lg text-dark/70">{{ __('home.pricing.subtitle') }}</p>
+
+                    <div class="mt-2 flex justify-center">
+                        <x-pricing.toggle :savings="$maxYearlySavings" />
+                    </div>
+                </x-reveal>
+
+                <div class="mx-auto mt-12 grid max-w-3xl gap-6 md:grid-cols-2">
+                    @foreach ($plans as $plan)
+                        <x-reveal wire:key="teaser-{{ $plan['slug'] }}" :delay="$loop->index * 120">
+                            <x-pricing.plan-card :plan="$plan" />
+                        </x-reveal>
+                    @endforeach
+                </div>
+
+                <div class="mt-10 flex justify-center">
+                    <flux:button :href="route('pricing')" variant="ghost" icon:trailing="arrow-up-right" wire:navigate>
+                        {{ __('home.pricing.cta') }}
+                    </flux:button>
+                </div>
+            </div>
+        </section>
+    @endif
+
     {{-- FAQ --}}
     @if ($frequentlyAskedQuestions->isNotEmpty())
         <section class="overflow-hidden bg-radial-picton-2 px-5 py-20 lg:px-8 lg:py-28">
@@ -147,23 +162,36 @@
                     </x-reveal>
 
                     <x-reveal :delay="120" class="mt-10 lg:col-span-7 lg:mt-0">
-                        <flux:accordion transition exclusive>
-                            @foreach ($frequentlyAskedQuestions as $frequentlyAskedQuestion)
-                                <flux:accordion.item wire:key="faq-{{ $frequentlyAskedQuestion->id }}">
-                                    <flux:accordion.heading>{{ $frequentlyAskedQuestion->question }}</flux:accordion.heading>
-                                    <flux:accordion.content>{!! $frequentlyAskedQuestion->answer !!}</flux:accordion.content>
-                                </flux:accordion.item>
-                            @endforeach
-                        </flux:accordion>
+                        <x-faq.accordion :questions="$frequentlyAskedQuestions" />
                     </x-reveal>
                 </div>
             </div>
         </section>
     @endif
 
+    {{-- Final CTA band --}}
+    <section class="px-5 py-20 lg:px-8 lg:py-28">
+        <div class="mx-auto max-w-5xl">
+            <x-reveal class="flex flex-col items-center gap-6 rounded-3xl bg-blue-950 px-6 py-16 text-center lg:px-12 lg:py-20">
+                <h2 class="max-w-2xl text-white">{{ __('home.cta.title') }}</h2>
+                <p class="max-w-xl text-lg text-balance text-white/70">{{ __('home.cta.subtitle') }}</p>
+
+                <div class="flex w-full flex-col items-center justify-center gap-3 sm:flex-row">
+                    <flux:button :href="$primaryCtaHref" variant="primary" class="w-full sm:w-auto" icon:trailing="arrow-up-right">
+                        {{ __('actions.start_free') }}
+                    </flux:button>
+
+                    <flux:button href="#pricing" class="w-full sm:w-auto">
+                        {{ $secondaryCtaLabel }}
+                    </flux:button>
+                </div>
+            </x-reveal>
+        </div>
+    </section>
+
     {{-- Blog --}}
     @if ($posts->isNotEmpty())
-        <section class="px-5 py-20 lg:px-8 lg:py-28">
+        <section class="px-5 pb-20 lg:px-8 lg:pb-28">
             <div class="mx-auto max-w-5xl">
                 <x-reveal class="mx-auto flex max-w-2xl flex-col gap-3 text-center">
                     <h2 class="text-dark">{{ __('home.blog.title') }}</h2>
@@ -187,36 +215,16 @@
         </section>
     @endif
 
-    {{-- Newsletter --}}
+    {{-- Newsletter: a compact closing row, kept below the final CTA so it never competes with it --}}
     <section class="px-5 pb-20 lg:px-8 lg:pb-28">
         <div class="mx-auto max-w-5xl">
-            <x-reveal class="relative isolate overflow-hidden rounded-3xl bg-radial-picton-2 px-6 py-16 shadow-custom inset-ring-4 inset-ring-white lg:px-12 lg:py-20">
-                <div class="mx-auto flex max-w-lg flex-col gap-3 text-center">
-                    <h2 class="text-dark">{{ __('home.newsletter.title') }}</h2>
-                    <p class="text-lg text-dark/70">{{ __('home.newsletter.subtitle') }}</p>
+            <x-reveal class="grid items-center gap-6 rounded-2xl bg-blue-50 p-6 sm:p-8 lg:grid-cols-2 lg:gap-12">
+                <div class="flex flex-col gap-2 text-center lg:text-left">
+                    <h2 class="text-xl! text-dark md:text-2xl!">{{ __('home.newsletter.title') }}</h2>
+                    <p class="text-dark/70">{{ __('home.newsletter.subtitle') }}</p>
                 </div>
 
                 <livewire:subscribe-to-newsletter />
-            </x-reveal>
-        </div>
-    </section>
-
-    {{-- Final CTA band --}}
-    <section class="px-5 pb-24 lg:px-8">
-        <div class="mx-auto max-w-5xl">
-            <x-reveal class="flex flex-col items-center gap-6 rounded-3xl bg-blue-950 px-6 py-16 text-center lg:px-12 lg:py-20">
-                <h2 class="max-w-2xl text-white">{{ __('home.cta.title') }}</h2>
-                <p class="max-w-xl text-lg text-white/70">{{ __('home.cta.subtitle') }}</p>
-
-                <div class="flex w-full flex-col items-center justify-center gap-3 sm:flex-row">
-                    <flux:button :href="$primaryCtaHref" variant="primary" class="w-full sm:w-auto" icon:trailing="arrow-up-right">
-                        {{ __('actions.start_free') }}
-                    </flux:button>
-
-                    <flux:button :href="route('pricing')" class="w-full sm:w-auto" wire:navigate>
-                        {{ __('actions.see_pricing') }}
-                    </flux:button>
-                </div>
             </x-reveal>
         </div>
     </section>

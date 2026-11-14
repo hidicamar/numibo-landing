@@ -20,7 +20,7 @@ return [
                 'Neograničeno kreiranje radnih listova',
                 'Sve vrste vježbi za 1.–5. razred',
                 'Interaktivno online rješavanje',
-                'PDF radni listovi za ispis s rješenjima',
+                'PDF radni listovi za ispis, po želji s rješenjima',
             ],
         ],
         'premium' => [

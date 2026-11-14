@@ -93,15 +93,15 @@
 
 @layer base {
     h1 {
-        @apply text-4xl font-semibold tracking-tight text-dark md:text-5xl;
+        @apply text-4xl font-semibold tracking-tight text-balance text-dark md:text-5xl;
     }
 
     h2 {
-        @apply text-3xl font-semibold tracking-tight text-dark md:text-4xl;
+        @apply text-3xl font-semibold tracking-tight text-balance text-dark md:text-4xl;
     }
 
     h3 {
-        @apply text-2xl font-semibold tracking-tight text-dark md:text-3xl;
+        @apply text-2xl font-semibold tracking-tight text-balance text-dark md:text-3xl;
     }
 
     h4 {
@@ -236,7 +236,14 @@ html {
 
 /* Dots under the hero phone carousel (Swiper pagination rendered outside the track). */
 .swiper-pagination-bullet {
-    @apply block h-2 w-2 cursor-pointer rounded-full bg-blue-200 transition-all duration-200 hover:bg-blue-300;
+    @apply relative block h-2 w-2 cursor-pointer rounded-full bg-blue-200 transition-all duration-200 hover:bg-blue-300;
+}
+
+/* The dot stays 8px; this invisible pad is what a thumb actually hits. */
+.swiper-pagination-bullet::before {
+    content: '';
+    position: absolute;
+    inset: -0.75rem -0.25rem;
 }
 
 .swiper-pagination-bullet-active {

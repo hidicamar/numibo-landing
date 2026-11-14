@@ -1,8 +1,8 @@
-<div class="mt-8">
+<div>
     @if ($subscribed)
-        <p class="text-center text-lg font-medium text-dark">{{ __('home.newsletter.success') }}</p>
+        <p class="text-center text-lg font-medium text-dark lg:text-right">{{ __('home.newsletter.success') }}</p>
     @else
-        <form wire:submit="subscribe" class="mx-auto flex max-w-md flex-col gap-3 sm:flex-row sm:items-start">
+        <form wire:submit="subscribe" class="mx-auto flex w-full max-w-md flex-col gap-3 sm:flex-row sm:items-start lg:mr-0">
             {{-- Honeypot: hidden from users, tempting to bots. --}}
             <div class="hidden" aria-hidden="true">
                 <label>

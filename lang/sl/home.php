@@ -10,8 +10,6 @@ return [
         'subtitle' => 'Ustvari zabavne in učinkovite delovne liste le z nekaj kliki. Natisni jih ali reši na spletu – kot nalašč za učence od 1. do 5. razreda.',
         'screenshots_label' => 'Posnetki aplikacije',
         'screenshots' => [
-            'generator' => 'Generator poštevanke',
-            'worksheet_blank' => 'Pripravljen delovni list',
             'worksheet_filled' => 'Reševanje na spletu',
             'worksheet_feedback' => 'Takojšnja povratna informacija',
             'celebration_perfect' => 'Vse pravilno',
@@ -24,15 +22,18 @@ return [
         'items' => [
             [
                 'title' => 'Izberi temo in težavnost',
-                'description' => 'Izberi seštevanje, odštevanje, množenje ali deljenje in določi razred.',
+                'description' => 'Izberi seštevanje, odštevanje, množenje ali deljenje in nastavi težavnost.',
+                'image_alt' => 'Generator seštevanja z izbrano težavnostjo do 20',
             ],
             [
                 'title' => 'Prilagodi',
                 'description' => 'Nastavi obseg števil, število nalog in obliko, da bo delovni list ravno pravšnji za tvojega otroka ali učence.',
+                'image_alt' => 'Generator množenja z nastavljenimi števili in prehodom',
             ],
             [
                 'title' => 'Natisni ali reši',
-                'description' => 'Prenesi PDF z rešitvami in ga natisni ali pa naj otroci naloge rešijo kar na spletu, kjer se odgovori preverijo takoj.',
+                'description' => 'Prenesi PDF in ga natisni – če želiš, z listom rešitev – ali pa naj otroci naloge rešijo kar na spletu, kjer se odgovori preverijo takoj.',
+                'image_alt' => 'Natisnjen delovni list in list z rešitvami',
             ],
         ],
     ],
@@ -53,8 +54,8 @@ return [
                 'description' => 'Vsak odgovor se preveri takoj po vnosu, ob napaki se pokaže pravilni rezultat, za vse pravilne pa sledi praznovanje.',
             ],
             'answer_key' => [
-                'title' => 'Rešitve ob vsakem izpisu',
-                'description' => 'Vsakemu PDF-ju je priložen list z rešitvami, zato je pregledovanje opravljeno v nekaj sekundah, otroci pa se lahko preverijo sami.',
+                'title' => 'Rešitve, kadar jih želiš',
+                'description' => 'Vklopi rešitve in PDF dobi še list z odgovori: pregledovanje je opravljeno v nekaj sekundah, otroci pa se lahko preverijo sami.',
             ],
             'any_device' => [
                 'title' => 'Deluje na vsaki napravi',

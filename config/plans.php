@@ -14,6 +14,19 @@ return [
     |
     */
 
+    /*
+    |--------------------------------------------------------------------------
+    | Early access
+    |--------------------------------------------------------------------------
+    |
+    | While enabled, the app is free and the landing hides plans and prices,
+    | showing the early-access section instead. Must mirror the app's own
+    | early-access switch. Turn it off once paid plans launch.
+    |
+    */
+
+    'early_access' => (bool) env('NUMIBOO_EARLY_ACCESS', false),
+
     'currency' => 'EUR',
 
     'trial_days' => 7,

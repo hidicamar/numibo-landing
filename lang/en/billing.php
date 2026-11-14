@@ -20,7 +20,7 @@ return [
                 'Unlimited worksheet generation',
                 'All exercise types for grades 1–5',
                 'Interactive online solving',
-                'Printable PDF worksheets with solutions',
+                'Printable PDF worksheets, with optional solutions',
             ],
         ],
         'premium' => [

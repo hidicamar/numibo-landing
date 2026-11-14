@@ -10,8 +10,6 @@ return [
         'subtitle' => 'Napravi zabavne i djelotvorne radne listove iz matematike u samo nekoliko klikova. Ispiši ih ili rješavaj online — savršeno za 1.–5. razred.',
         'screenshots_label' => 'Snimke zaslona aplikacije',
         'screenshots' => [
-            'generator' => 'Generator tablice množenja',
-            'worksheet_blank' => 'Gotov radni list',
             'worksheet_filled' => 'Rješavanje online',
             'worksheet_feedback' => 'Trenutna povratna informacija',
             'celebration_perfect' => 'Sve točno',
@@ -24,15 +22,18 @@ return [
         'items' => [
             [
                 'title' => 'Odaberi temu i razinu',
-                'description' => 'Odaberi zbrajanje, oduzimanje, množenje ili dijeljenje i postavi razred.',
+                'description' => 'Odaberi zbrajanje, oduzimanje, množenje ili dijeljenje i postavi težinu.',
+                'image_alt' => 'Generator zbrajanja s odabranom težinom do 20',
             ],
             [
                 'title' => 'Prilagodi',
                 'description' => 'Prilagodi raspon brojeva, količinu i format dok radni list ne odgovara tvom djetetu.',
+                'image_alt' => 'Generator množenja s postavljenim brojevima i prijelazom',
             ],
             [
                 'title' => 'Ispiši ili rješavaj',
-                'description' => 'Preuzmi PDF za ispis zajedno s rješenjima ili pusti djecu da rješavaju online uz trenutnu provjeru.',
+                'description' => 'Preuzmi PDF za ispis – ako želiš, s listom rješenja – ili pusti djecu da rješavaju online uz trenutnu provjeru.',
+                'image_alt' => 'Ispisani radni list i list s rješenjima',
             ],
         ],
     ],
@@ -53,8 +54,8 @@ return [
                 'description' => 'Svaki se odgovor provjerava odmah nakon unosa, prikazuje se točan rezultat, a za sve točne slijedi proslava.',
             ],
             'answer_key' => [
-                'title' => 'Rješenja uz svaki ispis',
-                'description' => 'Uz svaki PDF dolazi i list s rješenjima, pa ispravljanje traje sekunde, a djeca se mogu provjeriti sama.',
+                'title' => 'Rješenja kad ih želiš',
+                'description' => 'Uključi rješenja i PDF dobiva list s odgovorima: ispravljanje traje sekunde, a djeca se mogu provjeriti sama.',
             ],
             'any_device' => [
                 'title' => 'Radi na svakom uređaju',

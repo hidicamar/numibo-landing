@@ -9,23 +9,41 @@ return [
     | Hero phone screenshots
     |--------------------------------------------------------------------------
     |
-    | Ordered along the user journey: generate -> worksheet -> solve -> feedback
-    | -> celebrate. Files live at public/img/usage/<locale>/img-<image>-mobile.png
-    | and are described in public/img/usage/mapping.txt. Alt text lives in
-    | lang/<locale>/home.php under home.hero.screenshots.<key>.
+    | The hero shows the child's side of the product: solve -> feedback ->
+    | celebrate. Files live at public/img/usage/<locale>/img-<image>-mobile.png
+    | and are described in public/img/usage/mapping.txt. The caption under the
+    | phone (also the alt text) lives in lang/<locale>/home.php under
+    | home.hero.screenshots.<key>.
     |
-    | The phone screen is a fixed 780:1688 box (the worksheet shots' size) that
-    | crops from the top, so the generator shot may lose a few percent of its
-    | edges in locales where it renders slightly taller or wider.
+    | Every shot is a 780:1688 capture with the app's own header and toolbar hidden, so the
+    | phone screen opens on worksheet content instead of navigation.
     |
     */
 
     'slides' => [
-        ['key' => 'generator', 'image' => 7],
-        ['key' => 'worksheet_blank', 'image' => 1],
-        ['key' => 'worksheet_filled', 'image' => 2],
-        ['key' => 'worksheet_feedback', 'image' => 4],
-        ['key' => 'celebration_perfect', 'image' => 5],
+        ['key' => 'worksheet_filled', 'image' => 9],
+        ['key' => 'worksheet_feedback', 'image' => 10],
+        ['key' => 'celebration_perfect', 'image' => 11],
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | How-it-works step visuals
+    |--------------------------------------------------------------------------
+    |
+    | One visual per step, in step order, showing the adult's side: the two
+    | generators, then the printed result. A "panel" is a single generator
+    | card cropped from its top; "paper" is the real PDF, front page first and
+    | the optional answer key behind it. Files live at
+    | public/img/usage/<locale>/img-<image>-<type>.png and alt text under
+    | home.steps.items.<index>.image_alt.
+    |
+    */
+
+    'steps' => [
+        ['type' => 'panel', 'images' => [12]],
+        ['type' => 'panel', 'images' => [13]],
+        ['type' => 'paper', 'images' => [14, 15]],
     ],
 
 ];

@@ -64,6 +64,27 @@ return [
             ]) : [],
         ],
 
+        // Production over the fixed tunnel that `flow:querying-production` opens. SELECT-only user,
+        // read-only session and a 30 s statement cap, so nothing on this connection can write.
+        'production' => [
+            'driver' => 'mysql',
+            'host' => '127.0.0.1',
+            'port' => env('PROD_DB_TUNNEL_PORT', '3307'),
+            'database' => env('PROD_DB_DATABASE'),
+            'username' => env('PROD_DB_USERNAME'),
+            'password' => env('PROD_DB_PASSWORD'),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => [
+                PDO::ATTR_TIMEOUT => 5,
+                Mysql::ATTR_INIT_COMMAND => 'SET SESSION transaction_read_only = 1, max_execution_time = 30000',
+            ],
+        ],
+
         'mariadb' => [
             'driver' => 'mariadb',
             'url' => env('DB_URL'),

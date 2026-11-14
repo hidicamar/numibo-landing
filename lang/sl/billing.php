@@ -20,7 +20,7 @@ return [
                 'Neomejeno ustvarjanje delovnih listov',
                 'Vse vrste vaj za 1.–5. razred',
                 'Interaktivno reševanje v brskalniku',
-                'Delovni listi PDF za tiskanje z rešitvami',
+                'Delovni listi PDF za tiskanje, po želji z rešitvami',
             ],
         ],
         'premium' => [

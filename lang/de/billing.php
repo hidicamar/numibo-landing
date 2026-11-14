@@ -20,7 +20,7 @@ return [
                 'Unbegrenzte Arbeitsblatt-Erstellung',
                 'Alle Übungstypen für Klasse 1–5',
                 'Interaktives Online-Lösen',
-                'Druckbare PDF-Arbeitsblätter mit Lösungen',
+                'Druckbare PDF-Arbeitsblätter, auf Wunsch mit Lösungen',
             ],
         ],
         'premium' => [

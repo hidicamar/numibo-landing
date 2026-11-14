@@ -8,11 +8,11 @@
 
 <header
     x-data="{ open: false }"
-    class="fixed left-1/2 top-5 z-50 mx-auto w-[90%] max-w-5xl -translate-x-1/2"
+    class="fixed inset-x-0 top-5 z-50 mx-auto w-[90%] max-w-5xl"
 >
     <nav
-        :class="open ? 'bg-white' : 'bg-white/50'"
-        class="flex h-min w-full flex-col justify-between rounded-2xl p-5 shadow-lg backdrop-blur-sm"
+        :class="open ? 'bg-white' : 'bg-white/80'"
+        class="flex h-min w-full flex-col justify-between rounded-2xl p-5 shadow-lg backdrop-blur-md"
     >
         <div class="relative flex items-center justify-between gap-4">
             <a href="{{ route('home') }}" class="w-56" wire:navigate>

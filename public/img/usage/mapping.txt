@@ -1,20 +1,28 @@
-sl/img-1-mobile.png	01-worksheet-blank (mobile)
-sl/img-2-mobile.png	02-worksheet-filled (mobile)
-sl/img-4-mobile.png	04-worksheet-feedback (mobile)
-sl/img-5-mobile.png	05-celebration-perfect (mobile)
-sl/img-7-mobile.png	07-generator-times-table (mobile)
-en/img-1-mobile.png	01-worksheet-blank (mobile)
-en/img-2-mobile.png	02-worksheet-filled (mobile)
-en/img-4-mobile.png	04-worksheet-feedback (mobile)
-en/img-5-mobile.png	05-celebration-perfect (mobile)
-en/img-7-mobile.png	07-generator-times-table (mobile)
-de/img-1-mobile.png	01-worksheet-blank (mobile)
-de/img-2-mobile.png	02-worksheet-filled (mobile)
-de/img-4-mobile.png	04-worksheet-feedback (mobile)
-de/img-5-mobile.png	05-celebration-perfect (mobile)
-de/img-7-mobile.png	07-generator-times-table (mobile)
-hr/img-1-mobile.png	01-worksheet-blank (mobile)
-hr/img-2-mobile.png	02-worksheet-filled (mobile)
-hr/img-4-mobile.png	04-worksheet-feedback (mobile)
-hr/img-5-mobile.png	05-celebration-perfect (mobile)
-hr/img-7-mobile.png	07-generator-times-table (mobile)
+sl/img-9-mobile.png	09-worksheet-solving, app header and toolbar hidden (mobile)
+sl/img-10-mobile.png	10-worksheet-feedback, app header and toolbar hidden (mobile)
+sl/img-11-mobile.png	11-celebration-perfect, app header and toolbar hidden (mobile)
+sl/img-12-panel.png	12-generator-addition-subtraction, filled in, card only
+sl/img-13-panel.png	13-generator-custom, filled in, card only
+sl/img-14-paper.png	14-pdf-worksheet-page, top of the A4 page
+sl/img-15-paper.png	15-pdf-answer-key-page, top of the A4 page
+en/img-9-mobile.png	09-worksheet-solving, app header and toolbar hidden (mobile)
+en/img-10-mobile.png	10-worksheet-feedback, app header and toolbar hidden (mobile)
+en/img-11-mobile.png	11-celebration-perfect, app header and toolbar hidden (mobile)
+en/img-12-panel.png	12-generator-addition-subtraction, filled in, card only
+en/img-13-panel.png	13-generator-custom, filled in, card only
+en/img-14-paper.png	14-pdf-worksheet-page, top of the A4 page
+en/img-15-paper.png	15-pdf-answer-key-page, top of the A4 page
+de/img-9-mobile.png	09-worksheet-solving, app header and toolbar hidden (mobile)
+de/img-10-mobile.png	10-worksheet-feedback, app header and toolbar hidden (mobile)
+de/img-11-mobile.png	11-celebration-perfect, app header and toolbar hidden (mobile)
+de/img-12-panel.png	12-generator-addition-subtraction, filled in, card only
+de/img-13-panel.png	13-generator-custom, filled in, card only
+de/img-14-paper.png	14-pdf-worksheet-page, top of the A4 page
+de/img-15-paper.png	15-pdf-answer-key-page, top of the A4 page
+hr/img-9-mobile.png	09-worksheet-solving, app header and toolbar hidden (mobile)
+hr/img-10-mobile.png	10-worksheet-feedback, app header and toolbar hidden (mobile)
+hr/img-11-mobile.png	11-celebration-perfect, app header and toolbar hidden (mobile)
+hr/img-12-panel.png	12-generator-addition-subtraction, filled in, card only
+hr/img-13-panel.png	13-generator-custom, filled in, card only
+hr/img-14-paper.png	14-pdf-worksheet-page, top of the A4 page
+hr/img-15-paper.png	15-pdf-answer-key-page, top of the A4 page

@@ -27,4 +27,22 @@ return [
         'title' => 'Fang heute mit dem Üben an',
         'subtitle' => 'Teste jeden Aufgabentyp kostenlos und mach dann mit dem passenden Tarif weiter.',
     ],
+
+    'early_access' => [
+        'hero_subtitle' => 'Noch gibt es nichts auszuwählen: Numibo ist während der Early-Access-Phase kostenlos.',
+        'title' => 'Kostenlos während der Early-Access-Phase',
+        'subtitle' => 'Registriere dich und nutze alles, was Numibo bietet, auch die Funktionen, die für den Premium-Tarif geplant sind.',
+        'included' => 'Aktuell enthalten',
+        'features' => [
+            'Alle Aufgabentypen für Klasse 1–5',
+            'Interaktives Lösen im Browser',
+            'Druckbare PDF-Arbeitsblätter, auf Wunsch mit Lösungen',
+            'Übungsverlauf',
+            'Statistiken und Fortschritt',
+        ],
+        'microcopy' => 'Kostenloses Konto im Early Access · keine Karte nötig',
+        'later_title' => 'Bezahltarife kommen später',
+        'later' => 'Numibo wird kostenpflichtig. Wir informieren dich rechtzeitig per E-Mail, und berechnet wird erst etwas, wenn du einen Tarif wählst.',
+        'cta_subtitle' => 'Erstelle ein Konto und teste während der Early-Access-Phase jeden Aufgabentyp kostenlos.',
+    ],
 ];

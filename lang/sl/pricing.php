@@ -27,4 +27,22 @@ return [
         'title' => 'Začni vaditi še danes',
         'subtitle' => 'Brezplačno preizkusi vse vrste vaj, nato nadaljuj s paketom, ki ti ustreza.',
     ],
+
+    'early_access' => [
+        'hero_subtitle' => 'Zaenkrat ni kaj izbirati: Numibo je v zgodnjem dostopu brezplačen.',
+        'title' => 'Brezplačno, dokler traja zgodnji dostop',
+        'subtitle' => 'Registriraj se in uporabljaj vse, kar Numibo ponuja, tudi funkcije, načrtovane za paket Premium.',
+        'included' => 'Trenutno vključeno',
+        'features' => [
+            'Vse vrste vaj za 1.–5. razred',
+            'Interaktivno reševanje v brskalniku',
+            'Delovni listi PDF za tiskanje, po želji z rešitvami',
+            'Zgodovina vaj',
+            'Statistika poskusov in napredek',
+        ],
+        'microcopy' => 'Brezplačen račun v zgodnjem dostopu · brez kartice',
+        'later_title' => 'Plačljivi paketi pridejo kasneje',
+        'later' => 'Numibo bo postal plačljiv. O tem te bomo pravočasno obvestili po e-pošti, zaračunali pa ti ne bomo ničesar, dokler ne izbereš paketa.',
+        'cta_subtitle' => 'Ustvari račun in v zgodnjem dostopu brezplačno preizkusi vse vrste vaj.',
+    ],
 ];
