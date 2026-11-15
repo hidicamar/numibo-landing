@@ -38,6 +38,14 @@
                             <li><a href="{{ route('legal.privacy-policy') }}" class="nav-link text-sm text-dark/70 hover:text-dark" wire:navigate>{{ __('titles.legal.privacy_policy') }}</a></li>
                             <li><a href="{{ route('legal.terms-and-conditions') }}" class="nav-link text-sm text-dark/70 hover:text-dark" wire:navigate>{{ __('titles.legal.terms_and_conditions') }}</a></li>
                             <li><a href="{{ route('legal.cookies') }}" class="nav-link text-sm text-dark/70 hover:text-dark" wire:navigate>{{ __('titles.legal.cookies') }}</a></li>
+
+                            @production
+                                <li>
+                                    <button type="button" x-data x-on:click="$dispatch('cookie-settings')" class="nav-link cursor-pointer text-sm text-dark/70 hover:text-dark">
+                                        {{ __('cookies.settings') }}
+                                    </button>
+                                </li>
+                            @endproduction
                         </ul>
                     </div>
                 </div>

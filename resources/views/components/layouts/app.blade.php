@@ -18,6 +18,10 @@
 
         <x-back-to-top />
 
+        @production
+            <x-cookie-consent />
+        @endproduction
+
         <div class="blurred-footer"></div>
 
         @persist('toast')
