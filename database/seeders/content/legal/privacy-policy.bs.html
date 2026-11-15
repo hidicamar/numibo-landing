@@ -1,0 +1,67 @@
+<p>Datum stupanja na snagu: <strong>15. novembra 2026.</strong> · Posljednje ažuriranje: <strong>15. novembra 2026.</strong></p>
+
+<p>Ova politika obuhvata cjelokupnu uslugu <strong>Numibo</strong>: javnu web stranicu na <strong>numibo.com</strong> i aplikaciju na <strong>app.numibo.com</strong>. Sama web stranica obrađuje vrlo malo ličnih podataka (e-mail adresu za newsletter i, uz vašu saglasnost, analitičke kolačiće); podaci o računima, plaćanjima i vježbama obrađuju se u aplikaciji.</p>
+
+<h2>1. Kontrolor podataka</h2>
+<!-- The bracketed operator identity placeholders are resolved from .env (config/company.php + mail.from.address) at render time by LegalPageController - leave them as-is. -->
+<p>Kontrolor podataka je <strong>[OPERATOR NAME] s.p.</strong>, samostalni poduzetnik registrovan u Sloveniji, [ADDRESS], Slovenija, matični broj [REGISTRATION NUMBER], porezni broj [VAT ID] („Numibo", „mi" ili „nas"). Za sva pitanja u vezi sa zaštitom podataka kontaktirajte nas na <a href="mailto:[EMAIL]">[EMAIL]</a>.</p>
+
+<h2>2. Koje podatke prikupljamo</h2>
+<ul>
+    <li><strong>Podaci o računu:</strong> ime i prezime, e-mail adresa, lozinka (pohranjena isključivo kao jednosmjerni hash) i odabrani jezik.</li>
+    <li><strong>Prijava putem Googlea:</strong> ako se prijavite Google računom, od Googlea primamo vaše ime, e-mail adresu i identifikator Google računa.</li>
+    <li><strong>Podaci o plaćanju:</strong> plaćanja obrađuje Stripe. Brojeve kartica ne pohranjujemo sami; pohranjujemo Stripeov identifikator kupca, vrstu platnog sredstva i posljednje četiri cifre, status pretplate i račune (uključujući podatke za izdavanje računa). Dok je Numibo besplatan u ranom pristupu, podatke o plaćanju ne prikupljamo.</li>
+    <li><strong>Podaci o korištenju:</strong> radni listovi (vježbe) koje generišete, uključujući njihove postavke i naslov koji im eventualno date, te pokušaji rješavanja u vašem računu (broj tačnih i netačnih odgovora, trajanje, predati odgovori).</li>
+    <li><strong>Newsletter:</strong> ako se prijavite na newsletter na web stranici, obrađujemo vašu e-mail adresu radi njegovog slanja. Najprije vam šaljemo poruku u kojoj potvrđujete prijavu (dvostruka potvrda). Prijava je dobrovoljna, a odjaviti se možete u bilo kojem trenutku putem linka u svakoj poruci.</li>
+    <li><strong>Tehnički podaci:</strong> zapisi sesija s vašom IP adresom i podacima o pregledniku, kolačići nužni za rad web stranice i aplikacije te kratkotrajni serverski zapisi i zapisi o performansama.</li>
+    <li><strong>Izvještaji o greškama:</strong> ako u aplikaciji dođe do greške, našem pružaocu usluge praćenja grešaka šalje se tehnički izvještaj (greška, adresa stranice i identifikator vašeg računa) kako bismo je mogli otkloniti. Lozinke, kolačići i kodovi uklanjaju se iz tih izvještaja.</li>
+    <li><strong>Sigurnosni podaci:</strong> passkey podaci za prijavu, postavke dvostepene prijave i kodovi za potvrdu e-mail adrese.</li>
+</ul>
+<p>Ne prodajemo lične podatke i ne koristimo ih za izradu reklamnih profila.</p>
+
+<h2>3. Svrhe i pravne osnove obrade</h2>
+<ul>
+    <li><strong>Izvršenje ugovora</strong> (član 6(1)(b) GDPR-a): vođenje vašeg računa, generisanje vježbi, obračun pretplate.</li>
+    <li><strong>Zakonske obaveze</strong> (član 6(1)(c) GDPR-a): vođenje računovodstvene i porezne dokumentacije.</li>
+    <li><strong>Legitimni interes</strong> (član 6(1)(f) GDPR-a): sigurnost aplikacije, sprječavanje zloupotreba i otklanjanje grešaka.</li>
+    <li><strong>Saglasnost</strong> (član 6(1)(a) GDPR-a): analitički kolačići na javnoj web stranici i slanje našeg newslettera; saglasnost možete povući u bilo kojem trenutku, bez uticaja na zakonitost obrade izvršene prije povlačenja.</li>
+</ul>
+
+<h2>4. Kolačići i analitika</h2>
+<p>Na javnoj web stranici koristimo <strong>Google Analytics</strong> radi razumijevanja posjeta, i to samo uz vašu saglasnost datu putem trake za kolačiće. <strong>U prijavljenom dijelu aplikacije analitiku ne koristimo.</strong> Potpun spisak kolačića i način upravljanja njima pogledajte u našoj <a href="/bs/kolacici">politici kolačića</a>.</p>
+
+<h2>5. Primaoci, obrađivači i međunarodni prijenosi podataka</h2>
+<p>Lične podatke dijelimo samo s pružaocima usluga koji su nam potrebni za rad Numiba. Većina njih djeluje kao naši obrađivači na osnovu ugovora o obradi podataka; Stripe (plaćanja) i Google (prijava) dio podataka obrađuju i kao samostalni kontrolori podataka u skladu sa svojim politikama privatnosti.</p>
+<ul>
+    <li><strong>Stripe</strong> (Stripe Payments Europe, Ltd., Irska) – obrada plaćanja i računi.</li>
+    <li><strong>Google</strong> (Google Ireland Ltd., Irska) – prijava putem Google računa i Google Analytics na javnoj web stranici.</li>
+    <li><strong>Brevo</strong> (Sendinblue SAS, Francuska) – slanje newslettera i automatskih e-mail poruka te vođenje spiska primalaca.</li>
+    <li><strong>Zoho Mail</strong> (Zoho Corporation B.V., Holandija) – hosting našeg e-mail sandučića i korespondencija s vama.</li>
+    <li><strong>Hetzner</strong> (Hetzner Online GmbH, Njemačka – data centar Nürnberg) – hosting web stranice, aplikacije i baze podataka.</li>
+    <li><strong>Ploi</strong> (Ploi B.V., Holandija) – upravljanje serverom, objava ažuriranja i sigurnosne kopije.</li>
+    <li><strong>Sentry</strong> (Functional Software, Inc., SAD) – praćenje grešaka u aplikaciji.</li>
+</ul>
+<p>Podaci se, gdje god je to moguće, čuvaju u EU/EEP-u. Kada pružalac usluge prenosi podatke izvan EEP-a (na primjer Stripe, Google ili Sentry u SAD), takav prijenos zasniva se na odluci Evropske komisije o adekvatnosti (uključujući okvir EU–SAD za zaštitu podataka, Data Privacy Framework) ili na standardnim ugovornim klauzulama.</p>
+
+<h2>6. Čuvanje podataka</h2>
+<ul>
+    <li><strong>Podaci o računu i korištenju:</strong> dok je vaš račun aktivan. Brisanjem računa račun se odmah deaktivira i više se ne može koristiti za prijavu; 30 dana kasnije račun, vaši radni listovi i pokušaji rješavanja trajno se brišu.</li>
+    <li><strong>Računovodstvena i porezna dokumentacija:</strong> onoliko dugo koliko to zahtijeva važeće pravo — u pravilu 10 godina za izdane račune. Ta se dokumentacija čuva i nakon brisanja računa.</li>
+    <li><strong>Newsletter:</strong> dok se ne odjavite ili od nas ne zatražite uklanjanje.</li>
+    <li><strong>Zapisi sesija:</strong> ističu nakon 2 sata neaktivnosti i zatim se uklanjaju.</li>
+    <li><strong>Mjerenja performansi i serverski zapisi:</strong> 7 dana, odnosno najviše 14 dana.</li>
+    <li><strong>Izvještaji o greškama:</strong> najviše 90 dana.</li>
+    <li><strong>Sigurnosne kopije:</strong> najviše 30 dana, nakon čega se prepisuju.</li>
+</ul>
+
+<h2>7. Sigurnost podataka</h2>
+<p>Sav saobraćaj između vašeg preglednika i Numibo aplikacije šifriran je (TLS). Lozinke se čuvaju isključivo kao jednosmjerni hash, podaci o platnim karticama nikada ne dolaze na naše servere, a pristup produkcijskim podacima ograničen je na pružaoca usluge. Nijedan način prijenosa ili čuvanja podataka nije potpuno siguran, ali redovno pregledavamo i unapređujemo naše mjere zaštite.</p>
+
+<h2>8. Vaša prava</h2>
+<p>Na osnovu GDPR-a imate pravo na pristup, ispravku, brisanje, ograničenje obrade, prenosivost podataka i prigovor, kao i pravo da u svakom trenutku povučete saglasnost. Zahtjeve šaljite na <a href="mailto:[EMAIL]">[EMAIL]</a>; odgovaramo u roku od mjesec dana. Pritužbu možete podnijeti i slovenskom nadzornom organu, Informacijskom povjereniku (Informacijski pooblaščenec), Dunajska cesta 22, 1000 Ljubljana, <a href="https://www.ip-rs.si">www.ip-rs.si</a>.</p>
+
+<h2>9. Djeca</h2>
+<p>Numibo je namijenjen vježbanju matematike s djecom, ali račun mogu kreirati samo punoljetne osobe (roditelji, staratelji ili nastavnici). Aplikacija ne kreira profile djece i ne traži ime, dob ni druge podatke po kojima bi se dijete moglo prepoznati. Kada dijete rješava radni list na ekranu, odgovori i vrijeme rješavanja pohranjuju se u računu odrasle osobe, bez identifikovanja djeteta. Molimo vas da u naslove radnih listova ne upisujete lične podatke djeteta (na primjer ime i prezime). Ako smatrate da nam je dijete dostavilo lične podatke, kontaktirajte nas i mi ćemo ih izbrisati.</p>
+
+<h2>10. Izmjene ove politike</h2>
+<p>O bitnim izmjenama ove politike obavijestit ćemo vas e-mailom ili u aplikaciji najmanje 30 dana prije njihovog stupanja na snagu. Uvijek vrijedi objavljena verzija, s naznačenim datumom stupanja na snagu.</p>

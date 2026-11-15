@@ -199,6 +199,52 @@ class PageSeeder extends Seeder
         ],
     ];
 
+    /**
+     * @var array<int, array{name: string, type: string, seo: array{title: string, description: string, keywords?: array<int, string>}}>
+     */
+    private array $bsPages = [
+        [
+            'name' => 'Početna',
+            'type' => 'home',
+            'seo' => [
+                'title' => 'Numibo - brzo i efikasno učenje matematike!',
+                'description' => 'Sabiranje, oduzimanje, množenje, dijeljenje - vježbaj matematiku uz Numibo, sve na jednom mjestu za efikasno učenje!',
+            ],
+        ],
+        [
+            'name' => 'Blog',
+            'type' => 'posts.index',
+            'seo' => [
+                'title' => 'Blog',
+                'description' => '',
+            ],
+        ],
+        [
+            'name' => 'Politika privatnosti',
+            'type' => 'privacy-policy',
+            'seo' => [
+                'title' => 'Politika privatnosti',
+                'description' => '',
+            ],
+        ],
+        [
+            'name' => 'Uslovi korištenja',
+            'type' => 'terms-and-conditions',
+            'seo' => [
+                'title' => 'Uslovi korištenja',
+                'description' => '',
+            ],
+        ],
+        [
+            'name' => 'Kolačići',
+            'type' => 'cookies',
+            'seo' => [
+                'title' => 'Kolačići',
+                'description' => '',
+            ],
+        ],
+    ];
+
     public function run(): void
     {
         $languages = [
@@ -206,6 +252,7 @@ class PageSeeder extends Seeder
             'en' => $this->enPages,
             'de' => $this->dePages,
             'hr' => $this->hrPages,
+            'bs' => $this->bsPages,
         ];
 
         foreach ($languages as $lang => $pages) {

@@ -23,7 +23,7 @@ class PostFactory extends Factory
             'subtitle' => fake()->sentence(),
             'summary' => fake()->paragraph(),
             'content' => fake()->paragraphs(4, true),
-            'lang' => fake()->randomElement(['sl', 'en', 'de', 'hr']),
+            'lang' => fake()->randomElement(['sl', 'en', 'de', 'hr', 'bs']),
             // The category must share the post's lang: PostCategory's
             // LanguageScope would otherwise resolve $post->category to null.
             'post_category_id' => fn (array $attributes) => PostCategory::factory()->create(['lang' => $attributes['lang']]),

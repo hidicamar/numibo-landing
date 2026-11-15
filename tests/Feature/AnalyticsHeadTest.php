@@ -49,7 +49,7 @@ it('translates the consent banner in every locale', function (string $locale) {
 
     expect(array_keys($translations))->toBe(array_keys(Arr::dot(require lang_path('en/cookies.php'))))
         ->and(array_filter($translations, 'filled'))->toHaveCount(count($translations));
-})->with(['sl', 'en', 'hr', 'de']);
+})->with(['sl', 'en', 'hr', 'de', 'bs']);
 
 it('names the first-party consent cookie in the seeded cookie policy', function () {
     $this->get(route('legal.cookies'))

@@ -9,6 +9,6 @@ it('seeds post categories with generated slugs', function () {
     // strict mode rejected the inserts.
     $this->seed(DatabaseSeeder::class);
 
-    expect(PostCategory::withoutGlobalScopes()->count())->toBe(20)
+    expect(PostCategory::withoutGlobalScopes()->count())->toBe(25)
         ->and(PostCategory::withoutGlobalScopes()->where(fn ($query) => $query->whereNull('slug')->orWhere('slug', ''))->count())->toBe(0);
 });

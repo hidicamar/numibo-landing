@@ -26,3 +26,10 @@ hr/img-12-panel.png	12-generator-addition-subtraction, filled in, card only
 hr/img-13-panel.png	13-generator-custom, filled in, card only
 hr/img-14-paper.png	14-pdf-worksheet-page, top of the A4 page
 hr/img-15-paper.png	15-pdf-answer-key-page, top of the A4 page
+bs/img-9-mobile.png	09-worksheet-solving, app header and toolbar hidden (mobile)
+bs/img-10-mobile.png	10-worksheet-feedback, app header and toolbar hidden (mobile)
+bs/img-11-mobile.png	11-celebration-perfect, app header and toolbar hidden (mobile)
+bs/img-12-panel.png	12-generator-addition-subtraction, filled in, card only
+bs/img-13-panel.png	13-generator-custom, filled in, card only
+bs/img-14-paper.png	14-pdf-worksheet-page, top of the A4 page
+bs/img-15-paper.png	15-pdf-answer-key-page, top of the A4 page

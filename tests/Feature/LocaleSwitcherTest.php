@@ -9,6 +9,7 @@ it('renders a Flux flag for the current locale and one per language in the switc
         ->and(substr_count($html, 'data-country="GB"'))->toBe(2)
         ->and(substr_count($html, 'data-country="DE"'))->toBe(2)
         ->and(substr_count($html, 'data-country="HR"'))->toBe(2)
-        ->and($html)->toContain('hreflang="en"', 'hreflang="de"', 'hreflang="hr"')
+        ->and(substr_count($html, 'data-country="BA"'))->toBe(2)
+        ->and($html)->toContain('hreflang="en"', 'hreflang="de"', 'hreflang="hr"', 'hreflang="bs"')
         ->and($html)->not->toContain('flag-country-');
 });

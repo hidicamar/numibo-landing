@@ -51,6 +51,17 @@ class PostCategorySeeder extends Seeder
         'Vijesti',
     ];
 
+    /**
+     * @var array<int, string>
+     */
+    private array $bsCategories = [
+        'Matematika',
+        'Obrazovanje',
+        'Tutorijali',
+        'Savjeti i trikovi',
+        'Vijesti',
+    ];
+
     public function run(): void
     {
         $languages = [
@@ -58,6 +69,7 @@ class PostCategorySeeder extends Seeder
             'en' => $this->enCategories,
             'de' => $this->deCategories,
             'hr' => $this->hrCategories,
+            'bs' => $this->bsCategories,
         ];
 
         foreach ($languages as $lang => $categories) {

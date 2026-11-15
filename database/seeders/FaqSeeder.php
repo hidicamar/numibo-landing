@@ -39,7 +39,7 @@ class FaqSeeder extends Seeder
         ],
         [
             'question' => 'Ali lahko zamenjam jezik?',
-            'answer' => 'Da, aplikacija je na voljo v slovenščini, angleščini, nemščini in hrvaščini.',
+            'answer' => 'Da, aplikacija je na voljo v slovenščini, angleščini, nemščini, hrvaščini in bosanščini.',
         ],
         [
             'question' => 'Kako prekličem naročnino?',
@@ -79,7 +79,7 @@ class FaqSeeder extends Seeder
         ],
         [
             'question' => 'Can I change the language?',
-            'answer' => 'Yes, the app is available in Slovene, English, German and Croatian.',
+            'answer' => 'Yes, the app is available in Slovene, English, German, Croatian and Bosnian.',
         ],
         [
             'question' => 'How do I cancel my subscription?',
@@ -119,7 +119,7 @@ class FaqSeeder extends Seeder
         ],
         [
             'question' => 'Kann ich die Sprache ändern?',
-            'answer' => 'Ja, die App ist auf Slowenisch, Englisch, Deutsch und Kroatisch verfügbar.',
+            'answer' => 'Ja, die App ist auf Slowenisch, Englisch, Deutsch, Kroatisch und Bosnisch verfügbar.',
         ],
         [
             'question' => 'Wie kündige ich mein Abonnement?',
@@ -159,7 +159,7 @@ class FaqSeeder extends Seeder
         ],
         [
             'question' => 'Mogu li promijeniti jezik?',
-            'answer' => 'Da, aplikacija je dostupna na slovenskom, engleskom, njemačkom i hrvatskom jeziku.',
+            'answer' => 'Da, aplikacija je dostupna na slovenskom, engleskom, njemačkom, hrvatskom i bosanskom jeziku.',
         ],
         [
             'question' => 'Kako mogu otkazati pretplatu?',
@@ -172,6 +172,46 @@ class FaqSeeder extends Seeder
         ],
     ];
 
+    /**
+     * @var array<int, array{question: string, answer: string, is_visible?: bool}>
+     */
+    private array $bsFaqs = [
+        [
+            'question' => 'Je li Numibo stvarno besplatan?',
+            'answer' => 'Da. U ranom pristupu sve je besplatno i ne trebaš karticu. Za nove radne listove vrijedi izdašno mjesečno ograničenje.',
+        ],
+        [
+            'question' => 'Šta se događa kad rani pristup završi?',
+            'answer' => 'Numibo će postati aplikacija koja se plaća. Na vrijeme ćemo te obavijestiti e-mailom i ništa ti nećemo naplatiti dok ne odabereš paket.',
+        ],
+        [
+            'question' => 'Postoji li besplatni probni period?',
+            'answer' => 'Da, prilikom registracije dobijaš 7-dnevni besplatni probni period.',
+            'is_visible' => false,
+        ],
+        [
+            'question' => 'Koje su vrste vježbi dostupne?',
+            'answer' => 'Sabiranje, oduzimanje, množenje i dijeljenje – uključujući osnovnu tablicu i zadatke po želji.',
+        ],
+        [
+            'question' => 'Mogu li dodati više djece?',
+            'answer' => 'Ne trebaš ih dodavati: s jednim računom možeš izrađivati radne listove za koliko god djece želiš.',
+        ],
+        [
+            'question' => 'Mogu li promijeniti jezik?',
+            'answer' => 'Da, aplikacija je dostupna na slovenskom, engleskom, njemačkom, hrvatskom i bosanskom jeziku.',
+        ],
+        [
+            'question' => 'Kako mogu otkazati pretplatu?',
+            'answer' => 'Pretplatu možeš otkazati u bilo kojem trenutku u postavkama računa; pristup ostaje do kraja obračunskog perioda.',
+            'is_visible' => false,
+        ],
+        [
+            'question' => 'Mogu li odštampati vježbe?',
+            'answer' => 'Da, svaki skup vježbi možeš izvesti i odštampati kao PDF.',
+        ],
+    ];
+
     public function run(): void
     {
         $languages = [
@@ -179,6 +219,7 @@ class FaqSeeder extends Seeder
             'en' => $this->enFaqs,
             'de' => $this->deFaqs,
             'hr' => $this->hrFaqs,
+            'bs' => $this->bsFaqs,
         ];
 
         foreach ($languages as $lang => $faqs) {

@@ -21,7 +21,7 @@ class FaqFactory extends Factory
             'is_visible' => true,
             'question' => rtrim(fake()->sentence(), '.').'?',
             'answer' => fake()->paragraph(),
-            'lang' => fake()->randomElement(['sl', 'en', 'de', 'hr']),
+            'lang' => fake()->randomElement(['sl', 'en', 'de', 'hr', 'bs']),
             'sort' => 1,
         ];
     }

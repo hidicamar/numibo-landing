@@ -70,7 +70,7 @@ it('eagerly loads only the first screenshot', function () {
 });
 
 it('has screenshot copy in every supported locale', function () {
-    foreach (['en', 'sl', 'de', 'hr'] as $locale) {
+    foreach (['en', 'sl', 'de', 'hr', 'bs'] as $locale) {
         $copy = require lang_path($locale.'/home.php');
 
         expect($copy['hero']['screenshots_label'] ?? null)->toBeString();
@@ -82,7 +82,7 @@ it('has screenshot copy in every supported locale', function () {
 });
 
 it('has a mobile screenshot file for every slide and locale', function () {
-    foreach (['en', 'sl', 'de', 'hr'] as $locale) {
+    foreach (['en', 'sl', 'de', 'hr', 'bs'] as $locale) {
         foreach (config('screenshots.slides') as $slide) {
             expect(public_path("img/usage/{$locale}/img-{$slide['image']}-mobile.png"))->toBeFile();
         }
@@ -115,7 +115,7 @@ it('pairs every how-it-works step with its visual', function () {
 });
 
 it('has a step visual file and alt text for every step and locale', function () {
-    foreach (['en', 'sl', 'de', 'hr'] as $locale) {
+    foreach (['en', 'sl', 'de', 'hr', 'bs'] as $locale) {
         $copy = require lang_path($locale.'/home.php');
 
         foreach (config('screenshots.steps') as $index => $visual) {

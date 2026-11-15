@@ -87,7 +87,7 @@ it('keeps the paid pricing when early access is off', function () {
 it('has early-access copy in every supported locale', function () {
     $english = require lang_path('en/pricing.php');
 
-    foreach (['en', 'sl', 'de', 'hr'] as $locale) {
+    foreach (['en', 'sl', 'de', 'hr', 'bs'] as $locale) {
         $copy = require lang_path($locale.'/pricing.php');
         $actions = require lang_path($locale.'/actions.php');
 
@@ -100,7 +100,7 @@ it('has early-access copy in every supported locale', function () {
 it('seeds an FAQ that matches early access in every locale', function (string $routeName) {
     $this->seed(FaqSeeder::class);
 
-    foreach (['en', 'sl', 'de', 'hr'] as $locale) {
+    foreach (['en', 'sl', 'de', 'hr', 'bs'] as $locale) {
         $faqs = Faq::withoutGlobalScopes()->where('lang', $locale)->get();
 
         expect($faqs->where('is_visible', true))->toHaveCount(6)
