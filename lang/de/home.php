@@ -80,7 +80,8 @@ return [
         'subtitle' => 'Abonniere unseren Newsletter und erfahre als Erste von neuen Tools, Updates und Lerntipps.',
         'placeholder' => 'Deine E-Mail-Adresse',
         'honeypot_label' => 'Dieses Feld bitte leer lassen',
-        'success' => 'Du bist angemeldet. Vielen Dank!',
+        'success' => 'Fast geschafft. Schau in dein Postfach und bestätige deine Anmeldung.',
+        'notice' => 'Wir verwenden deine Adresse nur für den Versand des Newsletters. Du kannst dich jederzeit abmelden. Mehr in unserer :privacy.',
         'error' => 'Etwas ist schiefgelaufen. Bitte versuche es gleich noch einmal.',
     ],
 

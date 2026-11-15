@@ -40,5 +40,8 @@ return [
         'lists' => [
             'newsletter' => env('BREVO_NEWSLETTER_LIST_ID'),
         ],
+        'templates' => [
+            'double_opt_in' => env('BREVO_DOUBLE_OPT_IN_TEMPLATE_ID'),
+        ],
     ],
 ];

@@ -3,21 +3,25 @@
 namespace App\Actions\Newsletter;
 
 use Brevo\Brevo;
-use Brevo\Contacts\Requests\CreateContactRequest;
+use Brevo\Contacts\Requests\CreateDoiContactRequest;
 
 class SubscribeToNewsletter
 {
     /**
-     * Add the given email address to the Brevo newsletter list.
+     * Ask Brevo to send the double opt-in email for the newsletter list.
+     *
+     * The address joins the list only after its owner clicks the confirmation
+     * link, which is what proves consent to receiving the newsletter.
      */
     public function handle(string $email): void
     {
         $brevo = new Brevo(config('services.brevo.key'));
 
-        $brevo->contacts->createContact(new CreateContactRequest([
+        $brevo->contacts->createDoiContact(new CreateDoiContactRequest([
             'email' => $email,
-            'listIds' => [(int) config('services.brevo.lists.newsletter')],
-            'updateEnabled' => true,
+            'includeListIds' => [(int) config('services.brevo.lists.newsletter')],
+            'templateId' => (int) config('services.brevo.templates.double_opt_in'),
+            'redirectionUrl' => route('home'),
         ]));
     }
 }

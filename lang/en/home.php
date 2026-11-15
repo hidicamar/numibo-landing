@@ -80,7 +80,8 @@ return [
         'subtitle' => 'Subscribe to our newsletter and be the first to hear about new tools, updates, and learning tips.',
         'placeholder' => 'Your email address',
         'honeypot_label' => 'Leave this field empty',
-        'success' => 'You are subscribed. Thank you!',
+        'success' => 'Almost done. Check your inbox and confirm your subscription.',
+        'notice' => 'We only use your address to send the newsletter. You can unsubscribe at any time. See our :privacy.',
         'error' => 'Something went wrong. Please try again in a moment.',
     ],
 

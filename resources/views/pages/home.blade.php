@@ -174,7 +174,7 @@
         <div class="mx-auto max-w-5xl">
             <x-reveal class="flex flex-col items-center gap-6 rounded-3xl bg-blue-950 px-6 py-16 text-center lg:px-12 lg:py-20">
                 <h2 class="max-w-2xl text-white">{{ __('home.cta.title') }}</h2>
-                <p class="max-w-xl text-lg text-balance text-white/70">{{ __('home.cta.subtitle') }}</p>
+                <p class="max-w-xl text-lg text-balance text-white/70">{{ $isEarlyAccess ? __('home.cta.subtitle') : __('pricing.cta.subtitle') }}</p>
 
                 <div class="flex w-full flex-col items-center justify-center gap-3 sm:flex-row">
                     <flux:button :href="$primaryCtaHref" variant="primary" class="w-full sm:w-auto" icon:trailing="arrow-up-right">

@@ -162,3 +162,18 @@ it('renders the shared FAQ list with the row padding on the heading button', fun
 
     expect($html)->toMatch('/<button[^>]*class="[^"]*\bpt-4 pb-2\b[^"]*"[^>]*data-flux-accordion-heading/');
 })->with(['home', 'pricing']);
+
+it('promises a card-free start in the final CTA only during early access', function () {
+    config(['plans.early_access' => true]);
+
+    $this->get(route('home'))
+        ->assertOk()
+        ->assertSee(__('home.cta.subtitle'));
+
+    config(['plans.early_access' => false]);
+
+    $this->get(route('home'))
+        ->assertOk()
+        ->assertSee(__('pricing.cta.subtitle'))
+        ->assertDontSee(__('home.cta.subtitle'));
+});

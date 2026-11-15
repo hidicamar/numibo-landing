@@ -25,5 +25,11 @@
                 {{ __('actions.subscribe') }}
             </flux:button>
         </form>
+
+        <p class="mx-auto mt-3 max-w-md text-center text-sm text-dark/60 lg:mr-0 lg:text-right">
+            {!! __('home.newsletter.notice', [
+                'privacy' => '<a href="'.route('legal.privacy-policy').'" class="underline hover:text-dark" wire:navigate>'.e(__('titles.legal.privacy_policy')).'</a>',
+            ]) !!}
+        </p>
     @endif
 </div>

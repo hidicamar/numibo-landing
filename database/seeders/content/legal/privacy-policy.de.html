@@ -1,19 +1,20 @@
-<p>Gültig ab: <strong>19. Juli 2026</strong> · Zuletzt aktualisiert: <strong>19. Juli 2026</strong></p>
+<p>Gültig ab: <strong>15. November 2026</strong> · Zuletzt aktualisiert: <strong>15. November 2026</strong></p>
 
 <p>Diese Richtlinie gilt für den gesamten <strong>Numibo</strong>-Dienst: die öffentliche Website unter <strong>numibo.com</strong> und die Anwendung unter <strong>app.numibo.com</strong>. Die Website selbst verarbeitet nur sehr wenige personenbezogene Daten (eine E-Mail-Adresse für den Newsletter und, mit Ihrer Einwilligung, Analyse-Cookies); Konten, Zahlungen und Übungsdaten werden in der Anwendung verarbeitet.</p>
 
 <h2>1. Verantwortlicher</h2>
 <!-- The bracketed operator identity placeholders are resolved from .env (config/company.php + mail.from.address) at render time by LegalPageController - leave them as-is. -->
-<p>Verantwortlicher für die Datenverarbeitung ist <strong>[OPERATOR NAME] s.p.</strong>, ein in Slowenien eingetragener Einzelunternehmer, [ADDRESS], Slowenien, Registernummer [REGISTRATION NUMBER], USt-ID [VAT ID] („Numibo", „wir", „uns"). Bei Fragen zum Datenschutz erreichen Sie uns unter <a href="mailto:[EMAIL]">[EMAIL]</a>.</p>
+<p>Verantwortlicher für die Datenverarbeitung ist <strong>[OPERATOR NAME] s.p.</strong>, ein in Slowenien eingetragener Einzelunternehmer, [ADDRESS], Slowenien, Registernummer [REGISTRATION NUMBER], Steuernummer [VAT ID] („Numibo", „wir", „uns"). Bei Fragen zum Datenschutz erreichen Sie uns unter <a href="mailto:[EMAIL]">[EMAIL]</a>.</p>
 
 <h2>2. Welche Daten wir verarbeiten</h2>
 <ul>
-    <li><strong>Kontodaten:</strong> Vor- und Nachname, E-Mail-Adresse, Passwort (ausschließlich verschlüsselt gespeichert) und bevorzugte Sprache.</li>
+    <li><strong>Kontodaten:</strong> Vor- und Nachname, E-Mail-Adresse, Passwort (ausschließlich als Einweg-Hash gespeichert) und bevorzugte Sprache.</li>
     <li><strong>Google-Anmeldung:</strong> Wenn Sie sich mit Google anmelden, erhalten wir von Google Ihren Namen, Ihre E-Mail-Adresse und Ihre Google-Konto-Kennung.</li>
-    <li><strong>Zahlungsdaten:</strong> Zahlungen werden von Stripe verarbeitet. Kartennummern speichern wir nicht selbst; wir speichern Ihre Stripe-Kundenkennung, die Art des Zahlungsmittels und die letzten vier Ziffern, den Abonnementstatus sowie Rechnungen (einschließlich der darauf enthaltenen Rechnungsangaben).</li>
-    <li><strong>Nutzungsdaten:</strong> die von Ihnen erstellten Arbeitsblätter (Übungen) und Ihre Lösungsversuche (Anzahl richtiger und falscher Antworten, Dauer, abgegebene Antworten).</li>
-    <li><strong>Newsletter:</strong> Wenn Sie sich auf der Website anmelden, verarbeiten wir Ihre E-Mail-Adresse zum Versand des Newsletters. Die Anmeldung ist freiwillig; Sie können sich jederzeit über den Link in jeder E-Mail wieder abmelden.</li>
-    <li><strong>Technische Daten:</strong> Sitzungsdaten mit Ihrer IP-Adresse und Browserinformationen sowie Cookies, die für den Betrieb der Website und der Anwendung notwendig sind.</li>
+    <li><strong>Zahlungsdaten:</strong> Zahlungen werden von Stripe verarbeitet. Kartennummern speichern wir nicht selbst; wir speichern Ihre Stripe-Kundenkennung, die Art des Zahlungsmittels und die letzten vier Ziffern, den Abonnementstatus sowie Rechnungen (einschließlich der darauf enthaltenen Rechnungsangaben). Solange Numibo im Early Access kostenlos ist, werden keine Zahlungsdaten erhoben.</li>
+    <li><strong>Nutzungsdaten:</strong> die von Ihnen erstellten Arbeitsblätter (Übungen) einschließlich ihrer Einstellungen und eines von Ihnen vergebenen Titels sowie die Lösungsversuche in Ihrem Konto (Anzahl richtiger und falscher Antworten, Dauer, abgegebene Antworten).</li>
+    <li><strong>Newsletter:</strong> Wenn Sie sich auf der Website anmelden, verarbeiten wir Ihre E-Mail-Adresse zum Versand des Newsletters. Zunächst senden wir Ihnen eine E-Mail, in der Sie die Anmeldung bestätigen (Double-Opt-in). Die Anmeldung ist freiwillig; Sie können sich jederzeit über den Link in jeder E-Mail wieder abmelden.</li>
+    <li><strong>Technische Daten:</strong> Sitzungsdaten mit Ihrer IP-Adresse und Browserinformationen, Cookies, die für den Betrieb der Website und der Anwendung notwendig sind, sowie kurzlebige Server- und Leistungsprotokolle.</li>
+    <li><strong>Fehlerberichte:</strong> Tritt in der Anwendung ein Fehler auf, wird ein technischer Bericht (der Fehler, die Seitenadresse und Ihre Kontokennung) an unseren Anbieter für Fehlerüberwachung gesendet, damit wir ihn beheben können. Passwörter, Cookies und Codes werden aus diesen Berichten entfernt.</li>
     <li><strong>Sicherheitsdaten:</strong> Passkey-Anmeldedaten, Einstellungen der Zwei-Faktor-Authentifizierung und Codes zur E-Mail-Bestätigung.</li>
 </ul>
 <p>Wir verkaufen keine personenbezogenen Daten und verwenden sie nicht für Werbeprofile.</p>
@@ -29,34 +30,39 @@
 <h2>4. Cookies und Analyse</h2>
 <p>Wir verwenden <strong>Google Analytics</strong> auf der öffentlichen Website, um den Website-Traffic zu verstehen, und zwar nur mit Ihrer über das Cookie-Banner (verwaltet von CookieYes) erteilten Einwilligung. <strong>Im eingeloggten Bereich der Anwendung setzen wir keine Analyse ein.</strong> Die vollständige Liste der Cookies und deren Verwaltung finden Sie in unserer <a href="/de/cookies">Cookie-Richtlinie</a>.</p>
 
-<h2>5. Auftragsverarbeiter und Drittlandtransfers</h2>
-<p>Wir geben personenbezogene Daten nur an Auftragsverarbeiter weiter, die wir für den Betrieb des Dienstes benötigen, und zwar auf Grundlage von Auftragsverarbeitungsverträgen:</p>
+<h2>5. Empfänger, Auftragsverarbeiter und Drittlandtransfers</h2>
+<p>Wir geben personenbezogene Daten nur an Dienstleister weiter, die wir für den Betrieb von Numibo benötigen. Die meisten handeln als unsere Auftragsverarbeiter auf Grundlage von Auftragsverarbeitungsverträgen; Stripe (Zahlungen) und Google (Anmeldung) verarbeiten einen Teil der Daten zudem als eigenständige Verantwortliche nach ihren eigenen Datenschutzerklärungen.</p>
 <ul>
-    <li><strong>Stripe</strong> (Stripe Payments Europe, Ltd. / Stripe, Inc.) – Zahlungsabwicklung.</li>
-    <li><strong>Google</strong> (Google Ireland Ltd.) – Google-Anmeldung und Google Analytics auf der öffentlichen Website.</li>
-    <li><strong>Brevo</strong> (Sendinblue GmbH, Deutschland) – Versand des Newsletters und von System-E-Mails sowie Verwaltung der Empfängerliste.</li>
-    <li><strong>CookieYes</strong> – das Cookie-Consent-Banner auf der öffentlichen Website.</li>
-    <li><strong>Zoho Mail</strong> (Zoho Corporation) – Hosting unseres E-Mail-Postfachs und Korrespondenz mit Ihnen.</li>
-    <li><strong>Hetzner</strong> (Hetzner Online GmbH, Deutschland – Rechenzentrum Frankfurt) – Hosting der Website, der Anwendung und der Datenbank.</li>
+    <li><strong>Stripe</strong> (Stripe Payments Europe, Ltd., Irland) – Zahlungsabwicklung und Rechnungen.</li>
+    <li><strong>Google</strong> (Google Ireland Ltd., Irland) – Google-Anmeldung und Google Analytics auf der öffentlichen Website.</li>
+    <li><strong>Brevo</strong> (Sendinblue SAS, Frankreich) – Versand des Newsletters und von System-E-Mails sowie Verwaltung der Empfängerliste.</li>
+    <li><strong>CookieYes</strong> (CookieYes Limited, Vereinigtes Königreich) – das Cookie-Consent-Banner auf der öffentlichen Website.</li>
+    <li><strong>Zoho Mail</strong> (Zoho Corporation B.V., Niederlande) – Hosting unseres E-Mail-Postfachs und Korrespondenz mit Ihnen.</li>
+    <li><strong>Hetzner</strong> (Hetzner Online GmbH, Deutschland – Rechenzentrum Nürnberg) – Hosting der Website, der Anwendung und der Datenbank.</li>
+    <li><strong>Ploi</strong> (Ploi B.V., Niederlande) – Serververwaltung, Bereitstellung von Updates und Backups.</li>
+    <li><strong>Sentry</strong> (Functional Software, Inc., USA) – Fehlerüberwachung in der Anwendung.</li>
 </ul>
-<p>Daten werden, wo immer möglich, in der EU/im EWR gespeichert. Übermittelt ein Auftragsverarbeiter Daten außerhalb des EWR (zum Beispiel Stripe oder Google in die USA), stützt sich die Übermittlung auf das EU-US Data Privacy Framework oder Standardvertragsklauseln.</p>
+<p>Daten werden, wo immer möglich, in der EU/im EWR gespeichert. Übermittelt ein Dienstleister Daten außerhalb des EWR (zum Beispiel Stripe, Google oder Sentry in die USA oder CookieYes in das Vereinigte Königreich), stützt sich die Übermittlung auf einen Angemessenheitsbeschluss der Europäischen Kommission (einschließlich des EU-US Data Privacy Framework) oder auf Standardvertragsklauseln.</p>
 
 <h2>6. Speicherdauer</h2>
 <ul>
-    <li><strong>Konto- und Nutzungsdaten:</strong> solange Ihr Konto aktiv ist. Löschen Sie Ihr Konto, wird es deaktiviert und kann nicht mehr für die Anmeldung verwendet werden.</li>
-    <li><strong>Rechnungs- und Steuerunterlagen:</strong> so lange, wie es geltendes Recht verlangt – in der Regel 10 Jahre für ausgestellte Rechnungen.</li>
+    <li><strong>Konto- und Nutzungsdaten:</strong> solange Ihr Konto aktiv ist. Löschen Sie Ihr Konto, wird es sofort deaktiviert und kann nicht mehr für die Anmeldung verwendet werden; 30 Tage später werden das Konto, Ihre Arbeitsblätter und Ihre Lösungsversuche endgültig gelöscht.</li>
+    <li><strong>Rechnungs- und Steuerunterlagen:</strong> so lange, wie es geltendes Recht verlangt – in der Regel 10 Jahre für ausgestellte Rechnungen. Diese Unterlagen bleiben auch nach der Löschung Ihres Kontos gespeichert.</li>
     <li><strong>Newsletter:</strong> bis Sie sich abmelden oder uns um Löschung bitten.</li>
-    <li><strong>Sitzungs- und technische Daten:</strong> werden nach kurzer Zeit automatisch gelöscht.</li>
+    <li><strong>Sitzungsdaten:</strong> laufen nach 2 Stunden Inaktivität ab und werden anschließend entfernt.</li>
+    <li><strong>Leistungsmesswerte und Serverprotokolle:</strong> 7 Tage beziehungsweise höchstens 14 Tage.</li>
+    <li><strong>Fehlerberichte:</strong> höchstens 90 Tage.</li>
+    <li><strong>Backups:</strong> höchstens 30 Tage, danach werden sie überschrieben.</li>
 </ul>
 
 <h2>7. Datensicherheit</h2>
 <p>Die gesamte Kommunikation zwischen Ihrem Browser und Numibo ist verschlüsselt (TLS). Passwörter werden ausschließlich als Einweg-Hash gespeichert, Zahlungskartendaten gelangen nie auf unsere Server, und der Zugriff auf Produktivdaten ist auf den Betreiber beschränkt. Keine Übertragungs- oder Speichermethode ist vollständig sicher, wir überprüfen und aktualisieren unsere Schutzmaßnahmen jedoch regelmäßig.</p>
 
 <h2>8. Ihre Rechte</h2>
-<p>Nach der DSGVO haben Sie das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch sowie das Recht, Ihre Einwilligung jederzeit zu widerrufen. Anfragen richten Sie an <a href="mailto:[EMAIL]">[EMAIL]</a>; wir antworten innerhalb von 30 Tagen. Sie können sich außerdem bei der slowenischen Aufsichtsbehörde beschweren, dem Informationsbeauftragten (Informacijski pooblaščenec), Dunajska cesta 22, 1000 Ljubljana, <a href="https://www.ip-rs.si">www.ip-rs.si</a>. Die Plattform der EU zur Online-Streitbeilegung finden Sie unter <a href="https://ec.europa.eu/consumers/odr">ec.europa.eu/consumers/odr</a>.</p>
+<p>Nach der DSGVO haben Sie das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch sowie das Recht, Ihre Einwilligung jederzeit zu widerrufen. Anfragen richten Sie an <a href="mailto:[EMAIL]">[EMAIL]</a>; wir antworten innerhalb eines Monats. Sie können sich außerdem bei der slowenischen Aufsichtsbehörde beschweren, dem Informationsbeauftragten (Informacijski pooblaščenec), Dunajska cesta 22, 1000 Ljubljana, <a href="https://www.ip-rs.si">www.ip-rs.si</a>.</p>
 
 <h2>9. Kinder</h2>
-<p>Numibo ist dafür gemacht, mit Kindern Mathematik zu üben, Konten dürfen jedoch nur von Erwachsenen (Eltern, Erziehungsberechtigten oder Lehrkräften) erstellt werden. Die Anwendung legt keine Kinderprofile an, fragt keine personenbezogenen Daten von Kindern ab und verknüpft erstellte Übungen nicht mit der Identität eines Kindes. Sollten Sie der Ansicht sein, dass ein Kind uns personenbezogene Daten übermittelt hat, kontaktieren Sie uns bitte; wir löschen die Daten dann.</p>
+<p>Numibo ist dafür gemacht, mit Kindern Mathematik zu üben, Konten dürfen jedoch nur von Erwachsenen (Eltern, Erziehungsberechtigten oder Lehrkräften) erstellt werden. Die Anwendung legt keine Kinderprofile an und fragt weder den Namen noch das Alter noch andere identifizierende Daten eines Kindes ab. Löst ein Kind ein Arbeitsblatt am Bildschirm, werden die Antworten und die Lösungszeit im Konto des Erwachsenen gespeichert, ohne das Kind zu identifizieren. Bitte tragen Sie keine personenbezogenen Daten eines Kindes (zum Beispiel den vollständigen Namen) in die Titel von Arbeitsblättern ein. Sollten Sie der Ansicht sein, dass ein Kind uns personenbezogene Daten übermittelt hat, kontaktieren Sie uns bitte; wir löschen die Daten dann.</p>
 
 <h2>10. Änderungen dieser Richtlinie</h2>
 <p>Über wesentliche Änderungen dieser Richtlinie informieren wir Sie mindestens 30 Tage vor deren Inkrafttreten per E-Mail oder in der Anwendung. Es gilt stets die veröffentlichte Fassung mit ihrem Gültigkeitsdatum.</p>

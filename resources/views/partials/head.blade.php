@@ -20,4 +20,6 @@
     <x-head.gtag />
 @endproduction
 
+@fonts
+
 @vite(['resources/css/app.css', 'resources/js/app.js'])

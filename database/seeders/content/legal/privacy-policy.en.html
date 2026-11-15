@@ -1,19 +1,20 @@
-<p>Effective date: <strong>19 July 2026</strong> · Last updated: <strong>19 July 2026</strong></p>
+<p>Effective date: <strong>15 November 2026</strong> · Last updated: <strong>15 November 2026</strong></p>
 
 <p>This policy covers the entire <strong>Numibo</strong> service: the public website at <strong>numibo.com</strong> and the application at <strong>app.numibo.com</strong>. The website itself processes very little personal data (a newsletter email address and, with your consent, analytics cookies); accounts, payments and exercise data are processed in the application.</p>
 
 <h2>1. Data controller</h2>
 <!-- The bracketed operator identity placeholders are resolved from .env (config/company.php + mail.from.address) at render time by LegalPageController - leave them as-is. -->
-<p>The data controller is <strong>[OPERATOR NAME] s.p.</strong>, a sole trader registered in Slovenia, [ADDRESS], Slovenia, registration number [REGISTRATION NUMBER], VAT ID [VAT ID] ("Numibo", "we", "us"). For any privacy-related questions, contact us at <a href="mailto:[EMAIL]">[EMAIL]</a>.</p>
+<p>The data controller is <strong>[OPERATOR NAME] s.p.</strong>, a sole trader registered in Slovenia, [ADDRESS], Slovenia, registration number [REGISTRATION NUMBER], tax number [VAT ID] ("Numibo", "we", "us"). For any privacy-related questions, contact us at <a href="mailto:[EMAIL]">[EMAIL]</a>.</p>
 
 <h2>2. Data we collect</h2>
 <ul>
-    <li><strong>Account data:</strong> first and last name, email address, password (stored only in hashed form) and preferred language.</li>
+    <li><strong>Account data:</strong> first and last name, email address, password (stored only as a one-way hash) and preferred language.</li>
     <li><strong>Google sign-in:</strong> if you sign in with Google, we receive your name, email address and Google account identifier from Google.</li>
-    <li><strong>Payment data:</strong> payments are processed by Stripe. We never store card numbers ourselves; we store your Stripe customer identifier, the payment method type and last four digits, your subscription status and invoices (including the billing details on them).</li>
-    <li><strong>Usage data:</strong> the worksheets (exercises) you generate and your solving attempts (correct/incorrect counts, duration, submitted answers).</li>
-    <li><strong>Newsletter:</strong> if you subscribe on the website, we process your email address in order to send the newsletter. Subscribing is voluntary and you can unsubscribe at any time via the link in every email.</li>
-    <li><strong>Technical data:</strong> session records containing your IP address and browser information, and cookies essential for the website and application to work.</li>
+    <li><strong>Payment data:</strong> payments are processed by Stripe. We never store card numbers ourselves; we store your Stripe customer identifier, the payment method type and last four digits, your subscription status and invoices (including the billing details on them). While Numibo is free during early access, no payment data is collected.</li>
+    <li><strong>Usage data:</strong> the worksheets (exercises) you generate, including their settings and any title you give them, and the solving attempts made in your account (correct/incorrect counts, duration, submitted answers).</li>
+    <li><strong>Newsletter:</strong> if you subscribe on the website, we process your email address in order to send the newsletter. We first send you an email asking you to confirm the subscription (double opt-in). Subscribing is voluntary and you can unsubscribe at any time via the link in every email.</li>
+    <li><strong>Technical data:</strong> session records containing your IP address and browser information, cookies essential for the website and application to work, and short-lived server and performance logs.</li>
+    <li><strong>Error reports:</strong> if an error occurs in the application, a technical report (the error, the page address and your account identifier) is sent to our error-monitoring provider so that we can fix it. Passwords, cookies and codes are removed from these reports.</li>
     <li><strong>Security data:</strong> passkey credentials, two-factor authentication settings and email verification codes.</li>
 </ul>
 <p>We do not sell personal data, and we do not use it for advertising profiles.</p>
@@ -29,34 +30,39 @@
 <h2>4. Cookies and analytics</h2>
 <p>We use <strong>Google Analytics</strong> on the public website to understand site traffic, and only with your consent given through the cookie banner (managed by CookieYes). <strong>We do not use analytics inside the logged-in area of the application.</strong> See our <a href="/en/cookies">cookies policy</a> for the full list of cookies and how to manage them.</p>
 
-<h2>5. Processors and international transfers</h2>
-<p>We share personal data only with processors we need to run the service, under data processing agreements:</p>
+<h2>5. Recipients, processors and international transfers</h2>
+<p>We share personal data only with the service providers we need to run Numibo. Most of them act as our processors under data processing agreements; Stripe (payments) and Google (sign-in) also process some data as independent controllers under their own privacy policies.</p>
 <ul>
-    <li><strong>Stripe</strong> (Stripe Payments Europe, Ltd. / Stripe, Inc.) – payment processing.</li>
-    <li><strong>Google</strong> (Google Ireland Ltd.) – Google sign-in and Google Analytics on the public website.</li>
-    <li><strong>Brevo</strong> (Sendinblue GmbH, Germany) – sending the newsletter and transactional emails, and managing the subscriber list.</li>
-    <li><strong>CookieYes</strong> – the cookie consent banner on the public website.</li>
-    <li><strong>Zoho Mail</strong> (Zoho Corporation) – hosting our email inbox and correspondence with you.</li>
-    <li><strong>Hetzner</strong> (Hetzner Online GmbH, Germany – Frankfurt data centre) – hosting the website, application and database.</li>
+    <li><strong>Stripe</strong> (Stripe Payments Europe, Ltd., Ireland) – payment processing and invoices.</li>
+    <li><strong>Google</strong> (Google Ireland Ltd., Ireland) – Google sign-in and Google Analytics on the public website.</li>
+    <li><strong>Brevo</strong> (Sendinblue SAS, France) – sending the newsletter and transactional emails, and managing the subscriber list.</li>
+    <li><strong>CookieYes</strong> (CookieYes Limited, United Kingdom) – the cookie consent banner on the public website.</li>
+    <li><strong>Zoho Mail</strong> (Zoho Corporation B.V., Netherlands) – hosting our email inbox and correspondence with you.</li>
+    <li><strong>Hetzner</strong> (Hetzner Online GmbH, Germany – Nuremberg data centre) – hosting the website, application and database.</li>
+    <li><strong>Ploi</strong> (Ploi B.V., Netherlands) – server management, deployment and backups.</li>
+    <li><strong>Sentry</strong> (Functional Software, Inc., USA) – error monitoring in the application.</li>
 </ul>
-<p>Data is stored in the EU/EEA wherever possible. Where a processor transfers data outside the EEA (for example Stripe or Google to the USA), the transfer relies on the EU–US Data Privacy Framework or standard contractual clauses.</p>
+<p>Data is stored in the EU/EEA wherever possible. Where a provider transfers data outside the EEA (for example Stripe, Google or Sentry to the USA, or CookieYes to the United Kingdom), the transfer relies on an adequacy decision of the European Commission (including the EU–US Data Privacy Framework) or on standard contractual clauses.</p>
 
 <h2>6. Retention</h2>
 <ul>
-    <li><strong>Account and usage data:</strong> for as long as your account is active. When you delete your account, it is deactivated and can no longer be used to sign in.</li>
-    <li><strong>Invoicing and tax records:</strong> as long as applicable law requires — as a rule, 10 years for issued invoices.</li>
+    <li><strong>Account and usage data:</strong> for as long as your account is active. When you delete your account, it is deactivated immediately and can no longer be used to sign in; 30 days later the account, your worksheets and your solving attempts are permanently erased.</li>
+    <li><strong>Invoicing and tax records:</strong> as long as applicable law requires — as a rule, 10 years for issued invoices. These records are kept even after your account is erased.</li>
     <li><strong>Newsletter:</strong> until you unsubscribe or ask us to remove you.</li>
-    <li><strong>Session and technical records:</strong> pruned automatically after a short period.</li>
+    <li><strong>Session records:</strong> expire after 2 hours of inactivity and are then removed.</li>
+    <li><strong>Performance metrics and server logs:</strong> 7 days and up to 14 days respectively.</li>
+    <li><strong>Error reports:</strong> up to 90 days.</li>
+    <li><strong>Backups:</strong> up to 30 days, after which they are overwritten.</li>
 </ul>
 
 <h2>7. Data security</h2>
 <p>All traffic between your browser and Numibo is encrypted (TLS). Passwords are stored only as one-way hashes, payment card data never touches our servers, and access to production data is restricted to the operator. No method of transmission or storage is completely secure, but we review and update our safeguards regularly.</p>
 
 <h2>8. Your rights</h2>
-<p>Under the GDPR you have the right to access, rectify, erase, restrict processing, data portability and objection, and the right to withdraw consent at any time. Send requests to <a href="mailto:[EMAIL]">[EMAIL]</a>; we respond within 30 days. You may also lodge a complaint with the Slovenian supervisory authority, the Information Commissioner (Informacijski pooblaščenec), Dunajska cesta 22, 1000 Ljubljana, <a href="https://www.ip-rs.si">www.ip-rs.si</a>. The EU online dispute resolution platform is available at <a href="https://ec.europa.eu/consumers/odr">ec.europa.eu/consumers/odr</a>.</p>
+<p>Under the GDPR you have the right to access, rectify, erase, restrict processing, data portability and objection, and the right to withdraw consent at any time. Send requests to <a href="mailto:[EMAIL]">[EMAIL]</a>; we respond within one month. You may also lodge a complaint with the Slovenian supervisory authority, the Information Commissioner (Informacijski pooblaščenec), Dunajska cesta 22, 1000 Ljubljana, <a href="https://www.ip-rs.si">www.ip-rs.si</a>.</p>
 
 <h2>9. Children</h2>
-<p>Numibo is made for practising math with children, but accounts may only be created by adults (parents, guardians or teachers). The application does not create child profiles, does not ask for any child's personal data and does not link generated exercises to any child's identity. If you believe a child has provided us personal data, contact us and we will delete it.</p>
+<p>Numibo is made for practising math with children, but accounts may only be created by adults (parents, guardians or teachers). The application does not create child profiles and does not ask for a child's name, age or any other identifying data. When a child solves a worksheet on screen, the answers and the solving time are stored in the adult's account, without identifying the child. Please do not enter a child's personal data (for example a full name) into worksheet titles. If you believe a child has provided us personal data, contact us and we will delete it.</p>
 
 <h2>10. Changes to this policy</h2>
 <p>We will notify you of material changes to this policy by email or in the application at least 30 days before they take effect. The published version, with its effective date, always applies.</p>

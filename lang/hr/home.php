@@ -80,7 +80,8 @@ return [
         'subtitle' => 'Prijavi se na naš newsletter i prvi saznaj za nove alate, novosti i savjete za učenje.',
         'placeholder' => 'Tvoja e-mail adresa',
         'honeypot_label' => 'Ostavi ovo polje prazno',
-        'success' => 'Prijava je uspješna. Hvala ti!',
+        'success' => 'Još samo korak. Provjeri e-poštu i potvrdi prijavu.',
+        'notice' => 'Tvoju adresu koristimo samo za slanje newslettera. Odjaviti se možeš u bilo kojem trenutku. Detalji: :privacy.',
         'error' => 'Nešto je pošlo po zlu. Pokušaj ponovno za trenutak.',
     ],
 

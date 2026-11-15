@@ -80,7 +80,8 @@ return [
         'subtitle' => 'Naroči se na naše e-novice in med prvimi izvedi za nova orodja, posodobitve in nasvete za učenje.',
         'placeholder' => 'Tvoj e-poštni naslov',
         'honeypot_label' => 'To polje pusti prazno',
-        'success' => 'Naročilo je uspešno. Hvala!',
+        'success' => 'Skoraj končano. Preveri e-pošto in potrdi prijavo.',
+        'notice' => 'Tvoj naslov uporabimo samo za pošiljanje e-novic. Odjaviš se lahko kadar koli. Podrobnosti: :privacy.',
         'error' => 'Nekaj je šlo narobe. Poskusi znova čez trenutek.',
     ],
 
