@@ -16,7 +16,6 @@ use Filament\Navigation\NavigationGroup;
 use Filament\Pages\Dashboard;
 use Filament\Panel;
 use Filament\PanelProvider;
-use Filament\Support\Colors\Color;
 use Filament\Widgets\AccountWidget;
 use Filament\Widgets\FilamentInfoWidget;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
@@ -35,6 +34,7 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
+            ->profile(isSimple: false)
             ->colors([
                 'primary' => '#4ac0fe',
             ])
@@ -65,7 +65,7 @@ class AdminPanelProvider extends PanelProvider
             ->authMiddleware([
                 Authenticate::class,
             ])
-             ->navigation(function (NavigationBuilder $builder): NavigationBuilder {
+            ->navigation(function (NavigationBuilder $builder): NavigationBuilder {
                 return $builder->groups([
                     NavigationGroup::make('Blog')
                         ->items([
@@ -77,7 +77,7 @@ class AdminPanelProvider extends PanelProvider
                         ->items([
                             ...FaqResource::getNavigationItems(),
                             ...PageResource::getNavigationItems(),
-                    ]),
+                        ]),
                 ]);
             })
             ->sidebarFullyCollapsibleOnDesktop();
