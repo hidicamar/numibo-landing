@@ -27,6 +27,23 @@ it('renders the seeded legal content to guests', function () {
         ->assertSee('Brevo');
 });
 
+it('seeds a privacy policy that describes child profiles in every locale', function (string $lang, string $childProfilesItem, string $retiredNoProfilesClaim) {
+    $content = Page::withoutGlobalScopes()
+        ->where('lang', $lang)
+        ->where('type', 'privacy-policy')
+        ->value('content');
+
+    // One item lists the data collected (section 2), the other how long it is kept (section 6).
+    expect(substr_count($content, $childProfilesItem))->toBe(2)
+        ->and($content)->not->toContain($retiredNoProfilesClaim);
+})->with([
+    'en' => ['en', '<li><strong>Child profiles:</strong>', 'does not create child profiles'],
+    'sl' => ['sl', '<li><strong>Profili otrok:</strong>', 'ne ustvarja profilov otrok'],
+    'de' => ['de', '<li><strong>Kinderprofile:</strong>', 'legt keine Kinderprofile an'],
+    'hr' => ['hr', '<li><strong>Dječji profili:</strong>', 'ne kreira profile djece'],
+    'bs' => ['bs', '<li><strong>Dječiji profili:</strong>', 'ne kreira profile djece'],
+]);
+
 it('renders the admin-managed page content as HTML', function () {
     Page::withoutGlobalScopes()
         ->where('lang', app()->getLocale())
