@@ -64,6 +64,27 @@ return [
         ],
     ],
 
+    'premium_features' => [
+        'title' => 'Extras in the Premium plan',
+        'items' => [
+            'timed_exercises' => [
+                'title' => 'Exercises with a time limit',
+                'description' => 'When you create an exercise, switch on a time limit of 1 to 60 minutes. The clock starts when your child presses Start; when time runs out, the answers are handed in automatically and empty ones count as wrong.',
+                'image_alt' => 'Timed exercise being solved, with the time left shown at the top',
+            ],
+            'child_profiles' => [
+                'title' => 'A profile for each child',
+                'description' => 'Add up to 4 children, each with a name and an animal avatar. You sign in, your child picks their name under "Who is practising?", and results are kept for each child.',
+                'image_alt' => '"Who is practising?" screen with two children to choose from',
+            ],
+            'rewards' => [
+                'title' => 'Stars, a weekly streak and badges',
+                'description' => 'Every exercise handed in earns up to 3 stars, and the best try counts. Practising on 3 days a week keeps the streak going, and there are 12 badges to collect.',
+                'image_alt' => 'A child\'s rewards page with stars, the weekly streak and badges',
+            ],
+        ],
+    ],
+
     'blog' => [
         'title' => 'From the blog',
         'subtitle' => 'Tips, insights, and updates on math learning and getting the most out of the app.',

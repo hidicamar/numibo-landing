@@ -1,18 +1,19 @@
-@props(['index'])
+@props(['index' => null, 'visual' => null, 'alt' => null])
 
 @php
-    $visual = config('screenshots.steps')[$index];
+    $visual ??= config('screenshots.steps')[$index];
+    $alt ??= __('home.steps.items.'.$index.'.image_alt');
     $locale = app()->getLocale();
-    $alt = __('home.steps.items.'.$index.'.image_alt');
     $source = fn (int $image): string => asset("img/usage/{$locale}/img-{$image}-{$visual['type']}.png");
 @endphp
 
-{{-- The picture for one how-it-works step, see config/screenshots.php. Both
-     kinds sit in the same box and run off its bottom edge, so the three steps
+{{-- The picture for one how-it-works step or Premium feature, see config/screenshots.php.
+     Every kind sits in the same box and runs off its bottom edge, so the cards
      line up and each reads as the top of something longer; the fade at the
-     bottom keeps that cut soft wherever it lands in a given locale. The images
-     carry no width/height because the captures differ in height per locale and,
-     being absolutely positioned in a fixed square, they cannot shift layout. --}}
+     bottom keeps that cut soft wherever it lands in a given locale. Panel and
+     paper images carry no width/height because the captures differ in height
+     per locale and, being absolutely positioned in a fixed square, they cannot
+     shift layout. A "mobile" capture is always 780x1688, shown in a phone frame. --}}
 <div {{ $attributes->class('relative aspect-square overflow-hidden rounded-xl bg-blue-50') }}>
     @if ($visual['type'] === 'paper')
         <img
@@ -30,6 +31,18 @@
             loading="lazy"
             decoding="async"
         />
+    @elseif ($visual['type'] === 'mobile')
+        <div class="absolute top-5 left-1/2 w-[62%] -translate-x-1/2 rounded-[1.75rem] bg-white p-1.5 shadow-custom inset-ring-2 inset-ring-blue-50">
+            <img
+                src="{{ $source($visual['images'][0]) }}"
+                alt="{{ $alt }}"
+                width="780"
+                height="1688"
+                class="block h-auto w-full rounded-[1.375rem] border border-blue-100 bg-light"
+                loading="lazy"
+                decoding="async"
+            />
+        </div>
     @else
         <img
             src="{{ $source($visual['images'][0]) }}"

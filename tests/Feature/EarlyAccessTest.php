@@ -53,13 +53,15 @@ it('hides every price and plan checkout link', function (string $routeName) {
         ->assertSee(config('app.app_url').'/register');
 })->with(['home', 'pricing']);
 
-it('lists every included feature', function () {
-    $response = $this->get(route('pricing'))->assertOk();
+it('lists every included feature', function (string $routeName) {
+    $response = $this->get(route($routeName))
+        ->assertOk()
+        ->assertSee(__('pricing.early_access.subtitle'));
 
     foreach (__('pricing.early_access.features') as $feature) {
         $response->assertSee($feature);
     }
-});
+})->with(['home', 'pricing']);
 
 it('does not promise unlimited generation while a fair-use cap applies', function () {
     $this->get(route('pricing'))
@@ -103,7 +105,7 @@ it('seeds an FAQ that matches early access in every locale', function (string $r
     foreach (['en', 'sl', 'de', 'hr', 'bs'] as $locale) {
         $faqs = Faq::withoutGlobalScopes()->where('lang', $locale)->get();
 
-        expect($faqs->where('is_visible', true))->toHaveCount(6)
+        expect($faqs->where('is_visible', true))->toHaveCount(8)
             ->and($faqs->where('is_visible', false))->toHaveCount(2)
             ->and($faqs->where('is_visible', true)->pluck('answer')->implode(' '))
             ->not->toContain((string) config('plans.trial_days').'-');

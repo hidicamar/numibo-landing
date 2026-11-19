@@ -26,8 +26,13 @@ Numibo generates maths worksheets in a few taps. The adult picks the operation a
 - Solving online gives per-row correct/incorrect feedback, a score, and a celebration when everything is correct.
 - Every worksheet has a PDF download. The answer-key page is optional: it is added only when the "solutions" toggle is switched on in the generator, and the toggle is off by default.
 - Exercise history exists in the app ("My exercises").
-- Four locales: Slovene (main), English, German, Croatian. Any app screenshot has to exist per locale.
-- Early access: while `plans.early_access` is on, the site presents Numibo as free with everything included and hides plans and prices. Paid plans are planned for later.
+- Premium plan features (Starter has none of them):
+  - Timed exercises: when creating an exercise the parent can switch on a time limit (presets 3, 5, 10 or 15 minutes, or any whole number from 1 to 60). The clock starts on Start; when time runs out the exercise is handed in automatically and unanswered equations count as wrong. The PDF does not print the limit.
+  - Child profiles: up to 4, each with a nickname and one of 12 preset animal avatars; no child login, email, birth date or photo. The parent signs in and picks the child under "Who is practising?"; results are recorded per child. Exercises belong to the parent and any child can solve any of them. Deleting a child deletes that child's results and badges.
+  - Rewards, per child profile: stars per exercise (1 for handing in, 2 at 75%, 3 at 90%; the best try counts), a weekly streak (3 practice days in a week, Monday to Sunday) and 12 badges.
+  - Not in the product: child logins, a lock on the parent areas, a skill map, leaderboards, spending stars, a switch to turn rewards off. Do not imply any of them.
+- Five locales: Slovene (main), English, German, Croatian, Bosnian. Any app screenshot has to exist per locale.
+- Early access: while `plans.early_access` is on, the site presents Numibo as free with everything included, the Premium features too, and hides plans and prices. Paid plans are planned for later.
 
 ## Brand Commitments
 

@@ -64,6 +64,27 @@ return [
         ],
     ],
 
+    'premium_features' => [
+        'title' => 'Dodatki v paketu Premium',
+        'items' => [
+            'timed_exercises' => [
+                'title' => 'Vaje s časovno omejitvijo',
+                'description' => 'Ko ustvariš vajo, lahko vklopiš časovno omejitev od 1 do 60 minut. Čas začne teči, ko otrok pritisne Začni; ko se izteče, se odgovori samodejno oddajo, prazni pa štejejo kot napačni.',
+                'image_alt' => 'Reševanje vaje s časovno omejitvijo, zgoraj je prikazan preostali čas',
+            ],
+            'child_profiles' => [
+                'title' => 'Profil za vsakega otroka',
+                'description' => 'Dodaš lahko največ 4 otroke, vsakega z imenom in živalco. Prijaviš se ti, otrok pa pri »Kdo vadi?« izbere sebe in rezultati se beležijo za vsakega posebej.',
+                'image_alt' => 'Zaslon »Kdo vadi?« z dvema otrokoma za izbiro',
+            ],
+            'rewards' => [
+                'title' => 'Zvezdice, tedenski niz in značke',
+                'description' => 'Vsaka oddana vaja prinese do 3 zvezdice, šteje najboljši poskus. Če otrok vadi 3 dni na teden, se niz nadaljuje, zbira pa lahko še 12 značk.',
+                'image_alt' => 'Stran z nagradami otroka: zvezdice, tedenski niz in značke',
+            ],
+        ],
+    ],
+
     'blog' => [
         'title' => 'Z bloga',
         'subtitle' => 'Nasveti, vpogledi in novice o učenju matematike ter o tem, kako kar najbolje izkoristiti aplikacijo.',

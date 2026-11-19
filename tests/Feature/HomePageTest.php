@@ -2,7 +2,9 @@
 
 use App\Models\Faq;
 use App\Models\Post;
+use Database\Seeders\FaqSeeder;
 use Database\Seeders\PageSeeder;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 
 beforeEach(fn () => $this->seed(PageSeeder::class));
@@ -128,6 +130,92 @@ it('has a step visual file and alt text for every step and locale', function () 
     }
 });
 
+it('shows every Premium feature with its phone screenshot in every locale', function (bool $isEarlyAccess) {
+    config(['plans.early_access' => $isEarlyAccess]);
+
+    foreach (['en', 'sl', 'de', 'hr', 'bs'] as $locale) {
+        app()->setLocale($locale);
+
+        $response = $this->get(route('home'))
+            ->assertOk()
+            ->assertSee('lang="'.$locale.'"', false)
+            ->assertSee(__('home.premium_features.title'));
+
+        foreach (config('screenshots.premium_features') as $visual) {
+            $response
+                ->assertSee(__("home.premium_features.items.{$visual['key']}.title"))
+                ->assertSee(__("home.premium_features.items.{$visual['key']}.image_alt"))
+                ->assertSee("img/usage/{$locale}/img-{$visual['images'][0]}-mobile.png");
+        }
+    }
+})->with(['early access off' => false, 'early access on' => true]);
+
+it('has Premium feature copy and alt text in every locale', function () {
+    foreach (['en', 'sl', 'de', 'hr', 'bs'] as $locale) {
+        $copy = require lang_path($locale.'/home.php');
+
+        expect($copy['premium_features']['title'] ?? null)->toBeString();
+
+        foreach (config('screenshots.premium_features') as $visual) {
+            expect($copy['premium_features']['items'][$visual['key']] ?? null)
+                ->toHaveKeys(['title', 'description', 'image_alt']);
+        }
+    }
+});
+
+it('has every English home, pricing and billing key in every locale', function (string $locale, string $file) {
+    expect(array_keys(Arr::dot(require lang_path("{$locale}/{$file}.php"))))
+        ->toBe(array_keys(Arr::dot(require lang_path("en/{$file}.php"))));
+})->with(['sl', 'de', 'hr', 'bs'])->with(['home', 'pricing', 'billing']);
+
+it('has a Premium feature screenshot file for every feature and locale', function () {
+    foreach (['en', 'sl', 'de', 'hr', 'bs'] as $locale) {
+        foreach (config('screenshots.premium_features') as $visual) {
+            expect(public_path("img/usage/{$locale}/img-{$visual['images'][0]}-mobile.png"))->toBeFile();
+        }
+    }
+});
+
+it('answers the Premium feature questions in the seeded FAQ', function (string $locale, array $questions) {
+    $this->seed(FaqSeeder::class);
+    app()->setLocale($locale);
+
+    $response = $this->get(route('home'))->assertOk();
+
+    foreach ($questions as $question) {
+        $response->assertSee($question);
+    }
+
+    expect(Faq::query()->where('question', $questions['children'])->value('answer'))
+        ->toContain('Premium', '4');
+})->with([
+    'en' => ['en', [
+        'time_limit' => 'What happens when the time limit runs out?',
+        'children' => 'Can I add more than one child?',
+        'rewards' => 'What are stars, the weekly streak and badges?',
+    ]],
+    'sl' => ['sl', [
+        'time_limit' => 'Kaj se zgodi, ko se čas za vajo izteče?',
+        'children' => 'Ali lahko dodam več otrok?',
+        'rewards' => 'Kaj so zvezdice, tedenski niz in značke?',
+    ]],
+    'de' => ['de', [
+        'time_limit' => 'Was passiert, wenn das Zeitlimit abläuft?',
+        'children' => 'Kann ich mehrere Kinder hinzufügen?',
+        'rewards' => 'Was sind Sterne, die Wochenserie und Abzeichen?',
+    ]],
+    'hr' => ['hr', [
+        'time_limit' => 'Što se događa kad istekne vrijeme za vježbu?',
+        'children' => 'Mogu li dodati više djece?',
+        'rewards' => 'Što su zvjezdice, tjedni niz i značke?',
+    ]],
+    'bs' => ['bs', [
+        'time_limit' => 'Šta se događa kad istekne vrijeme za vježbu?',
+        'children' => 'Mogu li dodati više djece?',
+        'rewards' => 'Šta su zvjezdice, sedmični niz i značke?',
+    ]],
+]);
+
 it('builds the case before pricing and keeps blog and newsletter below the final CTA', function () {
     Faq::factory()->create(['lang' => app()->getLocale()]);
     Post::factory()->create(['lang' => app()->getLocale()]);
@@ -137,6 +225,7 @@ it('builds the case before pricing and keeps blog and newsletter below the final
         ->assertSeeInOrder([
             __('home.steps.title'),
             __('home.features.title'),
+            __('home.premium_features.title'),
             __('home.pricing.title'),
             __('home.faq.title'),
             __('home.cta.title'),

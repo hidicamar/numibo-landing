@@ -34,8 +34,16 @@ class FaqSeeder extends Seeder
             'answer' => 'Seštevanje, odštevanje, množenje in deljenje – vključno s poštevanko in nalogami po meri.',
         ],
         [
+            'question' => 'Kaj se zgodi, ko se čas za vajo izteče?',
+            'answer' => 'Vaja se odda z odgovori, ki jih je otrok vpisal do takrat, prazni pa štejejo kot napačni. S paketom Premium omejitev nastaviš, ko ustvariš vajo: 3, 5, 10 ali 15 minut ali poljubno število minut od 1 do 60. Na natisnjenem PDF-ju časovne omejitve ni.',
+        ],
+        [
             'question' => 'Ali lahko dodam več otrok?',
-            'answer' => 'Ni ti jih treba dodajati: z enim računom lahko ustvarjaš delovne liste za poljubno število otrok.',
+            'answer' => 'Da. Z enim računom lahko ustvarjaš vaje za poljubno število otrok. S paketom Premium lahko dodaš še največ 4 profile otrok, tako da so rezultati, zvezdice in značke vsakega otroka ločeni.',
+        ],
+        [
+            'question' => 'Kaj so zvezdice, tedenski niz in značke?',
+            'answer' => 'To so nagrade v paketu Premium in pripadajo profilu otroka. Vsaka oddana vaja prinese do 3 zvezdice: pri 75 % pravilnih 2 in pri 90 % 3; šteje najboljši poskus. Če otrok vadi 3 dni v tednu (od ponedeljka do nedelje), se tedenski niz nadaljuje, osvojiti pa je mogoče 12 značk.',
         ],
         [
             'question' => 'Ali lahko zamenjam jezik?',
@@ -74,8 +82,16 @@ class FaqSeeder extends Seeder
             'answer' => 'Addition, subtraction, multiplication and division – including the base times table and custom exercises.',
         ],
         [
+            'question' => 'What happens when the time limit runs out?',
+            'answer' => 'The exercise is handed in with the answers given so far, and any left empty count as wrong. With Premium you set the limit when you create the exercise: 3, 5, 10 or 15 minutes, or any number of minutes from 1 to 60. The printed PDF does not show the time limit.',
+        ],
+        [
             'question' => 'Can I add more than one child?',
-            'answer' => 'You don\'t need to add them: one account can create worksheets for as many children as you like.',
+            'answer' => 'Yes. One account can create exercises for as many children as you like. With Premium you can also add up to 4 child profiles, so each child\'s results, stars and badges are kept apart.',
+        ],
+        [
+            'question' => 'What are stars, the weekly streak and badges?',
+            'answer' => 'They are the Premium rewards, and they belong to a child profile. Every exercise handed in earns up to 3 stars: 2 stars at 75% correct and 3 stars at 90%; the best try counts. Practising on 3 days in a week, Monday to Sunday, keeps the weekly streak going, and there are 12 badges to earn.',
         ],
         [
             'question' => 'Can I change the language?',
@@ -114,8 +130,16 @@ class FaqSeeder extends Seeder
             'answer' => 'Addition, Subtraktion, Multiplikation und Division – einschließlich Grundtabelle und benutzerdefinierter Aufgaben.',
         ],
         [
+            'question' => 'Was passiert, wenn das Zeitlimit abläuft?',
+            'answer' => 'Die Übung wird mit den bis dahin gegebenen Antworten abgegeben, und leere zählen als falsch. Mit Premium legst du das Limit beim Erstellen der Übung fest: 3, 5, 10 oder 15 Minuten oder eine beliebige Minutenzahl von 1 bis 60. Im ausgedruckten PDF steht das Zeitlimit nicht.',
+        ],
+        [
             'question' => 'Kann ich mehrere Kinder hinzufügen?',
-            'answer' => 'Das ist nicht nötig: Mit einem Konto kannst du Arbeitsblätter für beliebig viele Kinder erstellen.',
+            'answer' => 'Ja. Mit einem Konto kannst du Übungen für beliebig viele Kinder erstellen. Mit Premium kannst du zusätzlich bis zu 4 Kinderprofile anlegen, damit Ergebnisse, Sterne und Abzeichen jedes Kindes getrennt bleiben.',
+        ],
+        [
+            'question' => 'Was sind Sterne, die Wochenserie und Abzeichen?',
+            'answer' => 'Das sind die Belohnungen in Premium, und sie gehören zu einem Kinderprofil. Jede abgegebene Übung bringt bis zu 3 Sterne: ab 75 % richtig 2 und ab 90 % 3; der beste Versuch zählt. Wer an 3 Tagen in einer Woche (Montag bis Sonntag) übt, hält die Wochenserie, und es gibt 12 Abzeichen zu verdienen.',
         ],
         [
             'question' => 'Kann ich die Sprache ändern?',
@@ -154,8 +178,16 @@ class FaqSeeder extends Seeder
             'answer' => 'Zbrajanje, oduzimanje, množenje i dijeljenje – uključujući osnovnu tablicu i zadatke po želji.',
         ],
         [
+            'question' => 'Što se događa kad istekne vrijeme za vježbu?',
+            'answer' => 'Vježba se predaje s dotad upisanim odgovorima, a prazni se računaju kao netočni. S paketom Premium ograničenje zadaješ kad izrađuješ vježbu: 3, 5, 10 ili 15 minuta ili bilo koji broj minuta od 1 do 60. Na ispisanom PDF-u vremensko ograničenje ne piše.',
+        ],
+        [
             'question' => 'Mogu li dodati više djece?',
-            'answer' => 'Ne trebaš ih dodavati: s jednim računom možeš izrađivati radne listove za koliko god djece želiš.',
+            'answer' => 'Da. S jednim računom možeš izrađivati vježbe za koliko god djece želiš. S paketom Premium možeš dodati i do 4 dječja profila, pa su rezultati, zvjezdice i značke svakog djeteta odvojeni.',
+        ],
+        [
+            'question' => 'Što su zvjezdice, tjedni niz i značke?',
+            'answer' => 'To su nagrade u paketu Premium i pripadaju profilu djeteta. Svaka predana vježba donosi do 3 zvjezdice: uz 75 % točnih 2, a uz 90 % 3; računa se najbolji pokušaj. Vježbanje 3 dana u tjednu (od ponedjeljka do nedjelje) održava tjedni niz, a može se osvojiti 12 znački.',
         ],
         [
             'question' => 'Mogu li promijeniti jezik?',
@@ -194,8 +226,16 @@ class FaqSeeder extends Seeder
             'answer' => 'Sabiranje, oduzimanje, množenje i dijeljenje – uključujući osnovnu tablicu i zadatke po želji.',
         ],
         [
+            'question' => 'Šta se događa kad istekne vrijeme za vježbu?',
+            'answer' => 'Vježba se predaje s dotad upisanim odgovorima, a prazni se računaju kao netačni. S paketom Premium ograničenje zadaješ kad praviš vježbu: 3, 5, 10 ili 15 minuta ili bilo koji broj minuta od 1 do 60. Na odštampanom PDF-u vremensko ograničenje ne piše.',
+        ],
+        [
             'question' => 'Mogu li dodati više djece?',
-            'answer' => 'Ne trebaš ih dodavati: s jednim računom možeš izrađivati radne listove za koliko god djece želiš.',
+            'answer' => 'Da. S jednim računom možeš praviti vježbe za koliko god djece želiš. S paketom Premium možeš dodati i do 4 dječija profila, pa su rezultati, zvjezdice i značke svakog djeteta odvojeni.',
+        ],
+        [
+            'question' => 'Šta su zvjezdice, sedmični niz i značke?',
+            'answer' => 'To su nagrade u paketu Premium i pripadaju profilu djeteta. Svaka predana vježba donosi do 3 zvjezdice: uz 75 % tačnih 2, a uz 90 % 3; računa se najbolji pokušaj. Vježbanje 3 dana u sedmici (od ponedjeljka do nedjelje) održava sedmični niz, a može se osvojiti 12 znački.',
         ],
         [
             'question' => 'Mogu li promijeniti jezik?',

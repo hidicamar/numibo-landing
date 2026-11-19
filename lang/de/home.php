@@ -64,6 +64,27 @@ return [
         ],
     ],
 
+    'premium_features' => [
+        'title' => 'Extras im Premium-Tarif',
+        'items' => [
+            'timed_exercises' => [
+                'title' => 'Übungen mit Zeitlimit',
+                'description' => 'Beim Erstellen einer Übung kannst du ein Zeitlimit von 1 bis 60 Minuten einschalten. Die Zeit läuft, sobald dein Kind auf Starten drückt; ist sie abgelaufen, werden die Antworten automatisch abgegeben, und leere zählen als falsch.',
+                'image_alt' => 'Übung mit Zeitlimit beim Lösen, oben die verbleibende Zeit',
+            ],
+            'child_profiles' => [
+                'title' => 'Ein Profil für jedes Kind',
+                'description' => 'Lege bis zu 4 Kinder an, jedes mit Namen und Tier-Avatar. Du meldest dich an, dein Kind wählt sich unter „Wer übt?“ aus, und die Ergebnisse werden für jedes Kind getrennt gespeichert.',
+                'image_alt' => 'Bildschirm „Wer übt?“ mit zwei Kindern zur Auswahl',
+            ],
+            'rewards' => [
+                'title' => 'Sterne, Wochenserie und Abzeichen',
+                'description' => 'Jede abgegebene Übung bringt bis zu 3 Sterne, der beste Versuch zählt. Wer an 3 Tagen pro Woche übt, hält die Serie, und es gibt 12 Abzeichen zu sammeln.',
+                'image_alt' => 'Belohnungsseite eines Kindes mit Sternen, Wochenserie und Abzeichen',
+            ],
+        ],
+    ],
+
     'blog' => [
         'title' => 'Aus dem Blog',
         'subtitle' => 'Tipps, Einblicke und Neuigkeiten rund ums Mathelernen und wie du die App optimal nutzt.',

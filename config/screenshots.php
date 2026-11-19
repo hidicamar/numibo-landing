@@ -46,4 +46,22 @@ return [
         ['type' => 'paper', 'images' => [14, 15]],
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Premium feature visuals
+    |--------------------------------------------------------------------------
+    |
+    | One phone screenshot per Premium feature card on the home page, framed
+    | by the "mobile" kind of the step visual. Each is a 780x1688 capture at
+    | public/img/usage/<locale>/img-<image>-mobile.png; title, description
+    | and alt text live under home.premium_features.items.<key>.
+    |
+    */
+
+    'premium_features' => [
+        ['key' => 'timed_exercises', 'type' => 'mobile', 'images' => [16]],
+        ['key' => 'child_profiles', 'type' => 'mobile', 'images' => [17]],
+        ['key' => 'rewards', 'type' => 'mobile', 'images' => [18]],
+    ],
+
 ];

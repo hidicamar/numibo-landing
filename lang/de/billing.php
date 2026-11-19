@@ -25,11 +25,14 @@ return [
         ],
         'premium' => [
             'name' => 'Premium',
-            'description' => 'Alles aus Starter, plus voller Einblick in den Übungsfortschritt.',
+            'description' => 'Alles aus Starter, plus Übungen mit Zeitlimit, Kinderprofile und Belohnungen.',
             'features' => [
                 'Alles aus Starter',
                 'Übungsverlauf',
-                'Versuchsstatistiken und Fortschritt',
+                'Versuche, Ergebnisse und Lösungszeit',
+                'timed_exercises' => 'Übungen mit Zeitlimit',
+                'child_profiles' => 'Bis zu 4 Kinderprofile',
+                'rewards' => 'Sterne, Wochenserie und Abzeichen',
             ],
         ],
     ],

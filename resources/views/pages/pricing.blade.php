@@ -11,6 +11,9 @@
         ['label' => __('pricing.comparison.rows.all_types'), 'starter' => true, 'premium' => true],
         ['label' => __('pricing.comparison.rows.history'), 'starter' => false, 'premium' => true],
         ['label' => __('pricing.comparison.rows.statistics'), 'starter' => false, 'premium' => true],
+        ['label' => __('pricing.comparison.rows.timed_exercises'), 'starter' => false, 'premium' => true],
+        ['label' => __('pricing.comparison.rows.child_profiles'), 'starter' => false, 'premium' => true],
+        ['label' => __('pricing.comparison.rows.rewards'), 'starter' => false, 'premium' => true],
     ];
 @endphp
 

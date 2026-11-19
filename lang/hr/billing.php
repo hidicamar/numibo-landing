@@ -25,11 +25,14 @@ return [
         ],
         'premium' => [
             'name' => 'Premium',
-            'description' => 'Sve iz paketa Starter, plus potpun uvid u napredak vježbanja.',
+            'description' => 'Sve iz paketa Starter, plus vježbe s vremenskim ograničenjem, dječji profili i nagrade.',
             'features' => [
                 'Sve iz paketa Starter',
                 'Povijest vježbi',
-                'Statistika pokušaja i napredak',
+                'Pokušaji, rezultati i vrijeme rješavanja',
+                'timed_exercises' => 'Vježbe s vremenskim ograničenjem',
+                'child_profiles' => 'Do 4 dječja profila',
+                'rewards' => 'Zvjezdice, tjedni niz i značke',
             ],
         ],
     ],

@@ -110,6 +110,28 @@
         </div>
     </section>
 
+    {{-- Premium features --}}
+    <section class="px-5 py-20 lg:px-8 lg:py-28">
+        <div class="mx-auto max-w-5xl">
+            <x-reveal class="mx-auto max-w-2xl text-center">
+                <h2 class="text-dark">{{ __('home.premium_features.title') }}</h2>
+            </x-reveal>
+
+            <div class="mt-14 grid gap-6 md:grid-cols-3">
+                @foreach (config('screenshots.premium_features') as $visual)
+                    <x-reveal wire:key="premium-feature-{{ $visual['key'] }}" :delay="$loop->index * 120" class="flex flex-col rounded-2xl bg-white p-2 shadow-custom inset-ring-4 inset-ring-blue-50">
+                        <x-screenshots.step :visual="$visual" :alt="__('home.premium_features.items.'.$visual['key'].'.image_alt')" />
+
+                        <div class="flex flex-col gap-3 px-5 pt-6 pb-5">
+                            <h6 class="text-dark">{{ __('home.premium_features.items.'.$visual['key'].'.title') }}</h6>
+                            <p class="text-sm text-dark/70">{{ __('home.premium_features.items.'.$visual['key'].'.description') }}</p>
+                        </div>
+                    </x-reveal>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
     {{-- Pricing (early access: free for now, plans and prices hidden) --}}
     @if ($isEarlyAccess)
         <section id="pricing" class="scroll-mt-28 px-5 py-20 lg:px-8 lg:py-28">

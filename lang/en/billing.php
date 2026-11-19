@@ -25,11 +25,14 @@ return [
         ],
         'premium' => [
             'name' => 'Premium',
-            'description' => 'Everything in Starter, plus full insight into practice progress.',
+            'description' => 'Everything in Starter, plus timed exercises, child profiles and rewards.',
             'features' => [
                 'Everything in Starter',
                 'Exercise history',
-                'Attempt statistics and progress',
+                'Attempts, results and solving time',
+                'timed_exercises' => 'Exercises with a time limit',
+                'child_profiles' => 'Up to 4 child profiles',
+                'rewards' => 'Stars, a weekly streak and badges',
             ],
         ],
     ],

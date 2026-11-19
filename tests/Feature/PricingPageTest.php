@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Str;
+
 it('shows both plans with the recommended emphasis', function () {
     $this->get(route('pricing'))
         ->assertOk()
@@ -26,6 +28,20 @@ it('renders the configured prices', function () {
         ->assertSee('6.99')
         ->assertSee('29.99')
         ->assertSee('49.99');
+});
+
+it('lists the Premium-only features on the Premium card and in the comparison', function () {
+    $html = $this->get(route('pricing'))->assertOk()->getContent();
+    $comparison = Str::betweenFirst($html, '<table', '</table>');
+
+    foreach (['timed_exercises', 'child_profiles', 'rewards'] as $feature) {
+        $label = e(__("pricing.comparison.rows.{$feature}"));
+
+        // Starter shows the muted minus, Premium the green check.
+        expect(Str::before($html, '<table'))->toContain(e(__("billing.plans.premium.features.{$feature}")))
+            ->and($comparison)->toContain($label)
+            ->and(Str::betweenFirst($comparison, $label, '</tr>'))->toMatch('/text-dark\/25.*text-green-500/s');
+    }
 });
 
 it('offers a free-trial CTA with the trial notice', function () {

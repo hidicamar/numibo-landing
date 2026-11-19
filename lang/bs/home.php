@@ -64,6 +64,27 @@ return [
         ],
     ],
 
+    'premium_features' => [
+        'title' => 'Dodaci u paketu Premium',
+        'items' => [
+            'timed_exercises' => [
+                'title' => 'Vježbe s vremenskim ograničenjem',
+                'description' => 'Kad praviš vježbu, možeš uključiti vremensko ograničenje od 1 do 60 minuta. Vrijeme počinje teći kad dijete pritisne Počni; kad istekne, odgovori se automatski predaju, a prazni se računaju kao netačni.',
+                'image_alt' => 'Rješavanje vježbe s vremenskim ograničenjem, gore je prikazano preostalo vrijeme',
+            ],
+            'child_profiles' => [
+                'title' => 'Profil za svako dijete',
+                'description' => 'Dodaj do 4 dječija profila, svaki s imenom i životinjicom. Prijavljuješ se ti, dijete odabere sebe pod „Ko vježba?”, a rezultati se bilježe za svako dijete posebno.',
+                'image_alt' => 'Ekran „Ko vježba?” s dvoje djece za odabir',
+            ],
+            'rewards' => [
+                'title' => 'Zvjezdice, sedmični niz i značke',
+                'description' => 'Svaka predana vježba donosi do 3 zvjezdice, a računa se najbolji pokušaj. Vježbanje 3 dana sedmično održava niz, a čeka i 12 znački za skupljanje.',
+                'image_alt' => 'Stranica s nagradama djeteta: zvjezdice, sedmični niz i značke',
+            ],
+        ],
+    ],
+
     'blog' => [
         'title' => 'S bloga',
         'subtitle' => 'Savjeti, uvidi i novosti o učenju matematike i kako izvući najviše iz aplikacije.',

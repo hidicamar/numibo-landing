@@ -5,6 +5,9 @@ sl/img-12-panel.png	12-generator-addition-subtraction, filled in, card only
 sl/img-13-panel.png	13-generator-custom, filled in, card only
 sl/img-14-paper.png	14-pdf-worksheet-page, top of the A4 page
 sl/img-15-paper.png	15-pdf-answer-key-page, top of the A4 page
+sl/img-16-mobile.png	16-timed-exercise-solving, timer bar visible (mobile)
+sl/img-17-mobile.png	17-who-is-practising-picker, two children (mobile)
+sl/img-18-mobile.png	18-child-rewards, stars, weekly streak and badges (mobile)
 en/img-9-mobile.png	09-worksheet-solving, app header and toolbar hidden (mobile)
 en/img-10-mobile.png	10-worksheet-feedback, app header and toolbar hidden (mobile)
 en/img-11-mobile.png	11-celebration-perfect, app header and toolbar hidden (mobile)
@@ -12,6 +15,9 @@ en/img-12-panel.png	12-generator-addition-subtraction, filled in, card only
 en/img-13-panel.png	13-generator-custom, filled in, card only
 en/img-14-paper.png	14-pdf-worksheet-page, top of the A4 page
 en/img-15-paper.png	15-pdf-answer-key-page, top of the A4 page
+en/img-16-mobile.png	16-timed-exercise-solving, timer bar visible (mobile)
+en/img-17-mobile.png	17-who-is-practising-picker, two children (mobile)
+en/img-18-mobile.png	18-child-rewards, stars, weekly streak and badges (mobile)
 de/img-9-mobile.png	09-worksheet-solving, app header and toolbar hidden (mobile)
 de/img-10-mobile.png	10-worksheet-feedback, app header and toolbar hidden (mobile)
 de/img-11-mobile.png	11-celebration-perfect, app header and toolbar hidden (mobile)
@@ -19,6 +25,9 @@ de/img-12-panel.png	12-generator-addition-subtraction, filled in, card only
 de/img-13-panel.png	13-generator-custom, filled in, card only
 de/img-14-paper.png	14-pdf-worksheet-page, top of the A4 page
 de/img-15-paper.png	15-pdf-answer-key-page, top of the A4 page
+de/img-16-mobile.png	16-timed-exercise-solving, timer bar visible (mobile)
+de/img-17-mobile.png	17-who-is-practising-picker, two children (mobile)
+de/img-18-mobile.png	18-child-rewards, stars, weekly streak and badges (mobile)
 hr/img-9-mobile.png	09-worksheet-solving, app header and toolbar hidden (mobile)
 hr/img-10-mobile.png	10-worksheet-feedback, app header and toolbar hidden (mobile)
 hr/img-11-mobile.png	11-celebration-perfect, app header and toolbar hidden (mobile)
@@ -26,6 +35,9 @@ hr/img-12-panel.png	12-generator-addition-subtraction, filled in, card only
 hr/img-13-panel.png	13-generator-custom, filled in, card only
 hr/img-14-paper.png	14-pdf-worksheet-page, top of the A4 page
 hr/img-15-paper.png	15-pdf-answer-key-page, top of the A4 page
+hr/img-16-mobile.png	16-timed-exercise-solving, timer bar visible (mobile)
+hr/img-17-mobile.png	17-who-is-practising-picker, two children (mobile)
+hr/img-18-mobile.png	18-child-rewards, stars, weekly streak and badges (mobile)
 bs/img-9-mobile.png	09-worksheet-solving, app header and toolbar hidden (mobile)
 bs/img-10-mobile.png	10-worksheet-feedback, app header and toolbar hidden (mobile)
 bs/img-11-mobile.png	11-celebration-perfect, app header and toolbar hidden (mobile)
@@ -33,3 +45,6 @@ bs/img-12-panel.png	12-generator-addition-subtraction, filled in, card only
 bs/img-13-panel.png	13-generator-custom, filled in, card only
 bs/img-14-paper.png	14-pdf-worksheet-page, top of the A4 page
 bs/img-15-paper.png	15-pdf-answer-key-page, top of the A4 page
+bs/img-16-mobile.png	16-timed-exercise-solving, timer bar visible (mobile)
+bs/img-17-mobile.png	17-who-is-practising-picker, two children (mobile)
+bs/img-18-mobile.png	18-child-rewards, stars, weekly streak and badges (mobile)
